@@ -1,0 +1,68 @@
+﻿/*----------- auth -------------*/
+.auth-wrap{
+	padding: 82px 0;
+}
+
+.auth{
+	width: 100%;
+	max-width: 614px;
+	border: 1px solid #000;
+	margin: 0 auto;
+	padding: 40px 30px;
+	text-align: center;
+}
+
+.auth-social{
+	font-family: $font-helvetica;
+	margin-top: 65px;
+	margin-bottom: 65px;
+
+	&__text{
+		@include font(normal, normal, 17px, 22px, $color-text);
+	}
+
+	&__list{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 16px;
+	}
+
+	&__item{
+		display: block;
+		width: 18px;
+		height: 18px;
+		text-decoration: none;
+		background-image: url(#{$path-img}/sprite.png);
+		background-repeat: no-repeat;
+	}
+
+
+	&__item--fb{
+		background-position: -5px -175px;
+	}
+
+	&__item--tw{
+		background-position: -5px -200px;
+	}
+
+	&__item--gplus{
+		background-position: -5px -225px;
+	}
+
+	&__item--fb:hover{
+		background-position: -30px -175px;
+	}
+
+	&__item--tw:hover{
+		background-position: -30px -200px;
+	}
+
+	&__item--gplus:hover{
+		background-position: -30px -225px;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 28px;
+	}
+}

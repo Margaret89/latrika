@@ -1,0 +1,62 @@
+﻿/*----------- form-site -------------*/
+.form-site{
+	font-family: $font-helvetica;
+
+	&__head{
+		@include font(normal, normal, 25px, 28px, $color-text);
+		margin-bottom: 50px;
+	}
+
+	&__text{
+		@include font(normal, normal, 17px, 22px, $color-text);
+		margin-bottom: 10px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea{
+		height: 45px;
+		width: 100%;
+		outline: none;
+		border: 0;
+		border-bottom: 2px solid #dfdcdb;
+		border-radius: 0;
+		font-family: $font-calibri;
+		@include font(normal, normal, 17px, 43px, $color-text);
+		padding: 0;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="email"]::placeholder,
+	input[type="password"]::placeholder,
+	textarea::placeholder{
+		color: #b1b1b1;
+	}
+
+	&__field{
+		position: relative;
+		margin-bottom: 23px;
+	}
+
+	&__tip{
+		@include font(normal, normal, 13px, 16px, $color-grey-light);
+		position: absolute;
+		right: 0;
+		@include top-center;
+	}
+
+	input[type="password"]{
+		padding-right: 135px;
+	}
+
+	.btn{
+		width: 100%;
+		margin-top: 17px;
+	}
+
+	&__polit{
+		@include font(normal, normal, 13px, 16px, $color-grey-light);
+		margin-top: 16px;
+	}
+}

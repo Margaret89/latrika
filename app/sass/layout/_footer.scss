@@ -1,1 +1,115 @@
 /*-------------- Footer -----------------*/
+.footer{
+	font-family: $font-calibri;
+	border-top: 1px solid #f2f2f3;
+}
+
+.footer-top{
+	padding-top: 50px;
+
+	&__logo{
+		width: 145px;
+		padding-top: 5px;
+	}
+
+	&__head{
+		@include font(normal, 300, 17px, 30px, $color-text);
+		margin-bottom: 24px;
+	}
+
+	&__phone{
+		@include font(normal, 300, 17px, 30px, $color-text);
+	}
+
+	&__contact{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: space-between;
+	}
+}
+
+.footer-menu{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	&__item{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__item,
+	&__link{
+		@include font(normal, 300, 17px, 26px, $color-grey);
+		text-decoration: none;
+	}
+}
+
+.footer-social{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-top: 5px;
+
+	&__item{
+		text-decoration: none;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 20px;
+	}
+
+	&__item--in{
+		width: 14px;
+		height: 14px;
+		background: url(#{$path-img}/sprite.png) no-repeat -30px  -105px;
+	}
+
+	&__item--vk{
+		width: 18px;
+		height: 10px;
+		background: url(#{$path-img}/sprite.png) no-repeat -30px  -130px;
+	}
+
+	&__item--fb{
+		width: 7px;
+		height: 15px;
+		background: url(#{$path-img}/sprite.png) no-repeat -30px  -150px;
+	}
+
+	&__item--in:hover{
+		background-position: -5px -105px;
+	}
+
+	&__item--vk:hover{
+		background-position: -5px -130px;
+	}
+
+	&__item--fb:hover{
+		background-position: -5px -150px;
+	}
+}
+
+.footer-bottom{
+	padding: 36px 0;
+
+	&__copyright{
+		@include font(normal, 300, 15px, 20px, #b4b4b4);
+	}
+
+	&__polit{
+		@include font(normal, 300, 17px, 22px, $color-grey);
+	}
+}
+
+.footer-pay{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	&__item:not(:last-child){
+		margin-right: 70px;
+	}
+}

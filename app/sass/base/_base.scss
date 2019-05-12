@@ -17,7 +17,7 @@ img{
 }
 
 a{
-	color: $color-text;
+	color: inherit;
 }
 
 a:hover,
@@ -85,7 +85,6 @@ h6,
 
 main{
 	flex: 1;
-	padding-bottom: 100px;
 }
 
 .btn,
