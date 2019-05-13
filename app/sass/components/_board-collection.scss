@@ -4,19 +4,37 @@
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
-	height: 280px;
-	background: url(#{$path-img}/bg-collection.jpg) no-repeat center;
+	height: 626px;
+	background-image: url(#{$path-img}/bg-collection.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
 	text-align: center;
 	padding: 20px 200px;
 
 	&__head{
 		font-family: $font-cyrillicgaramond;
-		@include font(normal, normal, 25px, 40px, #fff);
+		@include font(normal, normal, 55px, 60px, #fff);
 		text-transform: uppercase;
-		letter-spacing: 2.5px;
+		letter-spacing: 5.5px;
 	}
 
 	&__btn{
 		margin-top: 17px;
+	}
+
+	&--big{
+		background-image: url(#{$path-img}/bg-collection-big.jpg);
+		height: 930px;
+		margin-bottom: 60px;
+	}
+
+	&--big &__head{
+		font-size: 72px;
+		line-height: 76px;
+		letter-spacing: 7px;
+	}
+
+	&--big &__btn{
+		margin-top: 22px;
 	}
 }

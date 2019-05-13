@@ -14,7 +14,26 @@ $(document).ready(function () {
 	$('.js-select').chosen({
 		disable_search: true,
 	});
-	
+
+	// Слайдер товаров
+	if ($('.js-catalog-slider').length) {
+		$('.js-catalog-slider').slick({
+			dots: false,
+			arrows: true,
+			infinite: true,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			// responsive: [
+			// 	{
+			// 		breakpoint: 768,
+			// 		settings: {
+			// 			arrows: false,
+			// 			dots: true,
+			// 		}
+			// 	},
+			// ]
+		});
+	}
 	// //---------- Маска для телефона -------------
 	// $.mask.definitions['~'] = "[+-]";
 	// $("#phone").mask("(999) 999-9999");

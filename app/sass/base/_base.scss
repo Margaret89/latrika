@@ -133,9 +133,15 @@ input[type="submit"].btn--white{
 
 .btn--white:hover,
 input[type="submit"].btn--white:hover{
-	border-color: $color-text;
-	background: $color-text;
-	color: #fff;
+	background: #fff;
+	color: $color-text;
+}
+
+.btn--big{
+	height: 53px;
+	font-size: 14px;
+	line-height: 51px;
+	letter-spacing: 3.5px;
 }
 
 
