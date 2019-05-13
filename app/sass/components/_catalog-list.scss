@@ -1,0 +1,77 @@
+﻿/*----------- catalog-list -------------*/
+.catalog-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-family: $font-helvetica;
+
+	&__item{
+		width: 50%;
+		max-width: 395px;
+		text-align: center;
+		margin-bottom: 100px;
+	}
+
+	&__img-wrap{
+		position: relative;
+		margin-bottom: 20px;
+	}
+
+	&__img{
+		display: block;
+		width: 100%;
+		height: 593px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__wish{
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px -330px;
+		position: absolute;
+		top: 20px;
+		left: 20px;
+	}
+
+	&__wish.active,
+	&__wish:hover{
+		background-position: -30px -330px;
+	}
+
+	&__label{
+		display: inline-block;
+		height: 21px;
+		background: #e4e4e4;
+		@include font(normal, normal, 15px, 20px, $color-text);
+		text-transform: uppercase;
+		padding: 0 10px;
+	}
+
+	&__name{
+		display: inline-block;
+		@include font(normal, normal, 16px, 21px, $color-text);
+		margin-top: 6px;
+	}
+
+	&__price{
+		@include font(normal, 500, 14px, 20px, $color-text);
+		margin-top: 38px;
+	}
+
+	&__old-price{
+		font-weight: 300;
+		text-decoration: line-through;
+		margin-right: 20px;
+	}
+
+	.btn{
+		margin-top: 10px;
+	}
+
+	.board-collection{
+		margin-bottom: 100px;
+	}
+}

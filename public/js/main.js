@@ -1,5 +1,19 @@
 $(document).ready(function () {
+	// Открыть/Закрыть мобильное меню
+	$('.js-catalog-menu-mark').click(function(e){
+		e.preventDefault();
+		if($(this).hasClass("opened")){
+			$(this).siblings('.js-catalog-menu-sub').slideUp();
+		}else{
+			$(this).siblings('.js-catalog-menu-sub').slideDown();
+		}
+		$(this).toggleClass('opened');
+	});
 
+	// Стилизация выпадающего списка
+	$('.js-select').chosen({
+		disable_search: true,
+	});
 	
 	// //---------- Маска для телефона -------------
 	// $.mask.definitions['~'] = "[+-]";

@@ -1,0 +1,27 @@
+﻿/*----------- bredcrumb -------------*/
+.bredcrumb{
+	padding: 22px 0 30px;
+
+	&__item{
+		font-family: $font-helvetica;
+		@include font(normal, normal, 13px, 22px, #c0c0c6);
+		text-decoration: none;
+		position: relative;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 15px;
+	}
+
+	&__item:not(:last-child)::after{
+		content: '';
+		display: inline-block;
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background: #ececec;
+		position: absolute;
+		right: -12px;
+		@include top-center;
+	}
+}

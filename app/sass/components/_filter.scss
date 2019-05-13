@@ -1,0 +1,41 @@
+﻿/*----------- filter -------------*/
+.filter-wrap{
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 33px;
+}
+
+.filter{
+	display: flex;
+	font-family: $font-helvetica;
+
+	&__item{
+		display: flex;
+	}
+
+	&__head{
+		@include font(normal, normal, 15px, 20px, $color-text);
+		margin-right: 10px;
+	}
+
+	&__val{
+		@include font(normal, normal, 15px, 20px, $color-grey-light);
+		text-decoration: underline;
+	}
+
+	&__val:hover{
+		color: $color-text;
+	}
+
+	&__val:not(:last-child){
+		margin-right: 9px;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 48px;
+	}
+}
+
+.sort{
+	margin-left: 35px;
+}

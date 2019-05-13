@@ -1,0 +1,75 @@
+﻿/*----------- catalog-menu -------------*/
+.catalog-menu{
+	font-family: $font-helvetica;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	&__item,
+	&__sub,
+	&__sub-item{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__item{
+		position: relative;
+		margin-bottom: 18px;
+	}
+
+	&__item,
+	&__link{
+		@include font(normal, normal, 15px, 20px, $color-text);
+		text-decoration: none;
+	}
+
+	&__link{
+		display: inline-block;
+		padding-bottom: 1px;
+		border-bottom: 1px solid transparent;
+	}
+
+	&__link.current{
+		border-color: $color-text;
+	}
+
+	&__link:hover{
+		text-decoration: none;
+		border-bottom: 1px solid #e1e1e1;
+	}
+
+	&__sub{
+		display: none;
+		margin-top: 2px;
+	}
+
+	&__sub-item,
+	&__sub-link{
+		@include font(normal, normal, 13px, 18px, $color-grey-light);
+		text-decoration: none;
+	}
+
+	&__sub-link:hover{
+		color: $color-text;
+	}
+
+	&__open-mark{
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px -255px;
+		position: absolute;
+		right: 0;
+		top: 6px;
+		cursor: pointer;
+	}
+
+	&__sub-item{
+		margin-bottom: 5px;
+	}
+
+	&__open-mark.opened{
+		background-position: -5px -275px;
+	}
+}
