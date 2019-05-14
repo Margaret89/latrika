@@ -1,0 +1,98 @@
+﻿/*----------- category-main -------------*/
+.category-main{
+	font-family: $font-helvetica;
+
+	&__item{
+		margin-bottom: 46px;
+	}
+
+	&__img{
+		height: 608px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__head{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 24px;
+	}
+
+	&__title{
+		@include font(normal, normal, 17px, 21px, $color-text);
+	}
+
+	&__link{
+		display: inline-block;
+		@include font(normal, normal, 13px, 21px, #b4b4b4);
+		text-decoration: none;
+		position: relative;
+		padding-right: 18px;
+	}
+
+	&__link::after{
+		content: '';
+		display: inline-block;
+		width: 6px;
+		height: 10px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px  -415px;
+		position: absolute;
+		right: 0;
+		@include top-center;
+	}
+
+	&__link:hover{
+		color: $color-grey;
+	}
+
+	&__link:hover::after{
+		background-position: -30px -415px;
+	}
+
+	&--slider{
+		height: 655px;
+		overflow: hidden;
+	}
+
+	&--slider.slick-initialized{
+		height: auto;
+		overflow: visible;
+	}
+
+	.slick-arrow{
+		display: inline-block;
+		width: 12px;
+		height: 20px;
+		outline: 0;
+		border: 0;
+		font-size: 0;
+		padding: 0;
+		margin: 0;
+		background-image: url(#{$path-img}/sprite.png);
+		background-repeat: no-repeat;
+		background-color: transparent;
+		position: absolute;
+		@include top-center;
+		cursor: pointer;
+		z-index: 100;
+	}
+
+	.slick-prev{
+		left: 20px;
+		background-position: -5px  -355px
+	}
+
+	.slick-next{
+		right: 20px;
+		background-position: -30px  -355px
+	}
+
+	.slick-prev:hover{
+		background-position: -5px  -385px
+	}
+
+	.slick-next:hover{
+		background-position: -30px  -385px
+	}
+}

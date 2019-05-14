@@ -34,6 +34,16 @@ $(document).ready(function () {
 			// ]
 		});
 	}
+
+	// Слайдер категорий на главной
+	if ($('.js-category-main').length) {
+		$('.js-category-main').slick({
+			dots: false,
+			arrows: true,
+			infinite: true,
+			slidesToShow: 1,
+		});
+	}
 	// //---------- Маска для телефона -------------
 	// $.mask.definitions['~'] = "[+-]";
 	// $("#phone").mask("(999) 999-9999");
