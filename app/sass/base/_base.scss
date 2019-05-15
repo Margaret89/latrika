@@ -128,6 +128,20 @@ input[type="submit"].btn--border:hover{
 	color: #fff;
 }
 
+.btn--grey,
+input[type="submit"].btn--grey{
+	background: transparent;
+	border-color: #d9d9d9;
+	color: $color-text;
+}
+
+.btn--grey:hover,
+input[type="submit"].btn--grey:hover{
+	background: $color-text;
+	border-color: $color-text;
+	color: #fff;
+}
+
 .btn--white,
 input[type="submit"].btn--white{
 	background: transparent;

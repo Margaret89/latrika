@@ -35,6 +35,17 @@ $(document).ready(function () {
 		});
 	}
 
+	// Слайдер товаров в карточке товаров
+	if ($('.js-cat-detail-slider').length) {
+		$('.js-cat-detail-slider').slick({
+			dots: false,
+			arrows: true,
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+		});
+	}
+
 	// Слайдер категорий на главной
 	if ($('.js-category-main').length) {
 		$('.js-category-main').slick({
@@ -44,6 +55,28 @@ $(document).ready(function () {
 			slidesToShow: 1,
 		});
 	}
+
+	// Слайдер карточки товаров
+	 $('.js-product-slide-img').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: false,
+		vertical: true,
+		focusOnSelect: true,
+		asNavFor: '.js-product-slide-thumb'
+	});
+
+	$('.js-product-slide-thumb').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.js-product-slide-img',
+		dots: false,
+		arrows: true,
+		vertical: true,
+		focusOnSelect: true
+	});
+
 	// //---------- Маска для телефона -------------
 	// $.mask.definitions['~'] = "[+-]";
 	// $("#phone").mask("(999) 999-9999");
