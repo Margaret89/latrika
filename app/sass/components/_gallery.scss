@@ -1,0 +1,11 @@
+/*-------------- gallery -----------------*/
+.gallery{
+	&__item{
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+
+.video-block-wrap + .gallery{
+	margin-top: 70px;
+}

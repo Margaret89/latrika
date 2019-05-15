@@ -77,6 +77,24 @@ $(document).ready(function () {
 		focusOnSelect: true
 	});
 
+	// Раскрывающийся блок
+	$(".js-unwrap-block").on('click','.js-unwrap-head',function(event){
+		event.preventDefault();
+		$(this).parent().toggleClass("opened");
+		if($(this).parent().hasClass("opened")){
+			$(this).parent().children(".js-unwrap-content").slideDown(400);
+		}
+		else{
+			$(this).parent().children(".js-unwrap-content").slideUp(400);
+		}
+	});
+
+	// Включаем фоновое видео в блоке
+	$('.js-video-play').click(function(e){
+		$(this).parent('.js-video-content').addClass('hidden');
+		$(this).parent('.js-video-content').siblings('.js-video').trigger('play');
+	});
+
 	// //---------- Маска для телефона -------------
 	// $.mask.definitions['~'] = "[+-]";
 	// $("#phone").mask("(999) 999-9999");

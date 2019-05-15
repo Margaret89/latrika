@@ -2,7 +2,7 @@
 .header{
 	font-family: $font-calibri;
 	@include font(normal, 300, 15px, 20px, $color-text);
-	padding: 23px 0 20px;
+	padding: 19px 0;
 	border-bottom: 1px solid #f2f2f3;
 	height: 95px;
 
@@ -10,6 +10,7 @@
 		display: block;
 		width: 140px;
 		margin: 0 auto;
+		margin-top: 5px;
 	}
 
 	&__action{

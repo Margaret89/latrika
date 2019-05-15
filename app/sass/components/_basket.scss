@@ -1,0 +1,240 @@
+/*-------------- basket -----------------*/
+.basket{
+	font-family: $font-helvetica;
+	margin-top: 7px;
+
+	&__head{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 25px;
+	}
+
+	h1{
+		margin-bottom: 0;
+	}
+
+	&__clear{
+		@include font(normal, normal, 13px, 18px, $color-grey-light);
+		text-decoration: none;
+		position: relative;
+	}
+
+	&__clear::after{
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: 1px;
+		background: $color-grey-light;
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__clear:hover::after{
+		display: none;
+	}
+
+	&__item{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 30px;
+	}
+
+	&__img{
+		display: inline-block;
+		width: 177px;
+		height: 267px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		margin-right: 10px;
+	}
+
+	&__info{
+		width: 178px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	&__name-wrap{
+		display: flex;
+	}
+
+	&__name{
+		display: inline-block;
+		@include font(normal, normal, 16px, 21px, $color-text);
+	}
+
+	&__label{
+		display: inline-block;
+		height: 21px;
+		background: #e4e4e4;
+		@include font(normal, normal, 15px, 20px, $color-text);
+		text-transform: uppercase;
+		padding: 0 10px;
+		margin-left: 11px;
+	}
+
+	&__price{
+		@include font(normal, 500, 16px, 20px, $color-text);
+		margin-top: 8px;
+	}
+
+	&__old-price{
+		font-weight: 300;
+		text-decoration: line-through;
+		margin-right: 30px;
+	}
+
+	&__count{
+		margin-left: 10px;
+		margin-right: 10px;
+		width: calc(100% - 435px);
+	}
+
+	&__count-title{
+		@include font(normal, 500, 13px, 18px, $color-grey-light);
+		margin-bottom: 10px;
+	}
+
+	&__del{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background: url(#{$path-img}/sprite.png) no-repeat 0 -490px;
+		cursor: pointer;
+		margin-left: 10px;
+	}
+
+	&__del:hover{
+		background-position: -25px -490px;
+	}
+}
+
+.basket-param{
+	margin-top: 32px;
+
+	&__item{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&__item:not(:first-child){
+		margin-top: 30px;
+	}
+
+	&__title{
+		@include font(normal, 500, 13px, 18px, $color-grey-light);
+		margin-right: 10px;
+	}
+
+	&__val{
+		@include font(normal, 500, 15px, 20px, $color-text);
+	}
+
+	&__item--color &__val{
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+	}
+}
+
+.counter{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 94px;
+	height: 38px;
+	border: 1px solid #d9d9d9;
+	padding: 0 10px;
+
+	&__minus,
+	&__plus{
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		font-size: 0;
+		background-image: url(#{$path-img}/sprite.png);
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+
+	&__minus{background-position: -5px -271px;}
+	&__plus{background-position: -5px -255px;}
+	&__minus:hover{background-position: -30px -271px;}
+	&__plus:hover{background-position: -30px -255px;}
+
+	&__field{
+		width: 35px;
+		height: 100%;
+		outline: none;
+		border: 0;
+		border-radius: 0;
+		font-family:  $font-helvetica;
+		@include font(normal, 500, 12px, 34px, $color-text);
+		text-align: center;
+		padding: 0;
+		background: transparent;
+	}
+}
+
+.basket-form{
+	padding: 21px 30px;
+	border: 1px solid #f3f3f4;
+	margin-bottom: 20px;
+
+	&__result{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 20px;
+	}
+
+	&__count{
+		@include font(normal, normal, 13px, 18px, $color-text);
+	}
+
+	&__count-title{
+		color: $color-grey-light;
+	}
+
+	&__price{
+		@include font(normal, 500, 22px, 28px, $color-text);
+	}
+
+	.form-site__filds{
+		display: flex;
+	}
+
+	.form-site input[type="submit"]{
+		display: inline-block;
+		height: 45px;
+		background: transparent;
+		border: 0;
+		border-bottom: 2px solid #dfdcdb;
+		font-family: $font-helvetica;
+		@include font(normal, normal, 17px, 43px, $color-text);
+		letter-spacing: 2.2px;
+		padding: 0;
+		padding-left: 20px;
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	.btn{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+.basket-form-wrap{
+	padding-top: 8px;
+	.btn{
+		width: 100%;
+	}
+}
