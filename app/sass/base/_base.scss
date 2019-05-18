@@ -75,6 +75,11 @@ h6,
 	margin-bottom: 0;
 }
 
+.bredcrumb + h1,
+.bredcrumb + .h1{
+	margin-top: 7px;
+}
+
 .wrapper{
 	display: flex;
 	flex-direction: column;
@@ -116,6 +121,16 @@ input[type="submit"].btn:hover{
 	color: $color-text;
 }
 
+.btn--inactive,
+input[type="submit"].btn--inactive,
+.btn--inactive:hover,
+input[type="submit"].btn--inactive:hover{
+	background: #ededed;
+	border-color: #ededed;
+	color: #bababa;
+	pointer-events: none;
+}
+
 .btn--border,
 input[type="submit"].btn--border{
 	background: transparent;
@@ -155,6 +170,21 @@ input[type="submit"].btn--white:hover{
 	color: $color-text;
 }
 
+.btn--white-fill,
+input[type="submit"].btn--white-fill{
+	background: #fff;
+	border-color: #fff;
+	color: $color-text;
+}
+
+.btn--white-fill:hover,
+input[type="submit"].btn--white-fill:hover{
+	background: $color-text;
+	border-color: $color-text;
+	color: #fff;
+}
+
+
 .btn--big{
 	height: 53px;
 	font-size: 14px;
@@ -179,3 +209,47 @@ input[type="submit"].btn--white:hover{
 .h-text-justify{text-align: justify !important;}
 .h-text-uppercase{text-transform: uppercase !important;}
 .h-text-bold {font-weight: 700 !important;}
+
+.input-radio{
+	font-family: $font-calibri;
+
+	&__label{
+		display: inline-block;
+		vertical-align: top;
+		cursor: pointer;
+		position: relative;
+		padding-left: 26px;
+		@include font(normal, normal, 17px, 21px, $color-text);
+	}
+
+	input[type=radio] {
+		display: none;
+	}
+
+	&__mark{
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		border: 1px solid #e0e0e0;
+		background: transparent;
+		position: absolute;
+		left: 0;
+		top: 3px;
+	}
+
+	&__label:hover &__mark:after,
+	input[type=radio]:checked + &__label &__mark:after{
+		content: "";
+		display: inline-block;
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background: #d9d9d9;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 4px
+	}
+}

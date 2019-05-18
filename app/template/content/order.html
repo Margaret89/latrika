@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+	//= ../header/header-meta.html
+		<title>Оформление заказа</title>
+	//= ../header/header-link.html
+	</head>
+	<body>
+		<div class="wrapper">
+			//= ../header/header.html
+			<main>
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="bredcrumb">
+								<a href="/" class="bredcrumb__item">Главная</a>
+								<a href="#" class="bredcrumb__item">Корзина</a>
+								<span class="bredcrumb__item">Оформление заказа</span>
+							</div>
+
+							<h1>Оформление заказа</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-8">
+							<div class="order-regist">
+								<div class="order-regist__step js-order-regist-step active" data-step="1">
+									<div class="order-regist__head">Адрес электронной почты</div>
+
+									<div class="order-regist__content">
+										<form method="get" class="form-site js-form-step">
+											<div class="form-site__filds form-site__filds--hor">
+												<div class="form-site__field">
+													<input type="email" placeholder="E-mail" required="required">
+												</div>
+
+												<input type="submit" class="btn btn--border" value="Добавить">
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="order-regist__step js-order-regist-step" data-step="2">
+									<div class="order-regist__head">Адрес доставки</div>
+
+									<div class="order-regist__content">
+										<div class="tabs-page">
+											<div class="tabs-page__list js-tabs-list">
+												<div class="row">
+													<div class="col-6">
+														<a href="#" class="tabs-page__item js-tabs-item tabs-page__item--home" data-item="tab1"><span>Почтовый адрес</span></a>
+													</div>
+
+													<div class="col-6">
+														<a href="#" class="tabs-page__item js-tabs-item tabs-page__item--pickpoint" data-item="tab2"><span>Пункт самовывоза</span></a>
+													</div>
+												</div>
+											</div>
+
+											<div class="tabs-page__content js-tabs-content">
+												<div id="tab1" class="tabs-page__content-item js-tabs-content-item">
+													<form method="get" class="form-site js-form-step">
+														<div class="row">
+															<div class="col-6">
+																<div class="form-site__field">
+																	<input type="text" placeholder="Фамилия" required="required" >
+																</div>
+
+																<div class="form-site__field">
+																	<input type="text" placeholder="Имя" required="required" >
+																</div>
+
+																<div class="form-site__field">
+																	<input type="text" placeholder="Отчество" required="required" >
+																</div>
+
+																<div class="form-site__field form-site__field--phone">
+																	<input type="tel" class="js-phone"/>
+																</div>
+															</div>
+
+															<div class="col-6">
+																<div class="form-site__field">
+																	<input type="text" placeholder="Регион">
+																</div>
+
+																<div class="form-site__field">
+																	<input type="text" placeholder="Город">
+																</div>
+
+																<div class="form-site__field">
+																	<input type="text" placeholder="Адрес">
+																</div>
+
+																<div class="form-site__field">
+																	<input type="text" placeholder="Почтовый индекс">
+																</div>
+															</div>
+														</div>
+
+														<input type="submit" class="btn btn--border" value="Доставить по этому адресу">
+													</form>
+												</div>
+
+												<div id="tab2" class="tabs-page__content-item js-tabs-content-item">
+													Список пунктов самовывоза
+												</div>
+											</div>
+										</div><!-- end tabs-page -->
+									</div><!-- end order-regist__content -->
+								</div><!-- end order-regist__step -->
+
+								<div class="order-regist__step js-order-regist-step" data-step="3">
+									<div class="order-regist__head">Способ доставки</div>
+
+									<div class="order-regist__content">
+										<form method="get" class="form-site">
+
+											<div class="form-site__radio">
+												<div class="input-radio">
+													<input type="radio" id="radio1" name="param1">
+													<label for="radio1" class="input-radio__label"><span class="input-radio__mark"></span>Самовывоз</label>
+												</div>
+
+												<div class="input-radio">
+													<input type="radio" id="radio1" name="param1">
+													<label for="radio1" class="input-radio__label"><span class="input-radio__mark"></span>Доставка</label>
+												</div>
+
+												<div class="input-radio">
+													<input type="radio" id="radio1" name="param1">
+													<label for="radio1" class="input-radio__label"><span class="input-radio__mark"></span>Курьер</label>
+												</div>
+											</div>
+
+											<div class="form-site-choose">
+												<div class="form-site-choose__item active">Единая ставка: 400&nbsp;&#8381;</div>
+												<div class="form-site-choose__item">Бесплатно от  25&nbsp;000&nbsp;&#8381;</div>
+											</div>
+
+											<div class="form-site-date">
+												<span class="form-site-date__label">Ожидаемая дата доставки:</span>Среда, 6 марта, 2019
+											</div>
+										</form>
+									</div>
+								</div><!-- end order-regist__step -->
+
+								<div class="order-regist__step js-order-regist-step" data-step="3">
+									<div class="order-regist__head">Оплата</div>
+
+									<div class="order-regist__content">
+										<form method="get" class="form-site">
+											<div class="form-site__text">
+												Выберите способ оплаты
+											</div>
+
+											<div class="form-site-choose form-site-choose--img">
+												<div class="form-site-choose__item active">
+													<img src="img/pay-viza-color.png" alt="" class="form-site-choose__img-color">
+													<img src="img/pay-viza.png" alt="" class="form-site-choose__img">
+												</div>
+
+												<div class="form-site-choose__item active">
+													<img src="img/pay-gold-color.png" alt="" class="form-site-choose__img-color">
+													<img src="img/pay-gold.png" alt="" class="form-site-choose__img">
+												</div>
+
+												<div class="form-site-choose__item active">
+													<img src="img/pay-yamoney-color.png" alt="" class="form-site-choose__img-color">
+													<img src="img/pay-yamoney.png" alt="" class="form-site-choose__img">
+												</div>
+											</div>
+
+											<div class="form-site__check">
+												<span class="form-site__check-text">Проверьте данные получаетля</span>
+												<a href="#" class="form-site__check-link">Изменить</a>
+											</div>
+
+											<div class="form-site__info">
+												<div class="form-site__info-item">Иванов Сергей Анатольевич</div>
+												<div class="form-site__info-item">Росия. Смоленская обл, Смоленск, Ново-Ленинградская, дом 5 , кв. 43</div>
+												<div class="form-site__info-item">214000</div>
+												<div class="form-site__info-item">+7 (952) 98-88-22</div>
+											</div>
+										</form>
+									</div>
+								</div><!-- end order-regist__step -->
+
+								<div class="order-regist__bottom">
+									<a href="#" class="btn btn--inactive js-order-btn">Заказать</a>
+
+									<div class="order-regist__polit">Размещая заказ, вы принимаете наши Правила и условия, Политику конфкдкнциальности и Политику возврата товаров. Вы также даете свое согласие на то, что компания Latrikaтбудет хранить некоторые ваши данные с целью улучшить качество вашего обслуживания, когда вы в следующий раз будете делать покупки на нашем сайте.</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-4">
+							<div class="order-regist-res">
+								<div class="order-regist-res__top">
+									<div class="order-regist-res__count"><span class="order-regist-res__count-label">Итого:</span> 3 товара</div>
+
+									<a href="#" class="order-regist-res__change">Изменить</a>
+								</div>
+
+								<div class="order-regist-list">
+									<div class="order-regist-list__item">
+										<div class="order-regist-list__img" style="background-image: url(img/order1.jpg);"></div>
+
+										<div class="order-regist-list__content">
+											<div class="order-regist-list__name-wrap">
+												<div class="order-regist-list__name">Лонгслив</div>
+												<div class="order-regist-list__price">4&nbsp;900&#8381;</div>
+											</div>
+
+											<div class="order-regist-list__param">
+												<div class="order-regist-list__param-label">Цвет</div>
+												<div class="order-regist-list__param-val order-regist-list__param-val--color" style="background: #ca6843;"></div>
+											</div>
+
+											<div class="order-regist-list__param">
+												<div class="order-regist-list__param-label">Размер</div>
+												<div class="order-regist-list__param-val">S</div>
+											</div>
+
+											<div class="order-regist-list__param">
+												<div class="order-regist-list__param-label">Количество</div>
+												<div class="order-regist-list__param-val">1</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="order-regist-list__item">
+										<div class="order-regist-list__img" style="background-image: url(img/order2.jpg);"></div>
+
+										<div class="order-regist-list__content">
+											<div class="order-regist-list__name-wrap">
+												<div class="order-regist-list__name">Рубашка с длинным названием</div>
+												<div class="order-regist-list__price">4&nbsp;900&#8381;</div>
+											</div>
+
+											<div class="order-regist-list__param">
+												<div class="order-regist-list__param-label">Цвет</div>
+												<div class="order-regist-list__param-val order-regist-list__param-val--color" style="background: #ca6843;"></div>
+											</div>
+
+											<div class="order-regist-list__param">
+												<div class="order-regist-list__param-label">Размер</div>
+												<div class="order-regist-list__param-val">S</div>
+											</div>
+
+											<div class="order-regist-list__param">
+												<div class="order-regist-list__param-label">Количество</div>
+												<div class="order-regist-list__param-val">1</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="order-regist-list__item">
+										<div class="order-regist-list__img" style="background-image: url(img/order3.jpg);"></div>
+
+										<div class="order-regist-list__content">
+											<div class="order-regist-list__name-wrap">
+												<div class="order-regist-list__name">Рубашка с длинным названием</div>
+												<div class="order-regist-list__price">4&nbsp;900&#8381;</div>
+											</div>
+
+											<div class="order-regist-list__param">
+												<div class="order-regist-list__param-label">Цвет</div>
+												<div class="order-regist-list__param-val order-regist-list__param-val--color" style="background: #ca6843;"></div>
+											</div>
+
+											<div class="order-regist-list__param">
+												<div class="order-regist-list__param-label">Размер</div>
+												<div class="order-regist-list__param-val">S</div>
+											</div>
+
+											<div class="order-regist-list__param">
+												<div class="order-regist-list__param-label">Количество</div>
+												<div class="order-regist-list__param-val">1</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- end order-regist-list -->
+
+								<div class="order-regist-price">
+									<div class="order-regist-price__cur">
+										<div class="order-regist-price__cur-label">Итого</div>
+										<div class="order-regist-price__cur-val">26&nbsp;950&nbsp;&#8381;</div>
+									</div>
+
+									<div class="order-regist-price__result">
+										<div class="order-regist-price__result-label">Всего к оплате:</div>
+										<div class="order-regist-price__result-val">26&nbsp;950&nbsp;&#8381;</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			//= ../footer/footer.html
+		</div>
+
+		//= ../footer/footer-script.html
+	</body>
+</html>

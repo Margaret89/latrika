@@ -1,0 +1,198 @@
+/*-------------- order-regist -----------------*/
+.order-regist{
+	font-family: $font-helvetica;
+	margin-top: -5px;
+
+	&__step{
+		padding: 27px 30px 24px;
+		border: 1px solid #f3f3f4;
+		margin-bottom: 30px;
+	}
+
+	&__step.active{
+		border-color: $color-text;
+		padding-bottom: 29px;
+	}
+
+	&__head{
+		@include font(normal, normal, 17px, 21px, #b1b1b1);
+	}
+
+	&__step.active &__head{
+		color: $color-text;
+	}
+
+	&__content{
+		display: none;
+		padding-top: 10px;
+	}
+
+	&__step.active &__content{
+		display: block;
+	}
+
+	.form-site__filds--hor{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	.form-site__filds--hor .btn{
+		width: auto;
+		min-width: 136px;
+	}
+
+	.form-site__filds--hor .form-site__field{
+		width: calc(100% - 166px);
+		margin-bottom: 0;
+	}
+
+	.form-site__filds--hor .btn{
+		margin-top: 0;
+	}
+
+	&__bottom{
+		display: flex;
+	}
+
+	&__polit{
+		@include font(normal, normal, 13px, 15px, $color-grey-light);
+		margin-left: 28px;
+		margin-top: -2px;
+	}
+
+	.input-radio__label{
+		margin-right: 78px;
+	}
+
+	.form-site__text{
+		font-family: $font-calibri;
+		@include font(normal, normal, 17px, 21px, $color-text);
+		margin-top: 20px;
+		margin-bottom: 25px;
+	}
+}
+
+.order-regist-res{
+	border: 1px solid #f3f3f4;
+	padding: 27px 30px 24px;
+	font-family: $font-helvetica;
+	margin-top: -5px;
+
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 47px;
+	}
+
+	&__count{
+		@include font(normal, normal, 13px, 15px, $color-text);
+	}
+
+	&__count-label{
+		color: $color-grey-light;
+	}
+
+	&__change{
+		@include font(normal, normal, 13px, 15px, $color-grey-light);
+		text-decoration: none;
+		position: relative;
+	}
+
+	&__change::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: $color-grey-light;
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__change:hover::after{
+		display: none;
+	}
+}
+
+.order-regist-list{
+	&__item{
+		display: flex;
+	}
+
+	&__item:not(:last-child){
+		margin-bottom: 30px;
+	}
+
+	&__img{
+		display: inline-block;
+		width: 100px;
+		height: 147px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		margin-right: 8px;
+	}
+
+	&__content{
+		width: calc(100% - 108px);
+	}
+
+	&__name-wrap{
+		margin-top: 5px;
+		margin-bottom: 8px;
+	}
+
+	&__name{
+		@include font(normal, normal, 16px, 20px, $color-text);
+		margin-bottom: 6px;
+	}
+
+	&__price{
+		@include font(normal, 500, 16px, 20px, $color-text);
+	}
+
+	&__param{
+		display: flex;
+		@include font(normal, normal, 13px, 18px, $color-text);
+		margin-top: 5px;
+	}
+
+	&__param-label{
+		color: $color-grey-light;
+		margin-right: 9px;
+	}
+
+	&__param-val--color{
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+	}
+}
+
+.order-regist-price{
+	margin-top: 45px;
+
+	&__cur{
+		display: flex;
+		justify-content: space-between;
+		@include font(normal, normal, 16px, 20px, $color-text);
+	}
+
+	&__result{
+		display: flex;
+		justify-content: space-between;
+		@include font(normal, 500, 19px, 23px, $color-text);
+		margin-top: 12px;
+	}
+
+	&__result-label{
+		text-transform: uppercase;
+	}
+
+	&__result-val{
+		font-size: 22px;
+	}
+}

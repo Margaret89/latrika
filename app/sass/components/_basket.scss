@@ -184,9 +184,9 @@
 }
 
 .basket-form{
-	padding: 21px 30px;
+	padding: 22px 30px;
 	border: 1px solid #f3f3f4;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 
 	&__result{
 		display: flex;
@@ -209,6 +209,11 @@
 
 	.form-site__filds{
 		display: flex;
+		margin-bottom: 15px;
+	}
+
+	.form-site__field{
+		width: 100%;
 	}
 
 	.form-site input[type="submit"]{
@@ -217,18 +222,25 @@
 		background: transparent;
 		border: 0;
 		border-bottom: 2px solid #dfdcdb;
-		font-family: $font-helvetica;
+		font-family: $font-calibri;
 		@include font(normal, normal, 17px, 43px, $color-text);
-		letter-spacing: 2.2px;
 		padding: 0;
 		padding-left: 20px;
 		cursor: pointer;
 		text-decoration: none;
 	}
 
+	.form-site input[type="submit"]:hover{
+		color: $color-grey;
+	}
+
 	.btn{
 		width: 100%;
-		margin-bottom: 20px;
+		margin-bottom: 32px;
+	}
+
+	.btn--grey{
+		margin-bottom: 37px;
 	}
 }
 
@@ -237,4 +249,8 @@
 	.btn{
 		width: 100%;
 	}
+}
+
+.personal-menu + .basket{
+	margin-top: 40px;
 }

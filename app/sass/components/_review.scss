@@ -1,0 +1,199 @@
+/*-------------- review -----------------*/
+.board-review{
+	font-family: $font-helvetica;
+	height: 434px;
+	background: url(#{$path-img}/bg-board-review.jpg) no-repeat center;
+	background-size: cover;
+	padding: 60px 20px;
+	@include font(normal, normal, 15px, 20px, #fff);
+	text-align: center;
+	margin-top: -6px;
+
+	&__head{
+		font-family: $font-cyrillicgaramond;
+		@include font(normal, normal, 25px, 30px, #fff);
+		letter-spacing: 2.5px;
+		text-transform: uppercase;
+		margin-bottom: 56px;
+	}
+
+	&__mark{
+		margin-bottom: 65px;
+	}
+
+	&__mark-text{
+		margin-bottom: 13px;
+	}
+
+	&__count{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__num{
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	&__num:first-child{
+		margin-right: 20px;
+	}
+
+	&__num:last-child{
+		margin-left: 20px;
+	}
+
+	&__text{
+		max-width: 615px;
+		margin: 0 auto 23px;
+	}
+}
+
+.review-filter{
+	display: flex;
+	justify-content: center;
+	font-family: $font-helvetica;
+	margin: 57px 0 30px;
+
+	&__item{
+		display: inline-block;
+		text-align: center;
+		min-width: 157px;
+		border-bottom: 1px solid #dbdbdb;
+		padding-bottom: 6px;
+		text-decoration: none;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 30px;
+	}
+
+	&__num{
+		display: block;
+		@include font(normal, 200, 25px, 25px, $color-grey-light);
+	}
+
+	&__label{
+		display: block;
+		@include font(normal, normal, 13px, 18px, $color-grey-light);
+		margin-top: 3px;
+	}
+
+	&__item:hover &__num,
+	&__item:hover &__label,
+	&__item.active &__num,
+	&__item.active &__label{
+		color: $color-text;
+	}
+}
+
+.review-list{
+	font-family: $font-helvetica;
+	margin-top: 60px;
+
+	&__item{
+		display: flex;
+		align-items: center;
+	}
+
+	&__item:not(:last-child){
+		margin-bottom: 40px;
+	}
+
+	&__mark{
+		width: 80px;
+		text-align: center;
+	}
+
+	&__num{
+		@include font(normal, 200, 25px, 25px, $color-text);
+	}
+
+	&__label{
+		@include font(normal, normal, 10px, 12px, $color-text);
+		text-transform: uppercase;
+		margin-top: 5px;
+	}
+}
+
+.review{
+	margin-left: 14px;
+	width: calc(100% - 80px);
+
+	&__content{
+		padding: 26px 30px;
+		border: 1px solid #dbdbdb;
+		position: relative;
+	}
+
+	&__content.opened{
+		border-color: $color-text;
+	}
+
+	&__content::before,
+	&__content::after{
+		content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 14px 14px 0;
+		border-color: transparent #dbdbdb transparent transparent;
+		position: absolute;
+	}
+
+	&__content::before{
+		top: -1px;
+		left: -14px;
+	}
+
+	&__content::after{
+		top: 0;
+		left: -12px;
+		border-color: transparent #fff transparent transparent;
+	}
+
+	&__text{
+		@include font(normal, normal, 15px, 20px, $color-text);
+	}
+
+	&__caption{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 17px;
+	}
+
+	&__author{
+		display: inline-flex;
+	}
+
+	&__name{
+		@include font(normal, 500, 13px, 18px, $color-text);
+	}
+
+	&__city{
+		@include font(normal, normal, 13px, 18px, $color-grey-light);
+		margin-left: 10px;
+	}
+
+	&__link-open{
+		@include font(normal, normal, 13px, 18px, $color-grey-light);
+	}
+
+	&__answer{
+		display: none;
+		border: 1px solid $color-text;
+		border-top: 0;
+		padding: 20px 30px 25px;
+	}
+
+	&__answer-text,
+	&__answer-text p{
+		@include font(normal, normal, 15px, 20px, $color-text);
+	}
+
+	&__answer-author{
+		@include font(normal, 500, 13px, 18px, $color-text);
+		margin-top: 14px;
+	}
+}

@@ -1,0 +1,83 @@
+/*-------------- tabs-page -----------------*/
+.tabs-page{
+	margin-top: 29px;
+
+	&__content{
+		padding-top: 24px;
+		padding-bottom: 16px;
+	}
+
+	&__content-item {
+		display: none;
+	}
+
+	&__item{
+		display: inline-block;
+		font-family: $font-calibri;
+		@include font(normal, normal, 17px, 21px, #b1b1b1);
+		text-decoration: none;
+		padding-left: 25px;
+		position: relative;
+	}
+
+	&__item span{
+		position: relative;
+		display: inline-block;
+	}
+
+	&__item span::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: #b1b1b1;
+	}
+
+	&__item.active span::after{
+		background: $color-text;
+	}
+
+	&__item:hover span::after{
+		display: none;
+	}
+
+	&__item::before{
+		content: '';
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		background-image: url(#{$path-img}/sprite.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	&__item--home::before{
+		background-position: -40px -695px;
+	}
+
+	&__item--pickpoint::before{
+		background-position: -40px -665px;
+	}
+
+	&__item--home.active::before,
+	&__item--home:hover::before{
+		background-position: -5px -695px;
+	}
+
+	&__item--pickpoint.active::before,
+	&__item--pickpoint:hover::before{
+		background-position: -5px -665px;
+	}
+
+	&__item.active,
+	&__item:hover{
+		color: $color-text
+	}
+
+	.btn{
+		width: auto;
+		padding: 0 60px;
+	}
+}

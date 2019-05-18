@@ -1,0 +1,245 @@
+/*-------------- personal -----------------*/
+.personal-menu{
+	font-family: $font-helvetica;
+	margin-top: 38px;
+	margin-bottom: 22px;
+
+	&__link{
+		text-decoration: none;
+		padding-left: 34px;
+		position: relative;
+	}
+
+	&__link::before{
+		content: '';
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		left: 0;
+		bottom: -6px;
+		background-image: url(#{$path-img}/sprite.png);
+		background-repeat: no-repeat;
+	}
+
+	&__link--user::before{background-position: -5px -542px;}
+	&__link--order::before{background-position: -5px -575px;}
+	&__link--card::before{background-position: -5px -605px;}
+	&__link--wish::before{background-position: -5px -635px;}
+	&__link--user:hover::before,
+	&__item.active &__link--user::before{background-position: -40px -542px;}
+	&__link--order:hover::before,
+	&__item.active &__link--order::before{background-position: -40px -575px;}
+	&__link--card:hover::before,
+	&__item.active &__link--card::before{background-position: -40px -605px;}
+	&__link--wish:hover::before,
+	&__item.active &__link--wish::before{background-position: -40px -635px;}
+
+	&__text{
+		@include font(normal, normal, 18px, 20px, #b5b5b5);
+		margin-bottom: 4px;
+		position: relative;
+	}
+
+	&__text::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: #b5b5b5;
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__item.active &__text,
+	&__link:hover &__text{
+		color: $color-text
+	}
+
+	&__item.active &__text::after{
+		color: $color-text
+	}
+
+	&__link:hover &__text{
+		border-bottom: 0;
+	}
+
+	&__link:hover &__text::after{
+		display: none;
+	}
+
+	&__item.active &__text::after{
+		background: $color-text;
+	}
+
+	&__num{
+		@include font(normal, normal, 13px, 13px, #c0c0c6);
+		top: -0.75em;
+	}
+}
+
+.personal-info{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+
+	&__exit-wrap{
+		padding-bottom: 11px;
+	}
+
+	&__exit{
+		display: table;
+		@include font(normal, 500, 12px, 14px, $color-text);
+		letter-spacing: 1.2px;
+		text-transform: uppercase;
+		text-decoration: none;
+		margin-left: 34px;
+		position: relative;
+	}
+
+	&__exit:hover{
+		border-bottom: 0;
+	}
+
+	&__exit::before{
+		content: '';
+		display: inline-block;
+		width: 16px;
+		height: 12px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px  -520px;
+		position: absolute;
+		left: -30px;
+	}
+
+	&__exit::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: $color-text;
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__exit:hover::after{
+		display: none;
+	}
+
+	.btn{
+		width: 100%;
+	}
+}
+
+.personal-contact{
+	font-family: $font-helvetica;
+	margin-bottom: 44px;
+	margin-top: -3px;
+
+	&__item{
+		@include font(normal, normal, 13px, 18px, $color-text);
+		margin-bottom: 7px;
+	}
+
+	&__label{
+		color: $color-grey-light;
+	}
+}
+
+.personal-list{
+	font-family: $font-helvetica;
+	margin-bottom: 20px;
+
+	&__item{
+		margin-bottom: 30px;
+		display: flex;
+	}
+
+	&__img{
+		display: inline-block;
+		width: 100px;
+		height: 147px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		margin-right: 15px;
+	}
+
+	&__content{
+		max-width: calc(100% - 115px);
+	}
+
+	&__order{
+		@include font(normal, 500, 16px, 20px, $color-text);
+		margin-bottom: 16px;
+		margin-top: 9px;
+	}
+
+	&__name{
+		@include font(normal, normal, 16px, 20px, $color-text);
+		margin-bottom: 6px;
+		margin-top: 6px;
+	}
+
+	&__price{
+		@include font(normal, 500, 16px, 20px, $color-text);
+		margin-bottom: 7px;
+	}
+
+	&__param{
+		display: flex;
+		flex-wrap: wrap;
+		@include font(normal, normal, 13px, 18px, $color-text);
+	}
+
+	&__param:not(:last-child){
+		margin-bottom: 6px;
+	}
+
+	&__param-name{
+		color: $color-grey-light;
+		margin-right: 6px;
+	}
+
+	&__param-val--color{
+		display: inline-block;
+		vertical-align: middle;
+		width: 15px;
+		height: 15px;
+	}
+}
+
+.personal-btn .btn{
+	width: 100%;
+}
+
+.profile{
+	margin-top: 60px;
+
+	&__head{
+		font-family: $font-helvetica;
+		@include font(normal, normal, 19px, 24px, $color-text);
+		margin-bottom: 17px;
+	}
+
+	input[type="submit"].btn{
+		width: auto;
+		margin-top: 26px;
+		min-width: 163px;
+	}
+
+	&__auth{
+		input[type="text"],
+		input[type="email"],
+		input[type="password"]{
+			border: 2px solid #f1eeed;
+			padding: 0 10px;
+		}
+	}
+}
