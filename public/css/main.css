@@ -565,6 +565,7 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 @media (max-width: 767px) {
   main {
     padding-bottom: 48px;
+    padding-top: 30px;
   }
   .no-indent {
     margin-bottom: -48px;
@@ -1794,7 +1795,7 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 
 @media (max-width: 767px) {
   .auth-wrap {
-    padding-top: 36px;
+    padding-top: 6px;
   }
   .auth {
     padding: 25px 20px 27px;
@@ -2017,6 +2018,12 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   margin-top: 0;
 }
 
+@media (max-width: 767px) {
+  .chosen-container-single .chosen-single {
+    font-size: 14px;
+  }
+}
+
 /*----------- filter -------------*/
 .filter-wrap {
   display: -webkit-box;
@@ -2031,6 +2038,8 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   font-family: "HelveticaNeueCyr", Arial, sans-serif;
 }
 
@@ -2067,11 +2076,40 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 }
 
 .filter__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.filter__item:first-child {
   margin-right: 48px;
 }
 
-.sort {
-  margin-left: 35px;
+@media (max-width: 767px) {
+  .filter-wrap {
+    margin-top: 1px;
+    margin-bottom: 16px;
+  }
+  .filter__item {
+    margin-bottom: 11px;
+  }
+  .filter__head {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+  .filter .filter__item--color {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+    margin-right: 0;
+  }
+  .filter .filter__item--sort {
+    margin-right: 30px;
+  }
+  .filter .chosen-container-single .chosen-single span {
+    margin-right: 30px;
+  }
+  .filter .chosen-container-single .chosen-single div {
+    right: 4px;
+  }
 }
 
 /*----------- board-collection -------------*/
@@ -2157,6 +2195,17 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 }
 
 /*----------- catalog-list -------------*/
+.catalog-list-wrap .board-collection {
+  margin-bottom: 100px;
+  height: 280px;
+}
+
+.catalog-list-wrap .board-collection__head {
+  font-size: 25px;
+  line-height: 40px;
+  letter-spacing: 2.5px;
+}
+
 .catalog-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2174,6 +2223,14 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   max-width: 395px;
   text-align: center;
   margin-bottom: 100px;
+}
+
+.catalog-list__item:nth-child(even) {
+  margin-left: 10px;
+}
+
+.catalog-list__item:nth-child(odd) {
+  margin-right: 10px;
 }
 
 .catalog-list__img-wrap {
@@ -2246,15 +2303,67 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   margin-top: 10px;
 }
 
-.catalog-list .board-collection {
-  margin-bottom: 100px;
-  height: 280px;
+@media (max-width: 1249px) {
+  .catalog-list__item {
+    width: calc(50% - 10px);
+  }
 }
 
-.catalog-list .board-collection__head {
-  font-size: 25px;
-  line-height: 40px;
-  letter-spacing: 2.5px;
+@media (max-width: 767px) {
+  .catalog-list-wrap .catalog-list,
+  .catalog-list-wrap .board-collection {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .catalog-list-wrap .board-collection {
+    width: auto;
+    height: 206px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .catalog-list-wrap .board-collection__head {
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .catalog-list-wrap__text {
+    margin-top: 9px;
+  }
+  .catalog-list__item {
+    margin-bottom: 34px;
+  }
+  .catalog-list__img-wrap {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+  }
+  .catalog-list__img {
+    height: 225px;
+    background-size: contain;
+  }
+  .catalog-list__wish {
+    top: 10px;
+    left: 10px;
+  }
+  .catalog-list__label {
+    font-size: 12px;
+    line-height: 17px;
+    height: 17px;
+    padding: 0 7px;
+  }
+  .catalog-list__name {
+    font-size: 14px;
+  }
+  .catalog-list__price {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 0;
+  }
+  .catalog-list__old-price {
+    font-size: 12px;
+    font-weight: 300;
+    margin-right: 10px;
+  }
 }
 
 /*----------- page-main -------------*/
@@ -2442,9 +2551,6 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   }
   .catalog-slider__name {
     font-size: 14px;
-  }
-  .catalog-slider .btn {
-    display: none;
   }
   .catalog-slider__wish {
     top: 10px;

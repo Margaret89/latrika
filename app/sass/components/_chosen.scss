@@ -69,10 +69,8 @@
 	margin-top: 0;
 }
 
-// @media (max-width: 767px) {
-// 	.chosen-container,
-// 	.chosen-container-single .chosen-single{
-// 		height: 45px;
-// 		line-height: 43px;
-// 	}
-// }
+@media (max-width: 767px) {
+	.chosen-container-single .chosen-single{
+		font-size: 14px;
+	}
+}

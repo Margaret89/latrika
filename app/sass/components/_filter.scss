@@ -7,6 +7,7 @@
 
 .filter{
 	display: flex;
+	flex-wrap: wrap;
 	font-family: $font-helvetica;
 
 	&__item{
@@ -32,10 +33,45 @@
 	}
 
 	&__item:not(:last-child){
+		margin-right: 35px;
+	}
+
+	&__item:first-child{
 		margin-right: 48px;
 	}
 }
 
-.sort{
-	margin-left: 35px;
+@media (max-width: 767px) {
+	.filter-wrap{
+		margin-top: 1px;
+		margin-bottom: 16px;
+	}
+
+	.filter{
+		&__item{
+			margin-bottom: 11px;
+		}
+
+		&__head{
+			font-size: 14px;
+			margin-right: 8px;
+		}
+
+		& &__item--color{
+			order: 3;
+			margin-right: 0;
+		}
+
+		& &__item--sort{
+			margin-right: 30px;
+		}
+
+		.chosen-container-single .chosen-single span{
+			margin-right: 30px;
+		}
+
+		.chosen-container-single .chosen-single div{
+			right: 4px;
+		}
+	}
 }
