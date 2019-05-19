@@ -9,3 +9,16 @@
 		margin-bottom: 126px;
 	}
 }
+
+@media (max-width: 767px) {
+	.page-main{
+		.board-collection--big:first-child{
+			margin-top: -54px;
+			background-position: 61% -11px;
+		}
+
+		.catalog-slider{
+			margin-bottom: 18px;
+		}
+	}
+}

@@ -21,6 +21,11 @@
 
 	&__title{
 		@include font(normal, normal, 17px, 21px, $color-text);
+		text-decoration: none;
+	}
+
+	&__title:hover{
+		color: $color-grey-light;
 	}
 
 	&__link{
@@ -94,5 +99,86 @@
 
 	.slick-next:hover{
 		background-position: -30px  -385px
+	}
+}
+
+@media (max-width: 767px) {
+	.category-main{
+		&__item{
+			margin-bottom: 25px;
+		}
+
+		&__head{
+			margin-bottom: 4px;
+		}
+
+		&__title{
+			font-size: 15px;
+		}
+
+		&__title::after{
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 6px;
+			height: 10px;
+			background: url(#{$path-img}/sprite.png) no-repeat -30px  -810px;
+			margin-left: 10px;
+		}
+
+		&__title:hover::after{
+			background-position: -30px -840px;
+		}
+
+		&__img{
+			height: 230px;
+			margin-left: -20px;
+			margin-right: -20px;
+			background-position: center top;
+		}
+
+		&--slider{
+			margin-left: -20px;
+			margin-right: -20px;
+			margin-top: 20px;
+		}
+
+		&--slider &__title{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		&--slider &__img{
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.slick-arrow{
+			width: 20px;
+			height: 20px;
+			background: none;
+		}
+
+		.slick-arrow::after{
+			content: '';
+			display: inline-block;
+			width: 6px;
+			height: 10px;
+			background-image: url(#{$path-img}/sprite.png);
+			background-repeat: no-repeat;
+			background-color: transparent;
+			position: absolute;
+			@include top-center;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+
+		.slick-prev{left: 10px;}
+		.slick-next{right: 10px;}
+		.slick-prev::after{background-position: -5px  -810px}
+		.slick-next::after{background-position: -30px  -810px}
+		.slick-prev:hover::after{background-position: -5px  -840px}
+		.slick-next:hover::after{background-position: -30px  -840px}
 	}
 }

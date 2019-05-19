@@ -11,6 +11,7 @@
 
 	&.slick-initialized{
 		overflow: visible;
+		height: auto;
 	}
 
 	&__item{
@@ -31,7 +32,7 @@
 		height: 322px;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: cover;
+		background-size: contain;
 	}
 
 	&__wish{
@@ -114,5 +115,105 @@
 		.slick-next{
 			right: 0;
 		}
+	}
+}
+
+@media (max-width: 992px) {
+	.catalog-slider{
+		margin-left: -10px;
+		margin-right: -10px;
+
+		&__item{
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+
+		.slick-prev{
+			left: 10px;
+		}
+
+		.slick-next{
+			right: 10px;
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+	.catalog-slider{
+		margin: 14px -10px;
+		height: 265px;
+
+		&__item{
+			width: 130px;
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+
+		&__img-wrap{
+			width: 130px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 6px;
+		}
+
+		&__img{
+			height: 200px;
+		}
+
+		&__name{
+			font-size: 14px;
+		}
+
+		.btn{
+			display: none;
+		}
+
+		&__wish{
+			top: 10px;
+			left: 10px;
+		}
+
+		&__price{
+			font-size: 12px;
+			font-weight: 500;
+			margin-top: 0;
+		}
+
+		&__old-price{
+			font-size: 12px;
+			font-weight: 300;
+			margin-right: 10px;
+		}
+
+		.slick-arrow{
+			width: 20px;
+			height: 20px;
+			background: none;
+			top: 90px;
+			z-index: 10;
+		}
+
+		.slick-arrow::after{
+			content: '';
+			display: inline-block;
+			width: 6px;
+			height: 10px;
+			background-image: url(#{$path-img}/sprite.png);
+			background-repeat: no-repeat;
+			background-color: transparent;
+			position: absolute;
+			@include top-center;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+
+		.slick-prev{left: -10px;}
+		.slick-next{right: -10px;}
+		.slick-prev::after{background-position: -5px  -810px}
+		.slick-next::after{background-position: -30px  -810px}
+		.slick-prev:hover::after{background-position: -5px  -840px}
+		.slick-next:hover::after{background-position: -30px  -840px}
 	}
 }

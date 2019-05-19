@@ -267,4 +267,28 @@ input[type="submit"].btn--white-fill:hover{
 		padding-right: 20px!important;
 		padding-left: 20px!important;
 	}
+
+	.btn,
+	input[type="submit"].btn{
+		height: 31px;
+		font-size: 11px;
+		font-weight: normal;
+		line-height: 30px;
+		letter-spacing: 3px;
+	}
+
+	.btn--big,
+	input[type="submit"].btn--big{
+		height: 31px;
+		font-size: 11px;
+		font-weight: normal;
+		line-height: 30px;
+		letter-spacing: 1.9px;
+		min-width: 196px;
+		padding: 0 10px;
+	}
+
+	.order-1{order: 1;}
+	.order-2{order: 2;}
+	.order-3{order: 3;}
 }

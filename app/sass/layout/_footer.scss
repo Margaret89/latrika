@@ -113,3 +113,58 @@
 		margin-right: 70px;
 	}
 }
+
+@media (max-width: 767px) {
+	.footer{
+		text-align: center;
+	}
+
+	.footer-top{
+		padding-top: 45px;
+
+		&__head{
+			font-size: 15px;
+			line-height: 20px;
+			margin-bottom: 10px;
+		}
+
+		&__contact{
+			margin-bottom: 34px;
+		}
+	}
+
+	.footer-social{
+		justify-content: center;
+	}
+
+	.footer-menu{
+		margin-top: 15px;
+
+		&__item,
+		&__link{
+			font-size: 15px;
+		}
+	}
+
+	.footer-pay{
+		justify-content: center;
+
+		&__item:not(:last-child){
+			margin-right: 15px;
+		}
+	}
+
+	.footer-bottom{
+		padding: 30px 0;
+
+		&__copyright{
+			font-size: 13px;
+			margin-top: 30px;
+		}
+
+		&__polit{
+			font-size: 15px;
+		}
+	}
+
+}

@@ -192,3 +192,17 @@
 		margin-right: 13px;
 	}
 }
+
+@media (max-width: 767px) {
+	.form-site{
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="tel"],
+		textarea{
+			height: 34px;
+			font-size: 15px;
+			line-height: 34px;
+		}
+	}
+}
