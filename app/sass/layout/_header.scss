@@ -13,6 +13,17 @@
 		margin-top: 5px;
 	}
 
+	&__logo-white,
+	&--white &__logo-black,
+	&--white.open-menu &__logo-white{
+		display: none;
+	}
+
+	&--white &__logo-white,
+	&--white.open-menu &__logo-black{
+		display: block;
+	}
+
 	&__action{
 		display: flex;
 		justify-content: flex-end;
@@ -78,6 +89,11 @@
 	&--white &__icon--wish:hover{background-position: -5px -30px;}
 	&--white &__icon--auth:hover{background-position: -5px -55px;}
 	&--white &__icon--buy:hover{background-position: -5px -80px;}
+
+	&--white.open-menu &__icon--search{background-position: -5px -5px;}
+	&--white.open-menu &__icon--buy{background-position: -5px -80px;}
+	&--white.open-menu &__icon--search:hover{background-position: -30px -5px;}
+	&--white.open-menu &__icon--buy:hover{background-position: -30px -80px;}
 }
 
 .top-menu{
@@ -128,6 +144,10 @@
 	&__item:not(:last-child){
 		margin-right: 16px;
 	}
+
+	&__arr{
+		display: none;
+	}
 }
 
 .header--white{
@@ -139,5 +159,312 @@
 	&__link.current::after,
 	&__link:hover::after{
 		background: #fff;
+	}
+
+	.ic-hamburger span,
+	.ic-hamburger span::before,
+	.ic-hamburger span::after{
+		background: #fff;
+	}
+
+	.ic-hamburger.active:hover span{
+		background-color: transparent;
+	}
+
+	.ic-hamburger:hover span,
+	.ic-hamburger:hover span::before,
+	.ic-hamburger:hover span::after{
+		background-color: $color-text;
+	}
+
+	.ic-hamburger.active span::before,
+	.ic-hamburger.active span::after{
+		background-color: $color-text;
+	}
+
+}
+
+@media (max-width: 1249px) {
+	.top-menu{
+		&__item,
+		&__link{
+			font-size: 11px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.header{
+		&__phone{
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			font-size: 0;
+			background: url(#{$path-img}/sprite.png) no-repeat -5px -725px;
+		}
+
+		&__phone:hover{background-position: -30px -725px;}
+		&--white &__phone{background-position: -55px -725px;}
+		&--white &__phone:hover{background-position: -5px -725px;}
+
+		&--white.open-menu &__phone{background-position: -5px -725px;}
+		&--white.open-menu &__phone:hover{background-position: -30px -725px;}
+
+		&--white .top-menu__item,
+		&--white .top-menu__link{
+			color: $color-text;
+		}
+
+		&--white .top-menu__link.current::after,
+		&--white .top-menu__link:hover::after{
+			background: $color-text;
+		}
+	}
+
+	.top-menu-wrap{
+		display: inline-block;
+		position: relative;
+		padding-bottom: 10px;
+
+		&__content{
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background: #f2f2f3;
+			z-index: 10;
+		}
+	}
+
+	.top-menu{
+		display: block;
+		padding: 20px;
+
+		&__item,
+		&__link{
+			font-size: 14px;
+		}
+
+		&__item:not(:last-child){
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.top-menu-wrap{
+		&:hover &__content{
+			display: block;
+		}
+
+		&:hover .ic-hamburger span,
+		&:hover .ic-hamburger span::before,
+		&:hover .ic-hamburger span::after{
+			background-color: $color-grey;
+		}
+	}
+
+	.header{
+		&--white .top-menu-wrap:hover .ic-hamburger span,
+		&--white .top-menu-wrap:hover .ic-hamburger span::before,
+		&--white .top-menu-wrap:hover .ic-hamburger span::after{
+			background-color: $color-text;
+		}
+	}
+
+	.top-menu{
+		transform: none!important;
+	}
+}
+
+@media (max-width: 767px) {
+	.header{
+		padding: 6px 0;
+		position: relative;
+		height: auto;
+		height: 54px;
+
+		&__logo{
+			width: 92px;
+		}
+
+		&__icon--search{
+			vertical-align: middle;
+			margin-left: 28px;
+		}
+
+		&__mobile-contacts{
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			padding: 20px;
+			height: 60px;
+		}
+
+		&__mobile-phone{
+			@include font(normal, 300, 15px, 20px, $color-text);
+			text-decoration: none;
+		}
+
+		&__mobile-contacts &__icon--wish{
+			width: 13px;
+			height: 11px;
+			background-position: -5px -755px;
+		}
+
+		&__mobile-contacts &__icon--auth{
+			width: 14px;
+			height: 14px;
+			background-position: -5px -55px;
+		}
+
+		&__mobile-contacts &__icon--wish:hover{background-position: -30px -755px;}
+		&__mobile-contacts &__icon--auth:hover{background-position: -30px -55px;}
+
+		&__mobile-contacts &__lang{color: $color-text; margin-right: 15px;}
+		&__mobile-contacts &__lang:hover{color: $color-text;}
+
+		&__mobile-contacts &__icon:not(:last-child){
+			margin-right: 18px;
+		}
+
+		&__mobile-contacts &__icon{
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&.open-menu{
+			background: #f2f2f3;
+			border-bottom: 1px solid #e2e2e2;
+		}
+	}
+
+	.top-menu-wrap{
+		padding-bottom: 0;
+
+		&__content{
+			position: fixed;
+			top: 54px;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 100%;
+			height: 0;
+			overflow: hidden;
+			transition: height 0.3s ease 0s;
+		}
+
+		&__list{
+			height: calc(100% - 60px);
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+	}
+
+	&.open-menu .top-menu-wrap{
+		&__content{
+			height: calc(100% - 54px);
+		}
+	}
+
+	.top-menu{
+		padding: 0;
+		transform: translateX(0);
+		transition: all 0.5s ease 0s;
+
+		&__item:not(:last-child){
+			margin-bottom: 0;
+		}
+
+		&__link{
+			display: block;
+			padding: 10px 50px 9px 20px;
+			border-bottom: 1px solid #e2e2e2;
+		}
+
+		&__link.current::after,
+		&__link:hover::after{
+			display: none;
+		}
+
+		&__arr{
+			display: inline-block;
+			height: 40px;
+			width: 40px;
+			position: absolute;
+			right: 4px;
+			top: 0;
+		}
+
+		&__arr::after{
+			content: '';
+			display: inline-block;
+			width: 5px;
+			height: 9px;
+			background: url(#{$path-img}/sprite.png) no-repeat -30px  -780px;
+			position: absolute;
+			@include top-center;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+
+		&__sub{
+			display: block;
+			visibility: hidden;
+			transition: visibility 0.5s ease 0s;
+		}
+
+		&__sub.active{
+			visibility: visible;
+		}
+
+		ul{
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: 100%;
+		}
+
+		& &__item-back{
+			padding: 10px 20px 11px 37px;
+		}
+
+		&__item-back{
+			@include font(normal, 300, 14px, 20px, #b5b5b5);
+			text-transform: uppercase;
+			position: relative;
+			cursor: pointer;
+		}
+
+		&__item-back::before{
+			content: '';
+			display: inline-block;
+			width: 5px;
+			height: 9px;
+			background: url(#{$path-img}/sprite.png) no-repeat -5px  -780px;
+			position: absolute;
+			top: 17px;
+			left: 20px;
+		}
+
+		&__link-sub{
+			display: block;
+			padding: 8px 50px 7px 37px;
+			@include font(normal, 300, 15px, 20px, $color-text);
+			text-decoration: none;
+			text-transform: none;
+			position: relative;
+		}
+	}
+}
+
+@media (max-width: 340px) {
+	.header{
+		&__logo{
+			margin-left: -7px;
+		}
 	}
 }

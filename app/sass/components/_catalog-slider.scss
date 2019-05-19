@@ -104,3 +104,15 @@
 		background-position: -30px  -385px
 	}
 }
+
+@media (max-width: 1050px) {
+	.catalog-slider{
+		.slick-prev{
+			left: 0;
+		}
+
+		.slick-next{
+			right: 0;
+		}
+	}
+}
