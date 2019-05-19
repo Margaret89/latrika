@@ -94,6 +94,21 @@
 	&--white.open-menu &__icon--buy{background-position: -5px -80px;}
 	&--white.open-menu &__icon--search:hover{background-position: -30px -5px;}
 	&--white.open-menu &__icon--buy:hover{background-position: -30px -80px;}
+
+	&.open-menu__icon--search{
+		position: relative;
+	}
+
+	&.open-menu::before{
+		content: '';
+		display: inline-block;
+		height: 100%;
+		width: 1px;
+		background: #e2e2e2;
+		position: absolute;
+		top: 0;
+		left: 50px;
+	}
 }
 
 .top-menu{

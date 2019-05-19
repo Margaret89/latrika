@@ -204,5 +204,42 @@
 			font-size: 15px;
 			line-height: 34px;
 		}
+
+		&__head{
+			margin-bottom: 20px;
+		}
+
+		&__text{
+			font-size: 15px;
+			line-height: 20px;
+			margin-bottom: 13px;
+		}
+
+		&__field{
+			margin-bottom: 17px;
+		}
+
+		.btn{
+			margin-top: 0;
+		}
+
+		input[type="password"] {
+			padding-right: 0;
+		}
+
+		&__foget{
+			@include font(normal, normal, 11px, 14px, $color-grey-light);
+			margin-top: 12px;
+		}
+
+		&__tip{
+			font-size: 11px;
+		}
+
+		&__polit{
+			font-size: 11px;
+			line-height: 13px;
+			margin-top: 14px;
+		}
 	}
 }
