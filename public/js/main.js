@@ -214,6 +214,15 @@ $(document).ready(function () {
 		});
 	}
 
+	//---------- Открыть/Закрыть настройки корзины -------------
+	if ($('.js-btn-setting').length) {
+		$('.js-btn-setting').on("click", function(event){
+			$(this).toggleClass('active');
+			$(this).parents('.js-basket-item').find('.js-setting').toggleClass('active');
+		});
+	}
+	
+
 	//---------- Открыть/Закрыть меню -------------
 	var windowWidth = $(window).width();
 
@@ -234,8 +243,6 @@ $(document).ready(function () {
 			$('.js-header').removeClass('open-menu');
 		}
 	});
-
-	
 
 	//---------- Перемещение мобильного меню -------------
 	var indentMenu = 0;

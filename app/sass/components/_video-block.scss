@@ -1,5 +1,5 @@
 /*-------------- video-block -----------------*/
-.video-block {
+.video-block{
 	position: relative;
 	width: 100%;
 	max-height: 525px;
@@ -52,3 +52,16 @@
 		background-repeat: no-repeat;
 	}
 }
+
+@media (max-width: 1249px) {
+	.video-block{
+		max-height: 475px;
+	}
+}
+
+@media (max-width: 991px) {
+	.video-block{
+		max-height: 430px;
+	}
+}
+

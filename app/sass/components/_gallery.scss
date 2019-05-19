@@ -6,6 +6,39 @@
 	}
 }
 
-.video-block-wrap + .gallery{
+.video-block-wrap + .gallery,
+.gallery-head + .gallery,{
 	margin-top: 70px;
+}
+
+.gallery-head{
+	font-family: $font-helvetica;
+	@include font(normal, normal, 19px, 22px, $color-text);
+	text-align: center;
+}
+
+@media (max-width: 767px) {
+	.gallery-head + .gallery,{
+		margin-top: 20px;
+	}
+
+	.gallery{
+		&__item{
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.gallery{
+		&__item{
+			margin-left: -20px;
+			margin-right: -20px;
+			margin-bottom: 28px;
+		}
+
+		&__item img{
+			width: 100%;
+		}
+	}
 }
