@@ -120,6 +120,7 @@ input[type="submit"].btn{
 	cursor: pointer;
 	text-decoration: none;
 	min-width: 200px;
+	white-space: nowrap;
 }
 
 .btn:hover,

@@ -54,6 +54,26 @@ $(document).ready(function () {
 			infinite: true,
 			slidesToShow: 4,
 			slidesToScroll: 1,
+			responsive: [
+			{
+				breakpoint: 1250,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			// {
+			// 	breakpoint: 992,
+			// 	settings: {
+			// 		slidesToShow: 3,
+			// 	}
+			// },
+			// {
+			// 	breakpoint: 480,
+			// 	settings: {
+			// 		slidesToShow: 2,
+			// 	}
+			// },
+		]
 		});
 	}
 
@@ -75,7 +95,16 @@ $(document).ready(function () {
 		arrows: false,
 		vertical: true,
 		focusOnSelect: true,
-		asNavFor: '.js-product-slide-thumb'
+		asNavFor: '.js-product-slide-thumb',
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					dots: true,
+					vertical: false,
+				}
+			},
+		]
 	});
 
 	$('.js-product-slide-thumb').slick({
@@ -85,7 +114,15 @@ $(document).ready(function () {
 		dots: false,
 		arrows: true,
 		vertical: true,
-		focusOnSelect: true
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 1250,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+		]
 	});
 
 	// Раскрывающийся блок
