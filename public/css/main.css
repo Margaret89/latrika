@@ -5947,3 +5947,13 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
     padding: 0 14px;
   }
 }
+
+/*-------------- contents-site -----------------*/
+.contents-site {
+  margin-top: 40px;
+}
+
+.contents-site__item {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
