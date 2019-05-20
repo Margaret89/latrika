@@ -243,3 +243,134 @@
 		}
 	}
 }
+
+@media (max-width: 991px) {
+	.personal-info{
+		.btn{
+			font-size: 10px;
+			padding: 0 5px;
+			min-width: 0;
+		}
+
+		&__exit{
+			font-size: 10px;
+		}
+	}
+
+	.personal-btn{
+		.btn{
+			font-size: 10px;
+			min-width: 0;
+			padding: 0 5px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.personal-info{
+		&__exit{
+			font-size: 12px;
+			margin-left: 32px;
+		}
+
+		.btn{
+			font-size: 11px;
+			padding: 0 20px;
+			width: auto;
+		}
+	}
+
+	.personal-menu{
+		margin-top: 0;
+		margin-bottom: 11px;
+
+		&__item{
+			padding: 30px 20px 26px;
+			margin-bottom: 20px;
+			border: 1px solid #f3f3f4;
+		}
+
+		&__text{
+			font-size: 16px;
+		}
+
+		&__link{
+			padding-left: 32px;
+		}
+	}
+
+	.personal-contact-wrap {
+		margin-bottom: 30px;
+	}
+
+	.personal-contact{
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+
+	.personal-inner{
+		border: 1px solid $color-text;
+		padding: 30px 20px;
+
+		.personal-menu__item{
+			padding: 0;
+			border: 0;
+		}
+
+		.basket-form{
+			padding: 0;
+			border: 0;
+		}
+	}
+
+	.profile{
+		margin-top: -5px;
+
+		&__head{
+			font-size: 15px;
+			margin-bottom: 5px;
+		}
+
+		.form-site input[type="text"],
+		.form-site input[type="email"],
+		.form-site input[type="password"],
+		.form-site input[type="tel"]{
+			height: 45px;
+			line-height: 43px;
+		}
+
+		.form-site__field {
+			margin-bottom: 11px;
+		}
+
+		.form-site{
+			margin-bottom: 43px;
+		}
+
+		&__auth .form-site{
+			margin-bottom: 0;
+		}
+
+		&__auth input[type="text"],
+		&__auth input[type="email"],
+		&__auth input[type="password"]{
+			border: 0;
+			border-bottom: 2px solid #dfdcdb;
+			padding: 0;
+		}
+
+		input[type="submit"].btn{
+			min-width: 240px;
+		}
+	}
+
+	.wish-list{
+		.catalog-list__img-wrap{
+			width: 280px;
+		}
+
+		.catalog-list__img{
+			height: 418px;
+		}
+	}
+}

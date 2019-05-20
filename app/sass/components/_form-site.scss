@@ -150,6 +150,7 @@
 		padding: 5px 30px 7px;
 		font-family: $font-calibri;
 		@include font(normal, normal, 17px, 21px, #d9d9d9);
+		cursor: pointer;
 	}
 
 	&__item.active,
@@ -241,5 +242,59 @@
 			line-height: 13px;
 			margin-top: 14px;
 		}
+
+		&__radio{
+			display: block;
+			margin-top: 27px;
+			margin-bottom: 14px;
+		}
+
+		&__check{
+			margin-top: 25px;
+			display: block;
+		}
+
+		&__check-text{
+			font-size: 16px;
+		}
+
+		&__info{
+			margin-bottom: 22px;
+		}
+
+		&__info-item:not(:last-child){
+			margin-bottom: 5px;
+		}
+	}
+
+	.intl-tel-input.separate-dial-code .selected-dial-code{
+		padding-left: 52px;
+	}
+
+	.intl-tel-input .selected-flag .iti-arrow{
+		left: 32px;
+	}
+
+	.form-site-choose{
+		&__item{
+			padding: 4px 25px 3px;
+			margin-bottom: 14px;
+		}
+
+		&--img &__item{
+			width: auto;
+			min-width: 240px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		&--img &__item img{
+			margin: 0 auto;
+		}
+	}
+
+	.form-site-date{
+		margin-top: 11px;
+		line-height: 19px;
 	}
 }

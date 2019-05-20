@@ -196,3 +196,87 @@
 		font-size: 22px;
 	}
 }
+
+@media (max-width: 767px) {
+	.order-regist{
+		&__bottom{
+			display: block;
+
+			.btn{
+				min-width: 280px;
+			}
+		}
+
+		&__polit{
+			margin-left: 0;
+			margin-top: 17px;
+		}
+
+		&__step{
+			padding: 24px 20px 24px;
+		}
+
+		&__step.active{
+			padding-bottom: 31px;
+		}
+
+		&__head{
+			font-size: 16px;
+		}
+
+		&__content{
+			padding-top: 5px;
+		}
+
+		.form-site__filds--hor .form-site__field{
+			width: 100%;
+		}
+
+		.form-site__filds--hor input[type="submit"].btn,
+		.form-site__filds--hor .btn{
+			height: 45px;
+			background: transparent;
+			border: 0;
+			border-bottom: 2px solid #dfdcdb;
+			padding: 0;
+			padding-left: 20px;
+			font-size: 14px;
+			letter-spacing: 0;
+			text-transform: none;
+			min-width: 85px;
+		}
+
+		.form-site input[type="text"],
+		.form-site input[type="email"],
+		.form-site input[type="password"],
+		.form-site input[type="tel"]{
+			height: 45px;
+			line-height: 43px;
+		}
+
+		.form-site__field {
+			margin-bottom: 11px;
+		}
+
+
+		.form-site__filds--hor input[type="submit"].btn:hover,
+		.form-site__filds--hor .btn:hover{
+			color: $color-grey;
+		}
+
+		.form-site__filds--hor input[type="text"]{
+			height: 45px;
+		}
+
+		.input-radio__label{
+			margin-right: 0;
+			width: 100%;
+		}
+
+		.form-site__text{
+			margin-bottom: 15px
+		}
+
+
+	}
+}

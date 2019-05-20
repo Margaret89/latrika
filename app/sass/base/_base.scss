@@ -359,4 +359,20 @@ input[type="submit"].btn--white-fill:hover{
 			line-height: 19px;
 		}
 	}
+
+	.bredcrumb + h1,
+	.bredcrumb + .h1{
+		margin-top: 0;
+	}
+
+	h1,
+	.h1{
+		margin-bottom: 16px;
+	}
+
+	.input-radio{
+		&__label{
+			margin-bottom: 24px;
+		}
+	}
 }

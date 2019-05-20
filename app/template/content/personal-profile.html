@@ -12,7 +12,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<div class="bredcrumb">
+							<div class="bredcrumb d-none d-md-flex">
 								<a href="/" class="bredcrumb__item">Главная</a>
 								<span class="bredcrumb__item">Личный кабинет</span>
 							</div>
@@ -22,95 +22,100 @@
 					</div>
 				</div>
 
-				<div class="personal-menu">
-					<div class="container">
-						<div class="row">
-							<div class="col-3">
-								<div class="personal-menu__item active"><a href="#" class="personal-menu__link personal-menu__link--user"><span class="personal-menu__text">Профиль</span></a></div>
-							</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="personal-inner">
 
-							<div class="col-3">
-								<div class="personal-menu__item"><a href="#" class="personal-menu__link personal-menu__link--order"><span class="personal-menu__text">Заказы</span><sup class="personal-menu__num">12</sup></a></div>
-							</div>
-
-							<div class="col-3">
-								<div class="personal-menu__item"><a href="#" class="personal-menu__link personal-menu__link--card"><span class="personal-menu__text">Корзина</span><sup class="personal-menu__num">35</sup></a></div>
-							</div>
-
-							<div class="col-3">
-								<div class="personal-menu__item"><a href="#" class="personal-menu__link personal-menu__link--wish"><span class="personal-menu__text">Вишлист</span><sup class="personal-menu__num">6</sup></a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="profile">
-					<div class="container">
-						<div class="row">
-							<div class="col-6">
-								<div class="profile__head">Личные данные</div>
-
-								<form method="get" class="form-site">
-									<div class="form-site__filds">
-										<div class="form-site__field">
-											<input type="text" placeholder="Фамилия" value="Иванов" required="required" >
+								<div class="personal-menu">
+									<div class="row">
+										<div class="col-md-3">
+											<div class="personal-menu__item active"><a href="#" class="personal-menu__link personal-menu__link--user"><span class="personal-menu__text">Профиль</span></a></div>
 										</div>
 
-										<div class="form-site__field">
-											<input type="text" placeholder="Имя" value="Сергей" required="required" >
+										<div class="col-md-3 d-none d-md-block">
+											<div class="personal-menu__item"><a href="#" class="personal-menu__link personal-menu__link--order"><span class="personal-menu__text">Заказы</span><sup class="personal-menu__num">12</sup></a></div>
 										</div>
 
-										<div class="form-site__field">
-											<input type="text" placeholder="Отчество" value="Анатольевич" required="required" >
+										<div class="col-md-3 d-none d-md-block">
+											<div class="personal-menu__item"><a href="#" class="personal-menu__link personal-menu__link--card"><span class="personal-menu__text">Корзина</span><sup class="personal-menu__num">35</sup></a></div>
 										</div>
 
-										<div class="form-site__field form-site__field--phone">
-											<input type="tel" class="js-phone" value="9529988822"/>
+										<div class="col-md-3 d-none d-md-block">
+											<div class="personal-menu__item"><a href="#" class="personal-menu__link personal-menu__link--wish"><span class="personal-menu__text">Вишлист</span><sup class="personal-menu__num">6</sup></a></div>
 										</div>
-
-										<div class="form-site__field">
-											<input type="text" placeholder="Регион">
-										</div>
-
-										<div class="form-site__field">
-											<input type="text" placeholder="Город">
-										</div>
-
-										<div class="form-site__field">
-											<input type="text" placeholder="Адрес">
-										</div>
-
-										<div class="form-site__field">
-											<input type="text" placeholder="Почтовый индекс">
-										</div>
-
-										<input type="submit" class="btn btn--border" value="Сохранить">
 									</div>
-								</form>
-							</div>
+								</div>
 
-							<div class="col-6">
-								<div class="profile__head">Данные для доступв к сайту</div>
+								<div class="profile">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="profile__head">Личные данные</div>
 
-								<div class="profile__auth">
-									<form method="get" class="form-site">
-										<div class="form-site__filds">
-											<div class="form-site__field">
-												<input type="email" placeholder="E-mail" value="sergeifoxypark@gmail.com" required="required">
-											</div>
+											<form method="get" class="form-site">
+												<div class="form-site__filds">
+													<div class="form-site__field">
+														<input type="text" placeholder="Фамилия" value="Иванов" required="required" >
+													</div>
 
-											<div class="form-site__field">
-												<input type="password" value="password" placeholder="Пароль" required="required">
-											</div>
+													<div class="form-site__field">
+														<input type="text" placeholder="Имя" value="Сергей" required="required" >
+													</div>
 
-											<div class="form-site__field">
-												<input type="password" value="password" placeholder="Подтвердите пароль" required="required">
-												<div class="form-site__label">Подтвердите пароль</div>
-											</div>
+													<div class="form-site__field">
+														<input type="text" placeholder="Отчество" value="Анатольевич" required="required" >
+													</div>
 
-											<!-- <input type="submit" class="btn" value="Войти"> -->
+													<div class="form-site__field form-site__field--phone">
+														<input type="tel" class="js-phone" value="9529988822"/>
+													</div>
+
+													<div class="form-site__field">
+														<input type="text" placeholder="Регион">
+													</div>
+
+													<div class="form-site__field">
+														<input type="text" placeholder="Город">
+													</div>
+
+													<div class="form-site__field">
+														<input type="text" placeholder="Адрес">
+													</div>
+
+													<div class="form-site__field">
+														<input type="text" placeholder="Почтовый индекс">
+													</div>
+
+													<input type="submit" class="btn btn--border d-none d-md-inline-block" value="Сохранить">
+												</div>
+											</form>
 										</div>
-									</form>
+
+										<div class="col-md-6">
+											<div class="profile__head">Данные для доступв к сайту</div>
+
+											<div class="profile__auth">
+												<form method="get" class="form-site">
+													<div class="form-site__filds">
+														<div class="form-site__field">
+															<input type="email" placeholder="E-mail" value="sergeifoxypark@gmail.com" required="required">
+														</div>
+
+														<div class="form-site__field">
+															<input type="password" value="password" placeholder="Пароль" required="required">
+														</div>
+
+														<div class="form-site__field">
+															<input type="password" value="password" placeholder="Подтвердите пароль" required="required">
+															<div class="form-site__label">Подтвердите пароль</div>
+														</div>
+
+														<input type="submit" class="btn btn--border d-block d-md-none" value="Сохранить">
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

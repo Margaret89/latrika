@@ -81,3 +81,29 @@
 		padding: 0 60px;
 	}
 }
+
+@media (max-width: 767px) {
+	.tabs-page{
+		margin-top: 16px;
+
+		&__item{
+			font-size: 15px;
+			margin-bottom: 16px;
+		}
+
+		&__item::before{
+			top: 3px;
+		}
+
+		&__content{
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		.btn,
+		input[type="submit"].btn{
+			margin-top: 10px;
+			padding: 0 14px;
+		}
+	}
+}

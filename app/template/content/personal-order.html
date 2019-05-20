@@ -12,7 +12,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<div class="bredcrumb">
+							<div class="bredcrumb d-none d-md-flex">
 								<a href="/" class="bredcrumb__item">Главная</a>
 								<span class="bredcrumb__item">Личный кабинет</span>
 							</div>
@@ -22,376 +22,399 @@
 					</div>
 				</div>
 
-				<div class="personal-menu">
-					<div class="container">
-						<div class="row">
-							<div class="col-3">
-								<div class="personal-menu__item"><a href="#" class="personal-menu__link personal-menu__link--user"><span class="personal-menu__text">Профиль</span></a></div>
-							</div>
-
-							<div class="col-3">
-								<div class="personal-menu__item active"><a href="#" class="personal-menu__link personal-menu__link--order"><span class="personal-menu__text">Заказы</span><sup class="personal-menu__num">12</sup></a></div>
-							</div>
-
-							<div class="col-3">
-								<div class="personal-menu__item"><a href="#" class="personal-menu__link personal-menu__link--card"><span class="personal-menu__text">Корзина</span><sup class="personal-menu__num">35</sup></a></div>
-							</div>
-
-							<div class="col-3">
-								<div class="personal-menu__item"><a href="#" class="personal-menu__link personal-menu__link--wish"><span class="personal-menu__text">Вишлист</span><sup class="personal-menu__num">6</sup></a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
+							<div class="personal-inner">
 
-							<div class="order-filter">
-								<a href="#" class="order-filter__item active">Все</a>
-								<a href="#" class="order-filter__item">В обработке</a>
-								<a href="#" class="order-filter__item">Ожидает оплаты</a>
-								<a href="#" class="order-filter__item">Оплачено</a>
+								<div class="personal-menu">
+									<div class="row">
+										<div class="col-md-3 d-none d-md-block">
+											<div class="personal-menu__item"><a href="#" class="personal-menu__link personal-menu__link--user"><span class="personal-menu__text">Профиль</span></a></div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="personal-menu__item active"><a href="#" class="personal-menu__link personal-menu__link--order"><span class="personal-menu__text">Заказы</span><sup class="personal-menu__num">12</sup></a></div>
+										</div>
+
+										<div class="col-md-3 d-none d-md-block">
+											<div class="personal-menu__item"><a href="#" class="personal-menu__link personal-menu__link--card"><span class="personal-menu__text">Корзина</span><sup class="personal-menu__num">35</sup></a></div>
+										</div>
+
+										<div class="col-md-3 d-none d-md-block">
+											<div class="personal-menu__item"><a href="#" class="personal-menu__link personal-menu__link--wish"><span class="personal-menu__text">Вишлист</span><sup class="personal-menu__num">6</sup></a></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-12">
+
+										<div class="order-filter">
+											<a href="#" class="order-filter__item active">Все</a>
+											<a href="#" class="order-filter__item">В обработке</a>
+											<a href="#" class="order-filter__item">Ожидает оплаты</a>
+											<a href="#" class="order-filter__item">Оплачено</a>
+										</div>
+
+										<div class="order-unwap">
+											<div class="order-unwap__item js-order-unwap__item">
+												<div class="order-unwap__head js-order-unwap-head">
+													<div class="order-unwap__num">№5424</div>
+
+													<div class="order-unwap-param">
+														<div class="order-unwap-param__item">
+															<div class="order-unwap-param__label">Дата заказа</div>
+															<div class="order-unwap-param__val">12.06.2019</div>
+														</div>
+
+														<div class="order-unwap-param__item">
+															<div class="order-unwap-param__label">Статус</div>
+															<div class="order-unwap-param__val">Ожидает оплаты</div>
+														</div>
+
+														<div class="order-unwap-param__item">
+															<div class="order-unwap-param__label">Товаров</div>
+															<div class="order-unwap-param__val">9</div>
+														</div>
+													</div>
+
+													<div class="order-unwap__price">
+														<div class="order-unwap__price-label">На общую сумму</div>
+														<div class="order-unwap__price-val">23&nbsp;443&nbsp;&#8381;</div>
+													</div>
+
+													<div class="order-unwap__arr js-order-unwap-arr">+</div>
+												</div>
+
+												<div class="order-unwap__content js-order-unwap-content">
+													<div class="order-list">
+														<div class="order-list__item">
+															<div class="order-list__img" style="background-image: url(img/order1.jpg);"></div>
+
+															<div class="order-list__content">
+																<div class="order-list__name-wrap">
+																	<div class="order-list__name">Лонгслив</div>
+																	<div class="order-list__price">4&nbsp;900&#8381;</div>
+																</div>
+
+																<div class="order-list__param-wrap">
+																	<div class="order-list__param order-list__param--color">
+																		<div class="order-list__param-label">Цвет</div>
+																		<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
+																	</div>
+
+																	<div class="order-list__param">
+																		<div class="order-list__param-label">Размер</div>
+																		<div class="order-list__param-val">S</div>
+																	</div>
+
+																	<div class="order-list__param order-list__param--count">
+																		<div class="order-list__param-label">Количество</div>
+																		<div class="order-list__param-val">1<span class="order-list__param-unit">шт.</span></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-list__item">
+															<div class="order-list__img" style="background-image: url(img/order2.jpg);"></div>
+
+															<div class="order-list__content">
+																<div class="order-list__name-wrap">
+																	<div class="order-list__name">Рубашка с длинным названием</div>
+																	<div class="order-list__price">4&nbsp;900&#8381;</div>
+																</div>
+
+																<div class="order-list__param-wrap">
+																	<div class="order-list__param order-list__param--color">
+																		<div class="order-list__param-label">Цвет</div>
+																		<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
+																	</div>
+
+																	<div class="order-list__param">
+																		<div class="order-list__param-label">Размер</div>
+																		<div class="order-list__param-val">S</div>
+																	</div>
+
+																	<div class="order-list__param order-list__param--count">
+																		<div class="order-list__param-label">Количество</div>
+																		<div class="order-list__param-val">1<span class="order-list__param-unit">шт.</span></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-list__item">
+															<div class="order-list__img" style="background-image: url(img/order3.jpg);"></div>
+
+															<div class="order-list__content">
+																<div class="order-list__name-wrap">
+																	<div class="order-list__name">Рубашка с длинным названием</div>
+																	<div class="order-list__price">4&nbsp;900&#8381;</div>
+																</div>
+
+																<div class="order-list__param-wrap">
+																	<div class="order-list__param order-list__param--color">
+																		<div class="order-list__param-label">Цвет</div>
+																		<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
+																	</div>
+
+																	<div class="order-list__param">
+																		<div class="order-list__param-label">Размер</div>
+																		<div class="order-list__param-val">S</div>
+																	</div>
+
+																	<div class="order-list__param order-list__param--count">
+																		<div class="order-list__param-label">Количество</div>
+																		<div class="order-list__param-val">1<span class="order-list__param-unit">шт.</span></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div><!-- end order-list -->
+												</div>
+											</div><!-- end order-unwap__item -->
+
+											<div class="order-unwap__item js-order-unwap__item">
+												<div class="order-unwap__head js-order-unwap-head">
+													<div class="order-unwap__num">№5424</div>
+
+													<div class="order-unwap-param">
+														<div class="order-unwap-param__item">
+															<div class="order-unwap-param__label">Дата заказа</div>
+															<div class="order-unwap-param__val">12.06.2019</div>
+														</div>
+
+														<div class="order-unwap-param__item">
+															<div class="order-unwap-param__label">Статус</div>
+															<div class="order-unwap-param__val">Ожидает оплаты</div>
+														</div>
+
+														<div class="order-unwap-param__item">
+															<div class="order-unwap-param__label">Товаров</div>
+															<div class="order-unwap-param__val">9</div>
+														</div>
+													</div>
+
+													<div class="order-unwap__price">
+														<div class="order-unwap__price-label">На общую сумму</div>
+														<div class="order-unwap__price-val">23&nbsp;443&nbsp;&#8381;</div>
+													</div>
+
+													<div class="order-unwap__arr js-order-unwap-arr">+</div>
+												</div>
+
+												<div class="order-unwap__content js-order-unwap-content">
+													<div class="order-list">
+														<div class="order-list__item">
+															<div class="order-list__img" style="background-image: url(img/order1.jpg);"></div>
+
+															<div class="order-list__content">
+																<div class="order-list__name-wrap">
+																	<div class="order-list__name">Лонгслив</div>
+																	<div class="order-list__price">4&nbsp;900&#8381;</div>
+																</div>
+
+																<div class="order-list__param-wrap">
+																	<div class="order-list__param order-list__param--color">
+																		<div class="order-list__param-label">Цвет</div>
+																		<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
+																	</div>
+
+																	<div class="order-list__param">
+																		<div class="order-list__param-label">Размер</div>
+																		<div class="order-list__param-val">S</div>
+																	</div>
+
+																	<div class="order-list__param order-list__param--count">
+																		<div class="order-list__param-label">Количество</div>
+																		<div class="order-list__param-val">1<span class="order-list__param-unit">шт.</span></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-list__item">
+															<div class="order-list__img" style="background-image: url(img/order2.jpg);"></div>
+
+															<div class="order-list__content">
+																<div class="order-list__name-wrap">
+																	<div class="order-list__name">Рубашка с длинным названием</div>
+																	<div class="order-list__price">4&nbsp;900&#8381;</div>
+																</div>
+
+																<div class="order-list__param-wrap">
+																	<div class="order-list__param order-list__param--color">
+																		<div class="order-list__param-label">Цвет</div>
+																		<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
+																	</div>
+
+																	<div class="order-list__param">
+																		<div class="order-list__param-label">Размер</div>
+																		<div class="order-list__param-val">S</div>
+																	</div>
+
+																	<div class="order-list__param order-list__param--count">
+																		<div class="order-list__param-label">Количество</div>
+																		<div class="order-list__param-val">1<span class="order-list__param-unit">шт.</span></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-list__item">
+															<div class="order-list__img" style="background-image: url(img/order3.jpg);"></div>
+
+															<div class="order-list__content">
+																<div class="order-list__name-wrap">
+																	<div class="order-list__name">Рубашка с длинным названием</div>
+																	<div class="order-list__price">4&nbsp;900&#8381;</div>
+																</div>
+
+																<div class="order-list__param-wrap">
+																	<div class="order-list__param order-list__param--color">
+																		<div class="order-list__param-label">Цвет</div>
+																		<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
+																	</div>
+
+																	<div class="order-list__param">
+																		<div class="order-list__param-label">Размер</div>
+																		<div class="order-list__param-val">S</div>
+																	</div>
+
+																	<div class="order-list__param order-list__param--count">
+																		<div class="order-list__param-label">Количество</div>
+																		<div class="order-list__param-val">1<span class="order-list__param-unit">шт.</span></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div><!-- end order-list -->
+												</div>
+											</div><!-- end order-unwap__item -->
+
+											<div class="order-unwap__item js-order-unwap__item">
+												<div class="order-unwap__head js-order-unwap-head">
+													<div class="order-unwap__num">№5424</div>
+
+													<div class="order-unwap-param">
+														<div class="order-unwap-param__item">
+															<div class="order-unwap-param__label">Дата заказа</div>
+															<div class="order-unwap-param__val">12.06.2019</div>
+														</div>
+
+														<div class="order-unwap-param__item">
+															<div class="order-unwap-param__label">Статус</div>
+															<div class="order-unwap-param__val">Ожидает оплаты</div>
+														</div>
+
+														<div class="order-unwap-param__item">
+															<div class="order-unwap-param__label">Товаров</div>
+															<div class="order-unwap-param__val">9</div>
+														</div>
+													</div>
+
+													<div class="order-unwap__price">
+														<div class="order-unwap__price-label">На общую сумму</div>
+														<div class="order-unwap__price-val">23&nbsp;443&nbsp;&#8381;</div>
+													</div>
+
+													<div class="order-unwap__arr js-order-unwap-arr">+</div>
+												</div>
+
+												<div class="order-unwap__content js-order-unwap-content">
+													<div class="order-list">
+														<div class="order-list__item">
+															<div class="order-list__img" style="background-image: url(img/order1.jpg);"></div>
+
+															<div class="order-list__content">
+																<div class="order-list__name-wrap">
+																	<div class="order-list__name">Лонгслив</div>
+																	<div class="order-list__price">4&nbsp;900&#8381;</div>
+																</div>
+
+																<div class="order-list__param-wrap">
+																	<div class="order-list__param order-list__param--color">
+																		<div class="order-list__param-label">Цвет</div>
+																		<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
+																	</div>
+
+																	<div class="order-list__param">
+																		<div class="order-list__param-label">Размер</div>
+																		<div class="order-list__param-val">S</div>
+																	</div>
+
+																	<div class="order-list__param order-list__param--count">
+																		<div class="order-list__param-label">Количество</div>
+																		<div class="order-list__param-val">1<span class="order-list__param-unit">шт.</span></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-list__item">
+															<div class="order-list__img" style="background-image: url(img/order2.jpg);"></div>
+
+															<div class="order-list__content">
+																<div class="order-list__name-wrap">
+																	<div class="order-list__name">Рубашка с длинным названием</div>
+																	<div class="order-list__price">4&nbsp;900&#8381;</div>
+																</div>
+
+																<div class="order-list__param-wrap">
+																	<div class="order-list__param order-list__param--color">
+																		<div class="order-list__param-label">Цвет</div>
+																		<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
+																	</div>
+
+																	<div class="order-list__param">
+																		<div class="order-list__param-label">Размер</div>
+																		<div class="order-list__param-val">S</div>
+																	</div>
+
+																	<div class="order-list__param order-list__param--count">
+																		<div class="order-list__param-label">Количество</div>
+																		<div class="order-list__param-val">1<span class="order-list__param-unit">шт.</span></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-list__item">
+															<div class="order-list__img" style="background-image: url(img/order3.jpg);"></div>
+
+															<div class="order-list__content">
+																<div class="order-list__name-wrap">
+																	<div class="order-list__name">Рубашка с длинным названием</div>
+																	<div class="order-list__price">4&nbsp;900&#8381;</div>
+																</div>
+
+																<div class="order-list__param-wrap">
+																	<div class="order-list__param order-list__param--color">
+																		<div class="order-list__param-label">Цвет</div>
+																		<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
+																	</div>
+
+																	<div class="order-list__param">
+																		<div class="order-list__param-label">Размер</div>
+																		<div class="order-list__param-val">S</div>
+																	</div>
+
+																	<div class="order-list__param order-list__param--count">
+																		<div class="order-list__param-label">Количество</div>
+																		<div class="order-list__param-val">1<span class="order-list__param-unit">шт.</span></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div><!-- end order-list -->
+												</div>
+											</div><!-- end order-unwap__item -->
+										</div><!-- end order-unwap -->
+									</div>
+								</div>
 							</div>
-
-							<div class="order-unwap">
-								<div class="order-unwap__item js-order-unwap__item">
-									<div class="order-unwap__head js-order-unwap-head">
-										<div class="order-unwap__num">№5424</div>
-
-										<div class="order-unwap-param">
-											<div class="order-unwap-param__item">
-												<div class="order-unwap-param__label">Дата заказа</div>
-												<div class="order-unwap-param__val">12.06.2019</div>
-											</div>
-
-											<div class="order-unwap-param__item">
-												<div class="order-unwap-param__label">Статус</div>
-												<div class="order-unwap-param__val">Ожидает оплаты</div>
-											</div>
-
-											<div class="order-unwap-param__item">
-												<div class="order-unwap-param__label">Товаров</div>
-												<div class="order-unwap-param__val">9</div>
-											</div>
-										</div>
-
-										<div class="order-unwap__price">
-											<div class="order-unwap__price-label">На общую сумму</div>
-											<div class="order-unwap__price-val">23&nbsp;443&nbsp;&#8381;</div>
-										</div>
-
-										<div class="order-unwap__arr js-order-unwap-arr">+</div>
-									</div>
-
-									<div class="order-unwap__content js-order-unwap-content">
-										<div class="order-list">
-											<div class="order-list__item">
-												<div class="order-list__img" style="background-image: url(img/order1.jpg);"></div>
-
-												<div class="order-list__content">
-													<div class="order-list__name-wrap">
-														<div class="order-list__name">Лонгслив</div>
-														<div class="order-list__price">4&nbsp;900&#8381;</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Цвет</div>
-														<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Размер</div>
-														<div class="order-list__param-val">S</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Количество</div>
-														<div class="order-list__param-val">1</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="order-list__item">
-												<div class="order-list__img" style="background-image: url(img/order2.jpg);"></div>
-
-												<div class="order-list__content">
-													<div class="order-list__name-wrap">
-														<div class="order-list__name">Рубашка с длинным названием</div>
-														<div class="order-list__price">4&nbsp;900&#8381;</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Цвет</div>
-														<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Размер</div>
-														<div class="order-list__param-val">S</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Количество</div>
-														<div class="order-list__param-val">1</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="order-list__item">
-												<div class="order-list__img" style="background-image: url(img/order3.jpg);"></div>
-
-												<div class="order-list__content">
-													<div class="order-list__name-wrap">
-														<div class="order-list__name">Рубашка с длинным названием</div>
-														<div class="order-list__price">4&nbsp;900&#8381;</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Цвет</div>
-														<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Размер</div>
-														<div class="order-list__param-val">S</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Количество</div>
-														<div class="order-list__param-val">1</div>
-													</div>
-												</div>
-											</div>
-										</div><!-- end order-list -->
-									</div>
-								</div><!-- end order-unwap__item -->
-
-								<div class="order-unwap__item js-order-unwap__item">
-									<div class="order-unwap__head js-order-unwap-head">
-										<div class="order-unwap__num">№5424</div>
-
-										<div class="order-unwap-param">
-											<div class="order-unwap-param__item">
-												<div class="order-unwap-param__label">Дата заказа</div>
-												<div class="order-unwap-param__val">12.06.2019</div>
-											</div>
-
-											<div class="order-unwap-param__item">
-												<div class="order-unwap-param__label">Статус</div>
-												<div class="order-unwap-param__val">Ожидает оплаты</div>
-											</div>
-
-											<div class="order-unwap-param__item">
-												<div class="order-unwap-param__label">Товаров</div>
-												<div class="order-unwap-param__val">9</div>
-											</div>
-										</div>
-
-										<div class="order-unwap__price">
-											<div class="order-unwap__price-label">На общую сумму</div>
-											<div class="order-unwap__price-val">23&nbsp;443&nbsp;&#8381;</div>
-										</div>
-
-										<div class="order-unwap__arr js-order-unwap-arr">+</div>
-									</div>
-
-									<div class="order-unwap__content js-order-unwap-content">
-										<div class="order-list">
-											<div class="order-list__item">
-												<div class="order-list__img" style="background-image: url(img/order1.jpg);"></div>
-
-												<div class="order-list__content">
-													<div class="order-list__name-wrap">
-														<div class="order-list__name">Лонгслив</div>
-														<div class="order-list__price">4&nbsp;900&#8381;</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Цвет</div>
-														<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Размер</div>
-														<div class="order-list__param-val">S</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Количество</div>
-														<div class="order-list__param-val">1</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="order-list__item">
-												<div class="order-list__img" style="background-image: url(img/order2.jpg);"></div>
-
-												<div class="order-list__content">
-													<div class="order-list__name-wrap">
-														<div class="order-list__name">Рубашка с длинным названием</div>
-														<div class="order-list__price">4&nbsp;900&#8381;</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Цвет</div>
-														<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Размер</div>
-														<div class="order-list__param-val">S</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Количество</div>
-														<div class="order-list__param-val">1</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="order-list__item">
-												<div class="order-list__img" style="background-image: url(img/order3.jpg);"></div>
-
-												<div class="order-list__content">
-													<div class="order-list__name-wrap">
-														<div class="order-list__name">Рубашка с длинным названием</div>
-														<div class="order-list__price">4&nbsp;900&#8381;</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Цвет</div>
-														<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Размер</div>
-														<div class="order-list__param-val">S</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Количество</div>
-														<div class="order-list__param-val">1</div>
-													</div>
-												</div>
-											</div>
-										</div><!-- end order-list -->
-									</div>
-								</div><!-- end order-unwap__item -->
-
-								<div class="order-unwap__item js-order-unwap__item">
-									<div class="order-unwap__head js-order-unwap-head">
-										<div class="order-unwap__num">№5424</div>
-
-										<div class="order-unwap-param">
-											<div class="order-unwap-param__item">
-												<div class="order-unwap-param__label">Дата заказа</div>
-												<div class="order-unwap-param__val">12.06.2019</div>
-											</div>
-
-											<div class="order-unwap-param__item">
-												<div class="order-unwap-param__label">Статус</div>
-												<div class="order-unwap-param__val">Ожидает оплаты</div>
-											</div>
-
-											<div class="order-unwap-param__item">
-												<div class="order-unwap-param__label">Товаров</div>
-												<div class="order-unwap-param__val">9</div>
-											</div>
-										</div>
-
-										<div class="order-unwap__price">
-											<div class="order-unwap__price-label">На общую сумму</div>
-											<div class="order-unwap__price-val">23&nbsp;443&nbsp;&#8381;</div>
-										</div>
-
-										<div class="order-unwap__arr js-order-unwap-arr">+</div>
-									</div>
-
-									<div class="order-unwap__content js-order-unwap-content">
-										<div class="order-list">
-											<div class="order-list__item">
-												<div class="order-list__img" style="background-image: url(img/order1.jpg);"></div>
-
-												<div class="order-list__content">
-													<div class="order-list__name-wrap">
-														<div class="order-list__name">Лонгслив</div>
-														<div class="order-list__price">4&nbsp;900&#8381;</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Цвет</div>
-														<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Размер</div>
-														<div class="order-list__param-val">S</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Количество</div>
-														<div class="order-list__param-val">1</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="order-list__item">
-												<div class="order-list__img" style="background-image: url(img/order2.jpg);"></div>
-
-												<div class="order-list__content">
-													<div class="order-list__name-wrap">
-														<div class="order-list__name">Рубашка с длинным названием</div>
-														<div class="order-list__price">4&nbsp;900&#8381;</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Цвет</div>
-														<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Размер</div>
-														<div class="order-list__param-val">S</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Количество</div>
-														<div class="order-list__param-val">1</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="order-list__item">
-												<div class="order-list__img" style="background-image: url(img/order3.jpg);"></div>
-
-												<div class="order-list__content">
-													<div class="order-list__name-wrap">
-														<div class="order-list__name">Рубашка с длинным названием</div>
-														<div class="order-list__price">4&nbsp;900&#8381;</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Цвет</div>
-														<div class="order-list__param-val order-list__param-val--color" style="background: #ca6843;"></div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Размер</div>
-														<div class="order-list__param-val">S</div>
-													</div>
-
-													<div class="order-list__param">
-														<div class="order-list__param-label">Количество</div>
-														<div class="order-list__param-val">1</div>
-													</div>
-												</div>
-											</div>
-										</div><!-- end order-list -->
-									</div>
-								</div><!-- end order-unwap__item -->
-							</div><!-- end order-unwap -->
 						</div>
 					</div>
 				</div>

@@ -12,7 +12,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<div class="bredcrumb">
+							<div class="bredcrumb d-none d-md-flex">
 								<a href="/" class="bredcrumb__item">Главная</a>
 								<a href="#" class="bredcrumb__item">Корзина</a>
 								<span class="bredcrumb__item">Оформление заказа</span>
@@ -25,7 +25,7 @@
 
 				<div class="container">
 					<div class="row">
-						<div class="col-8">
+						<div class="col-lg-8">
 							<div class="order-regist">
 								<div class="order-regist__step js-order-regist-step active" data-step="1">
 									<div class="order-regist__head">Адрес электронной почты</div>
@@ -50,11 +50,11 @@
 										<div class="tabs-page">
 											<div class="tabs-page__list js-tabs-list">
 												<div class="row">
-													<div class="col-6">
+													<div class="col-md-6">
 														<a href="#" class="tabs-page__item js-tabs-item tabs-page__item--home" data-item="tab1"><span>Почтовый адрес</span></a>
 													</div>
 
-													<div class="col-6">
+													<div class="col-md-6">
 														<a href="#" class="tabs-page__item js-tabs-item tabs-page__item--pickpoint" data-item="tab2"><span>Пункт самовывоза</span></a>
 													</div>
 												</div>
@@ -64,7 +64,7 @@
 												<div id="tab1" class="tabs-page__content-item js-tabs-content-item">
 													<form method="get" class="form-site js-form-step">
 														<div class="row">
-															<div class="col-6">
+															<div class="col-md-6">
 																<div class="form-site__field">
 																	<input type="text" placeholder="Фамилия" required="required" >
 																</div>
@@ -82,7 +82,7 @@
 																</div>
 															</div>
 
-															<div class="col-6">
+															<div class="col-md-6">
 																<div class="form-site__field">
 																	<input type="text" placeholder="Регион">
 																</div>
@@ -163,12 +163,12 @@
 													<img src="img/pay-viza.png" alt="" class="form-site-choose__img">
 												</div>
 
-												<div class="form-site-choose__item active">
+												<div class="form-site-choose__item">
 													<img src="img/pay-gold-color.png" alt="" class="form-site-choose__img-color">
 													<img src="img/pay-gold.png" alt="" class="form-site-choose__img">
 												</div>
 
-												<div class="form-site-choose__item active">
+												<div class="form-site-choose__item">
 													<img src="img/pay-yamoney-color.png" alt="" class="form-site-choose__img-color">
 													<img src="img/pay-yamoney.png" alt="" class="form-site-choose__img">
 												</div>
@@ -176,7 +176,7 @@
 
 											<div class="form-site__check">
 												<span class="form-site__check-text">Проверьте данные получаетля</span>
-												<a href="#" class="form-site__check-link">Изменить</a>
+												<a href="#" class="form-site__check-link d-none d-md-inline">Изменить</a>
 											</div>
 
 											<div class="form-site__info">
@@ -185,6 +185,8 @@
 												<div class="form-site__info-item">214000</div>
 												<div class="form-site__info-item">+7 (952) 98-88-22</div>
 											</div>
+
+											<a href="#" class="form-site__check-link d-inline-block d-md-none">Изменить</a>
 										</form>
 									</div>
 								</div><!-- end order-regist__step -->
@@ -198,7 +200,7 @@
 							</div>
 						</div>
 
-						<div class="col-4">
+						<div class="col-lg-4 d-none d-md-block">
 							<div class="order-regist-res">
 								<div class="order-regist-res__top">
 									<div class="order-regist-res__count"><span class="order-regist-res__count-label">Итого:</span> 3 товара</div>

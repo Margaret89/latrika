@@ -127,6 +127,7 @@
 	&__content{
 		display: flex;
 		padding-top: 5px;
+		width: calc(100% - 148px);
 	}
 
 	&__name-wrap{
@@ -142,6 +143,12 @@
 
 	&__price{
 		@include font(normal, 500, 16px, 20px, $color-text);
+	}
+
+	&__param-wrap{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
 	}
 
 	&__param:not(:last-child){
@@ -162,5 +169,161 @@
 		display: inline-block;
 		width: 15px;
 		height: 15px;
+	}
+
+	&__param-unit{
+		display: none;
+	}
+}
+
+@media (max-width: 991px) {
+	.order-unwap{
+		&__head{
+			padding: 33px 20px 35px;
+		}
+
+		&__price{
+			margin: 0 20px;
+		}
+	}
+
+	.order-unwap-param{
+		&__item:not(:last-child){
+			margin-right: 20px;
+		}
+	}
+
+	.order-list{
+		&__param:not(:last-child){
+			margin-right: 40px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.order-filter{
+		margin-top: -14px;
+		margin-bottom: 15px;
+
+		&__item{
+			margin-bottom: 7px;
+		}
+
+		&__item:not(:last-child){
+			margin-right: 16px;
+		}
+	}
+
+	.order-unwap{
+		&__content{
+			padding: 10px;
+		}
+
+		&__item{
+			margin-bottom: 20px;
+		}
+
+		&__head{
+			display: block;
+			padding: 15px 20px;
+			position: relative;
+		}
+
+		&__price{
+			margin: 0
+		}
+
+		&__num{
+			margin-bottom: 13px;
+		}
+
+		&__arr{
+			position: absolute;
+			top: 13px;
+			right: 20px;
+		}
+	}
+
+	.order-unwap-param{
+		display: block;
+
+		&__item{
+			margin-bottom: 2px;
+		}
+
+		&__item:not(:last-child){
+			margin-right: 0;
+		}
+	}
+
+	.order-list{
+		&__content{
+			display: block;
+			width: calc(100% - 105px);
+		}
+
+		&__img{
+			width: 85px;
+			height: 129px;
+			margin-right: 10px;
+		}
+
+		&__name-wrap{
+			width: auto;
+			margin-right: 0;
+		}
+
+		&__name{
+			font-size: 12px;
+			line-height: 16px;
+		}
+
+		&__price{
+			font-size: 12px;
+			font-weight: 500;
+		}
+
+		&__old-price{
+			font-size: 12px;
+			font-weight: 300;
+		}
+
+		&__label{
+			font-size: 12px;
+			line-height: 17px;
+			height: 17px;
+			padding: 0 7px;
+			margin-left: 0;
+			margin-bottom: 5px;
+			order: 1;
+		}
+
+		&__param-wrap{
+			margin-top: 20px;
+		}
+
+		&__param-label{
+			display: none;
+		}
+
+		&__param{
+			font-size: 12px;
+		}
+
+		&__param:not(:last-child){
+			margin-right: 15px;
+		}
+
+		&__param-unit{
+			display: inline;
+		}
+
+		&__param--color{
+			order: 2;
+		}
+
+		&__param--count{
+			order: 3;
+		}
 	}
 }
