@@ -89,7 +89,18 @@
 		margin-right: 20px;
 	}
 
+	&__del{
+		margin-top: 5px;
+	}
+
+	&__del a{
+		text-decoration: none;
+	}
+
 	.btn{
+		font-size: 10px;
+		line-height: 31px;
+		height: 32px;
 		margin-top: 10px;
 	}
 }

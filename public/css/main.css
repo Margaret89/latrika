@@ -2486,7 +2486,18 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   margin-right: 20px;
 }
 
+.catalog-list__del {
+  margin-top: 5px;
+}
+
+.catalog-list__del a {
+  text-decoration: none;
+}
+
 .catalog-list .btn {
+  font-size: 10px;
+  line-height: 31px;
+  height: 32px;
   margin-top: 10px;
 }
 
@@ -5232,10 +5243,6 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 .wish-list .catalog-list {
   max-width: 870px;
   margin: 0 auto;
-}
-
-.wish-list .catalog-list .btn {
-  margin-top: 17px;
 }
 
 @media (max-width: 670px) {
