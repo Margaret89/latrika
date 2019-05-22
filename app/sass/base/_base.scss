@@ -167,7 +167,7 @@ input[type="submit"].btn--grey:hover{
 
 .btn--white,
 input[type="submit"].btn--white{
-	background: transparent;
+	background: rgba(255,255,255,0.15);
 	border-color: #fff;
 	color: #fff;
 }
@@ -194,9 +194,9 @@ input[type="submit"].btn--white-fill:hover{
 
 
 .btn--big{
-	height: 53px;
+	height: 45px;
 	font-size: 14px;
-	line-height: 51px;
+	line-height: 44px;
 	letter-spacing: 3.5px;
 }
 
@@ -217,6 +217,25 @@ input[type="submit"].btn--white-fill:hover{
 .h-text-justify{text-align: justify !important;}
 .h-text-uppercase{text-transform: uppercase !important;}
 .h-text-bold {font-weight: 700 !important;}
+
+#position-fixedmenu{
+	position: absolute;
+	top: 150px;
+}
+
+table{
+	text-align: center;
+}
+
+th,
+td{
+	border: 1px solid #eef0f3;
+	padding: 15px 20px;
+}
+
+th{
+	background: #f8f8f8;
+}
 
 .input-radio{
 	font-family: $font-calibri;

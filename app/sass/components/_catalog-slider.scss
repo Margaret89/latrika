@@ -24,6 +24,9 @@
 	&__img-wrap{
 		position: relative;
 		margin-bottom: 16px;
+		max-width: 207px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	&__img{
@@ -52,22 +55,26 @@
 
 	&__name{
 		display: inline-block;
-		@include font(normal, normal, 15px, 20px, $color-text);
+		@include font(normal, normal, 13px, 18px, $color-text);
+		text-decoration: none;
 	}
 
 	&__price{
-		@include font(normal, normal, 15px, 20px, $color-text);
+		@include font(normal, normal, 13px, 18px, $color-text);
 		margin-top: 14px;
 	}
 
 	&__old-price{
-		font-size: 13px;
+		font-size: 11px;
 		text-decoration: line-through;
 		margin-right: 20px;
 	}
 
 	.btn{
 		margin-top: 10px;
+		font-size: 10px;
+		line-height: 31px;
+		height: 32px;
 	}
 
 	.slick-arrow{

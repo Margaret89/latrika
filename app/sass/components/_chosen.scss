@@ -18,7 +18,7 @@
 	height: 22px;
 	border: 1px solid transparent;
 	border-radius: 0;
-	@include font(normal, normal, 15px, 20px, $color-text);
+	@include font(normal, normal, 13px, 18px, $color-text);
 	text-decoration: underline;
 	padding: 0;
 }

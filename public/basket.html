@@ -16,7 +16,7 @@
 	</head>
 	<body class="js-body">
 		<div class="wrapper">
-			<header class="header js-header">
+			<header class="header js-header" id="header">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-4 col-lg-5 col-xl-5">
@@ -26,7 +26,7 @@
 								<div class="top-menu-wrap__content js-top-menu-content">
 									<div class="top-menu-wrap__list">
 										<ul class="top-menu js-top-menu">
-											<li class="top-menu__item"><a href="#" class="top-menu__link current">Главная</a></li>
+											<!-- <li class="top-menu__item"><a href="#" class="top-menu__link current">Главная</a></li> -->
 											<li class="top-menu__item"><a href="#" class="top-menu__link js-top-menu-link">Каталог<span class="top-menu__arr js-top-menu-arr"></span></a>
 												<ul class="top-menu__sub js-top-menu-sub">
 													<li class="top-menu__item-back js-top-menu-back"></li>
@@ -110,6 +110,7 @@
 					</div>
 				</div>
 			</header>
+			<div id="position-fixedmenu"></div>
 			<main>
 				<div class="container">
 					<div class="row">
@@ -125,7 +126,7 @@
 				<div class="basket">
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-7">
+							<div class="col-lg-8">
 								<div class="basket__head">
 									<h1>Моя корзина</h1>
 									<a href="#" class="basket__clear">Очистить корзину</a>
@@ -143,20 +144,17 @@
 											<div class="basket__price"><span class="basket__cur-price">4 900&#8381;</span></div>
 
 											<div class="basket-param">
-												<div class="basket-param__item basket-param__item--color">
-													<span class="basket-param__title">Цвет</span>
-													<span class="basket-param__val" style="background: #ca6843"></span>
-												</div>
-
 												<div class="basket-param__item">
-													<span class="basket-param__title">Размер</span>
+													<!-- <span class="basket-param__title">Цвет</span> -->
+													<span class="basket-param__val basket-param__val--color" style="background: #ca6843"></span>
 													<span class="basket-param__val">S</span>
+													<span class="basket-param__val basket-param__val--count">1 шт.</span>
 												</div>
 
-												<div class="basket-param__item basket-param__item--count d-block d-md-none">
+												<!-- <div class="basket-param__item basket-param__item--count d-block d-md-none">
 													<span class="basket-param__title">Количество</span>
-													<span class="basket-param__val">1 шт.</span>
-												</div>
+													
+												</div> -->
 											</div>
 										</div>
 
@@ -199,20 +197,17 @@
 											<div class="basket__price"><span class="basket__old-price">6 900&#8381;</span><span class="basket__cur-price">4 900&#8381;</span></div>
 
 											<div class="basket-param">
-												<div class="basket-param__item basket-param__item--color">
-													<span class="basket-param__title">Цвет</span>
-													<span class="basket-param__val" style="background: #e9c7be"></span>
-												</div>
-
 												<div class="basket-param__item">
-													<span class="basket-param__title">Размер</span>
+													<!-- <span class="basket-param__title">Цвет</span> -->
+													<span class="basket-param__val basket-param__val--color" style="background: #e9c7be"></span>
 													<span class="basket-param__val">S</span>
+													<span class="basket-param__val basket-param__val--count">1 шт.</span>
 												</div>
 
-												<div class="basket-param__item basket-param__item--count d-block d-md-none">
+				<!-- 								<div class="basket-param__item basket-param__item--count d-block d-md-none">
 													<span class="basket-param__title">Количество</span>
-													<span class="basket-param__val">1 шт.</span>
-												</div>
+													
+												</div> -->
 											</div>
 										</div>
 
@@ -254,19 +249,10 @@
 											<div class="basket__price"><span class="basket__cur-price">8 900&#8381;</span></div>
 
 											<div class="basket-param">
-												<div class="basket-param__item basket-param__item--color">
-													<span class="basket-param__title">Цвет</span>
-													<span class="basket-param__val" style="background: #9bb1ab"></span>
-												</div>
-
 												<div class="basket-param__item">
-													<span class="basket-param__title">Размер</span>
+													<span class="basket-param__val basket-param__val--color" style="background: #9bb1ab"></span>
 													<span class="basket-param__val">S</span>
-												</div>
-
-												<div class="basket-param__item basket-param__item--count d-block d-md-none">
-													<span class="basket-param__title">Количество</span>
-													<span class="basket-param__val">1 шт.</span>
+													<span class="basket-param__val basket-param__val--count">1 шт.</span>
 												</div>
 											</div>
 										</div>
@@ -300,7 +286,7 @@
 								</div>
 							</div>
 
-							<div class="col-lg-4 offset-xl-1">
+							<div class="col-lg-4">
 								<div class="basket-form-wrap">
 									<div class="basket-form">
 										<div class="basket-form__result">
@@ -350,6 +336,8 @@
 									</div><!-- end basket-form -->
 
 									<a href="#" class="btn btn--border">продолжить покупки</a>
+
+									<div class="basket-form-wrap__link"><a href="#">Условия обмена и возврата</a></div>
 								</div>
 							</div>
 						</div>

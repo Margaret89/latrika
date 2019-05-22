@@ -4,6 +4,16 @@
 
 	&__item{
 		margin-bottom: 46px;
+		max-width: 569px;
+	}
+
+	&__item--right{
+		margin-right: 0;
+		margin-left: auto;
+	}
+
+	&__item--big{
+		max-width: 100%;
 	}
 
 	&__img{

@@ -19,7 +19,7 @@
 	font-family: $font-helvetica;
 
 	&__item{
-		width: 50%;
+		width: 47%;
 		max-width: 395px;
 		text-align: center;
 		margin-bottom: 100px;
@@ -49,9 +49,9 @@
 
 	&__wish{
 		display: inline-block;
-		width: 14px;
-		height: 14px;
-		background: url(#{$path-img}/sprite.png) no-repeat -5px -330px;
+		width: 21px;
+		height: 18px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px -905px;
 		position: absolute;
 		top: 20px;
 		left: 20px;
@@ -59,7 +59,7 @@
 
 	&__wish.active,
 	&__wish:hover{
-		background-position: -30px -330px;
+		background-position: -35px -905px;
 	}
 
 	&__label{
@@ -74,12 +74,13 @@
 	&__name{
 		display: inline-block;
 		@include font(normal, normal, 16px, 21px, $color-text);
+		text-decoration: none;
 		margin-top: 6px;
 	}
 
 	&__price{
-		@include font(normal, 500, 14px, 20px, $color-text);
-		margin-top: 38px;
+		@include font(normal, 500, 16px, 21px, $color-text);
+		margin-top: 8px;
 	}
 
 	&__old-price{

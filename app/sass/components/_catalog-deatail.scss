@@ -105,6 +105,13 @@
 		margin-bottom: 30px;
 	}
 
+	&__name-wrap{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include font(normal, normal, 13px, 18px, $color-grey-light);
+	}
+
 	&__name{
 		@include font(normal, normal, 13px, 18px, $color-grey-light);
 		margin-bottom: 6px;
@@ -116,16 +123,12 @@
 	}
 
 	&__val{
-		@include font(normal, normal, 15px, 20px, $color-grey-light);
+		@include font(normal, normal, 17px, 20px, $color-grey-light);
 		text-decoration: none;
 	}
 
 	&__val:not(:last-child){
 		margin-right: 18px;
-	}
-
-	&__item--line &__val{
-		text-decoration: underline;
 	}
 
 	&__val:hover,
@@ -143,8 +146,8 @@
 
 	&__item--color &__val{
 		display: inline-block;
-		width: 17px;
-		height: 17px;
+		width: 40px;
+		height: 20px;
 		border: 1px solid #d9d9d9;
 		position: relative;
 		cursor: pointer;
@@ -154,8 +157,8 @@
 	&__item--color &__val.current::before{
 		content: '';
 		display: inline-block;
-		width: 21px;
-		height: 21px;
+		width: 44px;
+		height: 24px;
 		border: 1px solid #000;
 		position: absolute;
 		top: -3px;
@@ -182,17 +185,23 @@
 	}
 
 	.catalog-slider__item{
-		width: 255px;
+		width: 138px;
 		margin-left: 24.5px;
 		margin-right: 24.5px;
 	}
 
+	.catalog-slider__img-wrap{
+		width: 138px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	.catalog-slider__img{
-		height: 398px;
+		height: 215px;
 	}
 
 	.catalog-slider .slick-arrow{
-		top: 188px;
+		top: 105px;
 	}
 }
 
@@ -203,7 +212,7 @@
 }
 
 .product-slide-thumb{
-	width: 178px;
+	width: 119px;
 	height: 740px;
 	overflow: hidden;
 	margin-right: 20px;
@@ -215,7 +224,7 @@
 
 	&__item{
 		display: inline-block;
-		width: 178px;
+		width: 119px;
 		height: 178px;
 		margin: 27px 0;
 		background-repeat: no-repeat;
@@ -323,7 +332,7 @@
 	}
 
 	.product-slide-thumb.slick-vertical .slick-slide{
-		height: 105px;
+		height: 158px;
 	}
 }
 

@@ -62,33 +62,33 @@
 	}
 
 	&__item--in{
-		width: 14px;
-		height: 14px;
-		background: url(#{$path-img}/sprite.png) no-repeat -30px  -105px;
+		width: 30px;
+		height: 30px;
+		background: url(#{$path-img}/social-icon.png) no-repeat -5px  -5px;
 	}
 
 	&__item--vk{
-		width: 18px;
-		height: 10px;
-		background: url(#{$path-img}/sprite.png) no-repeat -30px  -130px;
+		width: 30px;
+		height: 17px;
+		background: url(#{$path-img}/social-icon.png) no-repeat -5px  -60px;
 	}
 
 	&__item--fb{
-		width: 7px;
-		height: 15px;
-		background: url(#{$path-img}/sprite.png) no-repeat -30px  -150px;
+		width: 14px;
+		height: 30px;
+		background: url(#{$path-img}/social-icon.png) no-repeat -5px  -100px;
 	}
 
 	&__item--in:hover{
-		background-position: -5px -105px;
+		background-position: -50px -5px;
 	}
 
 	&__item--vk:hover{
-		background-position: -5px -130px;
+		background-position: -50px -60px;
 	}
 
 	&__item--fb:hover{
-		background-position: -5px -150px;
+		background-position: -50px -100px;
 	}
 }
 

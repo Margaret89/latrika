@@ -1,4 +1,7 @@
 $(document).ready(function () {
+	// Фиксированное меню
+	showHeaderScroll('position-fixedmenu','header');
+
 	// Открыть/Закрыть мобильное меню
 	$('.js-catalog-menu-mark').click(function(e){
 		e.preventDefault();
@@ -21,15 +24,9 @@ $(document).ready(function () {
 			dots: false,
 			arrows: true,
 			infinite: true,
-			slidesToShow: 5,
+			slidesToShow: 4,
 			slidesToScroll: 1,
 			responsive: [
-				{
-					breakpoint: 1250,
-					settings: {
-						slidesToShow: 4,
-					}
-				},
 				{
 					breakpoint: 992,
 					settings: {
@@ -52,27 +49,15 @@ $(document).ready(function () {
 			dots: false,
 			arrows: true,
 			infinite: true,
-			slidesToShow: 4,
+			slidesToShow: 5,
 			slidesToScroll: 1,
 			responsive: [
 			{
 				breakpoint: 1250,
 				settings: {
-					slidesToShow: 3,
+					slidesToShow: 4,
 				}
 			},
-			// {
-			// 	breakpoint: 992,
-			// 	settings: {
-			// 		slidesToShow: 3,
-			// 	}
-			// },
-			// {
-			// 	breakpoint: 480,
-			// 	settings: {
-			// 		slidesToShow: 2,
-			// 	}
-			// },
 		]
 		});
 	}
@@ -115,14 +100,6 @@ $(document).ready(function () {
 		arrows: true,
 		vertical: true,
 		focusOnSelect: true,
-		responsive: [
-			{
-				breakpoint: 1250,
-				settings: {
-					slidesToShow: 4,
-				}
-			},
-		]
 	});
 
 	// Раскрывающийся блок
@@ -272,3 +249,53 @@ $(document).ready(function () {
 	});
 
 });
+
+//-------------- Fixed Menu ---------------------
+function showHeaderScroll(selPos,fixedMenu){
+
+	var positionSensor = document.getElementById(selPos);
+
+	if(positionSensor){
+		var fixedMenu = document.getElementById(fixedMenu);
+		var sensorTopPos = positionSensor.getBoundingClientRect().top;
+		var typeMenu = '';
+
+		if ($(fixedMenu).hasClass('opacity')) {
+			typeMenu = 'opacity';
+		}
+
+		
+		var menuHidden = true;
+		if(sensorTopPos <= 0) {
+			$(fixedMenu).css("top", "-100px");
+			$(fixedMenu).animate({top: "0"}, {duration: 400, easing: "linear"});
+			menuHidden = false;
+		}
+
+		$(window).on("scroll", function() {
+			sensorTopPos = positionSensor.getBoundingClientRect().top;
+			if(sensorTopPos <= 0) {
+				if(menuHidden) {
+					$(fixedMenu).css("top", "-100px");
+					$(fixedMenu).animate({top: "0"}, {duration: 400, easing: "linear"});
+					menuHidden = false;
+				}
+
+				$(fixedMenu).addClass('fixed');
+				if (typeMenu == 'opacity') {
+					$(fixedMenu).removeClass('opacity');
+				}
+			}else if (sensorTopPos > 0) {
+				if(!menuHidden) {
+					$(fixedMenu).animate({top: "0"}, {duration: 0, easing: "linear"});
+					menuHidden = true;
+				}
+
+				$(fixedMenu).removeClass('fixed');
+				if (typeMenu == 'opacity') {
+					$(fixedMenu).addClass('opacity');
+				}
+			}
+		});
+	}
+}

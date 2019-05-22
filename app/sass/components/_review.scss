@@ -1,8 +1,8 @@
 /*-------------- review -----------------*/
 .board-review{
 	font-family: $font-helvetica;
-	height: 434px;
-	background: url(#{$path-img}/bg-board-review.jpg) no-repeat center;
+	height: 330px;
+	background: url(#{$path-img}/bg-board-review.jpg) no-repeat center -80px;
 	background-size: cover;
 	padding: 60px 20px;
 	@include font(normal, normal, 15px, 20px, #fff);

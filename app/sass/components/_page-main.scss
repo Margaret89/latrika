@@ -1,24 +1,31 @@
 ﻿/*----------- page-main -------------*/
 .page-main{
 	.board-collection--big:first-child{
-		margin-top: -95px;
+		margin-top: -120px;
 		padding-top: 84px;
 	}
 
 	.catalog-slider{
 		margin-bottom: 126px;
 	}
+
+	.board-collection{
+		background-position: center -100px;
+	}
 }
 
 @media (max-width: 767px) {
 	.page-main{
 		.board-collection--big:first-child{
-			margin-top: -54px;
 			background-position: 61% -11px;
 		}
 
 		.catalog-slider{
 			margin-bottom: 18px;
+		}
+
+		.board-collection{
+			background-position: center;
 		}
 	}
 }

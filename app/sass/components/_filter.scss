@@ -15,12 +15,12 @@
 	}
 
 	&__head{
-		@include font(normal, normal, 15px, 20px, $color-text);
+		@include font(normal, normal, 13px, 18px, $color-text);
 		margin-right: 10px;
 	}
 
 	&__val{
-		@include font(normal, normal, 15px, 20px, $color-grey-light);
+		@include font(normal, normal, 13px, 18px, $color-grey-light);
 		text-decoration: underline;
 	}
 
