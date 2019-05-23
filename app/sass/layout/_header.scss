@@ -60,17 +60,41 @@
 		background-repeat: no-repeat;
 	}
 
-	&__icon--search{background-position: -5px -5px;}
-	&__icon--wish{background-position: -5px -30px;}
-	&__icon--auth{background-position: -5px -55px;}
-	&__icon--buy{background-position: -5px -80px;}
-	&__icon--search:hover{background-position: -30px -5px;}
-	&__icon--wish:hover{background-position: -30px -30px;}
-	&__icon--auth:hover{background-position: -30px -55px;}
-	&__icon--buy:hover{background-position: -30px -80px;}
+	&__icon--auth{
+		background: url(#{$path-img}/ic-auth.svg) no-repeat center;
+		background-size: contain;
+	}
 
-	// &__icon--buy{background: url(#{$path-img}/ic-cart.svg) no-repeat center;}
-	// &__icon--buy:hover{background-image: url(#{$path-img}/ic-cart-white.svg)}
+	&__icon--search{
+		background: url(#{$path-img}/ic-search.svg) no-repeat center;
+		background-size: contain;
+	}
+
+	&__icon--wish{
+		background: url(#{$path-img}/ic-wish.svg) no-repeat center;
+		background-size: contain;
+	}
+
+	&__icon--buy{
+		background: url(#{$path-img}/ic-basket.svg) no-repeat center;
+		background-size: contain;
+	}
+
+	&__icon--search:hover{background: url(#{$path-img}/ic-search-grey.svg) no-repeat center;}
+	&__icon--wish:hover{background: url(#{$path-img}/ic-wish-grey.svg) no-repeat center;}
+	&__icon--auth:hover{background: url(#{$path-img}/ic-auth-grey.svg) no-repeat center;}
+	&__icon--buy:hover{background: url(#{$path-img}/ic-basket-grey.svg) no-repeat center;}
+
+	// &__icon--search{background-position: -5px -5px;}
+	// &__icon--wish{background-position: -5px -30px;}
+	// &__icon--auth{background-position: -5px -55px;}
+	// &__icon--buy{background-position: -5px -80px;}
+	// &__icon--search:hover{background-position: -30px -5px;}
+	// &__icon--wish:hover{background-position: -30px -30px;}
+	// &__icon--auth:hover{background-position: -30px -55px;}
+	// &__icon--buy:hover{background-position: -30px -80px;}
+
+
 
 	&__icon:not(:last-child){
 		margin-right: 29px;
@@ -90,19 +114,38 @@
 		color: $color-text;
 	}
 
-	&--white &__icon--search{background-position: -55px -5px;}
-	&--white &__icon--wish{background-position: -55px -30px;}
-	&--white &__icon--auth{background-position: -55px -55px;}
-	&--white &__icon--buy{background-position: -55px -80px;}
-	&--white &__icon--search:hover{background-position: -5px -5px;}
-	&--white &__icon--wish:hover{background-position: -5px -30px;}
-	&--white &__icon--auth:hover{background-position: -5px -55px;}
-	&--white &__icon--buy:hover{background-position: -5px -80px;}
+	// &--white &__icon--search{background-position: -55px -5px;}
+	// &--white &__icon--wish{background-position: -55px -30px;}
+	// &--white &__icon--auth{background-position: -55px -55px;}
+	// &--white &__icon--buy{background-position: -55px -80px;}
+	// &--white &__icon--search:hover{background-position: -5px -5px;}
+	// &--white &__icon--wish:hover{background-position: -5px -30px;}
+	// &--white &__icon--auth:hover{background-position: -5px -55px;}
+	// &--white &__icon--buy:hover{background-position: -5px -80px;}
 
-	&--white.open-menu &__icon--search{background-position: -5px -5px;}
-	&--white.open-menu &__icon--buy{background-position: -5px -80px;}
-	&--white.open-menu &__icon--search:hover{background-position: -30px -5px;}
-	&--white.open-menu &__icon--buy:hover{background-position: -30px -80px;}
+	// &--white.open-menu &__icon--search{background-position: -5px -5px;}
+	// &--white.open-menu &__icon--buy{background-position: -5px -80px;}
+	// &--white.open-menu &__icon--search:hover{background-position: -30px -5px;}
+	// &--white.open-menu &__icon--buy:hover{background-position: -30px -80px;}
+
+	&--white &__icon--search{background: url(#{$path-img}/ic-search-white.svg) no-repeat center;}
+	&--white &__icon--wish{background: url(#{$path-img}/ic-wish-white.svg) no-repeat center;}
+	&--white &__icon--auth{background: url(#{$path-img}/ic-auth-white.svg) no-repeat center;}
+	&--white &__icon--buy{background: url(#{$path-img}/ic-basket-white.svg) no-repeat center;}
+	&--white &__icon--search:hover{background: url(#{$path-img}/ic-search.svg) no-repeat center;}
+	&--white &__icon--wish:hover{background: url(#{$path-img}/ic-wish.svg) no-repeat center;}
+	&--white &__icon--auth:hover{background: url(#{$path-img}/ic-auth.svg) no-repeat center;}
+	&--white &__icon--buy:hover{background: url(#{$path-img}/ic-basket.svg) no-repeat center;}
+
+	&--white.open-menu &__icon--search{background: url(#{$path-img}/ic-search.svg) no-repeat center;}
+	&--white.open-menu &__icon--wish{background: url(#{$path-img}/ic-wish.svg) no-repeat center;}
+	&--white.open-menu &__icon--auth{background: url(#{$path-img}/ic-auth.svg) no-repeat center;}
+	&--white.open-menu &__icon--buy{background: url(#{$path-img}/ic-basket.svg) no-repeat center;}
+	&--white.open-menu &__icon--search:hover{background: url(#{$path-img}/ic-search-grey.svg) no-repeat center;}
+	&--white.open-menu &__icon--wish:hover{background: url(#{$path-img}/ic-wish-grey.svg) no-repeat center;}
+	&--white.open-menu &__icon--auth:hover{background: url(#{$path-img}/ic-auth-grey.svg) no-repeat center;}
+	&--white.open-menu &__icon--buy:hover{background: url(#{$path-img}/ic-basket-grey.svg) no-repeat center;}
+
 
 	&.open-menu__icon--search{
 		position: relative;
@@ -139,14 +182,23 @@
 		color: $color-grey;
 	}
 
-	&--white.fixed &__icon--search{background-position: -5px -5px;}
-	&--white.fixed &__icon--wish{background-position: -5px -30px;}
-	&--white.fixed &__icon--auth{background-position: -5px -55px;}
-	&--white.fixed &__icon--buy{background-position: -5px -80px;}
-	&--white.fixed &__icon--search:hover{background-position: -30px -5px;}
-	&--white.fixed &__icon--wish:hover{background-position: -30px -30px;}
-	&--white.fixed &__icon--auth:hover{background-position: -30px -55px;}
-	&--white.fixed &__icon--buy:hover{background-position: -30px -80px;}
+	// &--white.fixed &__icon--search{background-position: -5px -5px;}
+	// &--white.fixed &__icon--wish{background-position: -5px -30px;}
+	// &--white.fixed &__icon--auth{background-position: -5px -55px;}
+	// &--white.fixed &__icon--buy{background-position: -5px -80px;}
+	// &--white.fixed &__icon--search:hover{background-position: -30px -5px;}
+	// &--white.fixed &__icon--wish:hover{background-position: -30px -30px;}
+	// &--white.fixed &__icon--auth:hover{background-position: -30px -55px;}
+	// &--white.fixed &__icon--buy:hover{background-position: -30px -80px;}
+
+	&--white.fixed &__icon--search{background: url(#{$path-img}/ic-search.svg) no-repeat center;}
+	&--white.fixed &__icon--wish{background: url(#{$path-img}/ic-wish.svg) no-repeat center;}
+	&--white.fixed &__icon--auth{background: url(#{$path-img}/ic-auth.svg) no-repeat center;}
+	&--white.fixed &__icon--buy{background: url(#{$path-img}/ic-basket.svg) no-repeat center;}
+	&--white.fixed &__icon--search:hover{background: url(#{$path-img}/ic-search-grey.svg) no-repeat center;}
+	&--white.fixed &__icon--wish:hover{background: url(#{$path-img}/ic-wish-grey.svg) no-repeat center;}
+	&--white.fixed &__icon--auth:hover{background: url(#{$path-img}/ic-auth-grey.svg) no-repeat center;}
+	&--white.fixed &__icon--buy:hover{background: url(#{$path-img}/ic-basket-grey.svg) no-repeat center;}
 
 	&--white.fixed &__logo-white{display: none;}
 	&--white.fixed &__logo-black{display: block;}

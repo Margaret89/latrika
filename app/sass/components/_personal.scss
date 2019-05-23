@@ -16,23 +16,52 @@
 		height: 24px;
 		position: absolute;
 		left: 0;
-		bottom: -6px;
-		background-image: url(#{$path-img}/sprite.png);
-		background-repeat: no-repeat;
+		bottom: -4px;
+		// background-image: url(#{$path-img}/sprite.png);
+		// background-repeat: no-repeat;
 	}
 
-	&__link--user::before{background-position: -5px -542px;}
-	&__link--order::before{background-position: -5px -575px;}
-	&__link--card::before{background-position: -5px -605px;}
-	&__link--wish::before{background-position: -5px -635px;}
+	// &__link--user::before{background-position: -5px -542px;}
+	// &__link--order::before{background-position: -5px -575px;}
+	// &__link--card::before{background-position: -5px -605px;}
+	// &__link--wish::before{background-position: -5px -635px;}
+	// &__link--user:hover::before,
+	// &__item.active &__link--user::before{background-position: -40px -542px;}
+	// &__link--order:hover::before,
+	// &__item.active &__link--order::before{background-position: -40px -575px;}
+	// &__link--card:hover::before,
+	// &__item.active &__link--card::before{background-position: -40px -605px;}
+	// &__link--wish:hover::before,
+	// &__item.active &__link--wish::before{background-position: -40px -635px;}
+
+	&__link--user::before{
+		background: url(#{$path-img}/ic-lk-user-light-grey.svg) no-repeat center;
+		background-size: contain;
+	}
+
+	&__link--order::before{
+		background: url(#{$path-img}/ic-lk-order-light-grey.svg) no-repeat center;
+		background-size: contain;
+	}
+
+	&__link--card::before{
+		background: url(#{$path-img}/ic-basket-light-grey.svg) no-repeat center;
+		background-size: contain;
+	}
+
+	&__link--wish::before{
+		background: url(#{$path-img}/ic-lk-wish-light-grey.svg) no-repeat center;
+		background-size: contain;
+	}
+
 	&__link--user:hover::before,
-	&__item.active &__link--user::before{background-position: -40px -542px;}
+	&__item.active &__link--user::before{background: url(#{$path-img}/ic-lk-user.svg) no-repeat center;}
 	&__link--order:hover::before,
-	&__item.active &__link--order::before{background-position: -40px -575px;}
+	&__item.active &__link--order::before{background: url(#{$path-img}/ic-lk-order.svg) no-repeat center;}
 	&__link--card:hover::before,
-	&__item.active &__link--card::before{background-position: -40px -605px;}
+	&__item.active &__link--card::before{background: url(#{$path-img}/ic-basket.svg) no-repeat center;}
 	&__link--wish:hover::before,
-	&__item.active &__link--wish::before{background-position: -40px -635px;}
+	&__item.active &__link--wish::before{background: url(#{$path-img}/ic-lk-wish.svg) no-repeat center;}
 
 	&__text{
 		@include font(normal, normal, 18px, 20px, #b5b5b5);
@@ -338,6 +367,25 @@
 		.basket-form{
 			padding: 0;
 			border: 0;
+		}
+
+		.basket__img{
+			width: 75px;
+			height: 115px;
+		}
+
+		.basket__info{
+			width: calc(100% - 120px);
+		}
+
+		.basket-param__val{
+			width: 32px;
+			height: 32px;
+			line-height: 30px;
+		}
+
+		.basket-param__val--color{
+			height: 15px;
 		}
 	}
 

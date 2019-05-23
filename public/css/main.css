@@ -729,36 +729,40 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   background-repeat: no-repeat;
 }
 
+.header__icon--auth {
+  background: url(../img/ic-auth.svg) no-repeat center;
+  background-size: contain;
+}
+
 .header__icon--search {
-  background-position: -5px -5px;
+  background: url(../img/ic-search.svg) no-repeat center;
+  background-size: contain;
 }
 
 .header__icon--wish {
-  background-position: -5px -30px;
-}
-
-.header__icon--auth {
-  background-position: -5px -55px;
+  background: url(../img/ic-wish.svg) no-repeat center;
+  background-size: contain;
 }
 
 .header__icon--buy {
-  background-position: -5px -80px;
+  background: url(../img/ic-basket.svg) no-repeat center;
+  background-size: contain;
 }
 
 .header__icon--search:hover {
-  background-position: -30px -5px;
+  background: url(../img/ic-search-grey.svg) no-repeat center;
 }
 
 .header__icon--wish:hover {
-  background-position: -30px -30px;
+  background: url(../img/ic-wish-grey.svg) no-repeat center;
 }
 
 .header__icon--auth:hover {
-  background-position: -30px -55px;
+  background: url(../img/ic-auth-grey.svg) no-repeat center;
 }
 
 .header__icon--buy:hover {
-  background-position: -30px -80px;
+  background: url(../img/ic-basket-grey.svg) no-repeat center;
 }
 
 .header__icon:not(:last-child) {
@@ -780,51 +784,67 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 }
 
 .header--white .header__icon--search {
-  background-position: -55px -5px;
+  background: url(../img/ic-search-white.svg) no-repeat center;
 }
 
 .header--white .header__icon--wish {
-  background-position: -55px -30px;
+  background: url(../img/ic-wish-white.svg) no-repeat center;
 }
 
 .header--white .header__icon--auth {
-  background-position: -55px -55px;
+  background: url(../img/ic-auth-white.svg) no-repeat center;
 }
 
 .header--white .header__icon--buy {
-  background-position: -55px -80px;
+  background: url(../img/ic-basket-white.svg) no-repeat center;
 }
 
 .header--white .header__icon--search:hover {
-  background-position: -5px -5px;
+  background: url(../img/ic-search.svg) no-repeat center;
 }
 
 .header--white .header__icon--wish:hover {
-  background-position: -5px -30px;
+  background: url(../img/ic-wish.svg) no-repeat center;
 }
 
 .header--white .header__icon--auth:hover {
-  background-position: -5px -55px;
+  background: url(../img/ic-auth.svg) no-repeat center;
 }
 
 .header--white .header__icon--buy:hover {
-  background-position: -5px -80px;
+  background: url(../img/ic-basket.svg) no-repeat center;
 }
 
 .header--white.open-menu .header__icon--search {
-  background-position: -5px -5px;
+  background: url(../img/ic-search.svg) no-repeat center;
+}
+
+.header--white.open-menu .header__icon--wish {
+  background: url(../img/ic-wish.svg) no-repeat center;
+}
+
+.header--white.open-menu .header__icon--auth {
+  background: url(../img/ic-auth.svg) no-repeat center;
 }
 
 .header--white.open-menu .header__icon--buy {
-  background-position: -5px -80px;
+  background: url(../img/ic-basket.svg) no-repeat center;
 }
 
 .header--white.open-menu .header__icon--search:hover {
-  background-position: -30px -5px;
+  background: url(../img/ic-search-grey.svg) no-repeat center;
+}
+
+.header--white.open-menu .header__icon--wish:hover {
+  background: url(../img/ic-wish-grey.svg) no-repeat center;
+}
+
+.header--white.open-menu .header__icon--auth:hover {
+  background: url(../img/ic-auth-grey.svg) no-repeat center;
 }
 
 .header--white.open-menu .header__icon--buy:hover {
-  background-position: -30px -80px;
+  background: url(../img/ic-basket-grey.svg) no-repeat center;
 }
 
 .header.open-menu__icon--search {
@@ -863,35 +883,35 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 }
 
 .header--white.fixed .header__icon--search {
-  background-position: -5px -5px;
+  background: url(../img/ic-search.svg) no-repeat center;
 }
 
 .header--white.fixed .header__icon--wish {
-  background-position: -5px -30px;
+  background: url(../img/ic-wish.svg) no-repeat center;
 }
 
 .header--white.fixed .header__icon--auth {
-  background-position: -5px -55px;
+  background: url(../img/ic-auth.svg) no-repeat center;
 }
 
 .header--white.fixed .header__icon--buy {
-  background-position: -5px -80px;
+  background: url(../img/ic-basket.svg) no-repeat center;
 }
 
 .header--white.fixed .header__icon--search:hover {
-  background-position: -30px -5px;
+  background: url(../img/ic-search-grey.svg) no-repeat center;
 }
 
 .header--white.fixed .header__icon--wish:hover {
-  background-position: -30px -30px;
+  background: url(../img/ic-wish-grey.svg) no-repeat center;
 }
 
 .header--white.fixed .header__icon--auth:hover {
-  background-position: -30px -55px;
+  background: url(../img/ic-auth-grey.svg) no-repeat center;
 }
 
 .header--white.fixed .header__icon--buy:hover {
-  background-position: -30px -80px;
+  background: url(../img/ic-basket-grey.svg) no-repeat center;
 }
 
 .header--white.fixed .header__logo-white {
@@ -1749,6 +1769,10 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.form-site__subscribe {
+  margin-top: 10px;
 }
 
 .form-site-choose {
@@ -4358,6 +4382,9 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
     margin-right: 10px;
   }
   .basket__name-wrap {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -4466,45 +4493,47 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   height: 24px;
   position: absolute;
   left: 0;
-  bottom: -6px;
-  background-image: url(../img/sprite.png);
-  background-repeat: no-repeat;
+  bottom: -4px;
 }
 
 .personal-menu__link--user::before {
-  background-position: -5px -542px;
+  background: url(../img/ic-lk-user-light-grey.svg) no-repeat center;
+  background-size: contain;
 }
 
 .personal-menu__link--order::before {
-  background-position: -5px -575px;
+  background: url(../img/ic-lk-order-light-grey.svg) no-repeat center;
+  background-size: contain;
 }
 
 .personal-menu__link--card::before {
-  background-position: -5px -605px;
+  background: url(../img/ic-basket-light-grey.svg) no-repeat center;
+  background-size: contain;
 }
 
 .personal-menu__link--wish::before {
-  background-position: -5px -635px;
+  background: url(../img/ic-lk-wish-light-grey.svg) no-repeat center;
+  background-size: contain;
 }
 
 .personal-menu__link--user:hover::before,
 .personal-menu__item.active .personal-menu__link--user::before {
-  background-position: -40px -542px;
+  background: url(../img/ic-lk-user.svg) no-repeat center;
 }
 
 .personal-menu__link--order:hover::before,
 .personal-menu__item.active .personal-menu__link--order::before {
-  background-position: -40px -575px;
+  background: url(../img/ic-lk-order.svg) no-repeat center;
 }
 
 .personal-menu__link--card:hover::before,
 .personal-menu__item.active .personal-menu__link--card::before {
-  background-position: -40px -605px;
+  background: url(../img/ic-basket.svg) no-repeat center;
 }
 
 .personal-menu__link--wish:hover::before,
 .personal-menu__item.active .personal-menu__link--wish::before {
-  background-position: -40px -635px;
+  background: url(../img/ic-lk-wish.svg) no-repeat center;
 }
 
 .personal-menu__text {
@@ -4837,6 +4866,21 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   .personal-inner .basket-form {
     padding: 0;
     border: 0;
+  }
+  .personal-inner .basket__img {
+    width: 75px;
+    height: 115px;
+  }
+  .personal-inner .basket__info {
+    width: calc(100% - 120px);
+  }
+  .personal-inner .basket-param__val {
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+  }
+  .personal-inner .basket-param__val--color {
+    height: 15px;
   }
   .profile {
     margin-top: -5px;
