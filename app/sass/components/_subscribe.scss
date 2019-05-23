@@ -20,7 +20,7 @@
 	}
 
 	&__text{
-		font-family: $font-helvetica;
+		font-family: $font-montserrat;
 		@include font(normal, normal, 13px, 18px, $color-text);
 		letter-spacing: 1.5px;
 		max-width: 310px;
@@ -42,7 +42,7 @@
 		background: transparent;
 		border: 0;
 		border-bottom: 2px solid #dfdcdb;
-		font-family: $font-helvetica;
+		font-family: $font-montserrat;
 		@include font(normal, normal, 13px, 43px, $color-text);
 		letter-spacing: 2.2px;
 		padding: 0;

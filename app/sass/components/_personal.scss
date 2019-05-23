@@ -1,6 +1,6 @@
 /*-------------- personal -----------------*/
 .personal-menu{
-	font-family: $font-helvetica;
+	font-family: $font-montserrat;
 	margin-bottom: 22px;
 
 	&__link{
@@ -166,7 +166,7 @@
 }
 
 .personal-contact{
-	font-family: $font-helvetica;
+	font-family: $font-montserrat;
 	margin-bottom: 44px;
 	margin-top: -3px;
 
@@ -190,7 +190,7 @@
 }
 
 .personal-list{
-	font-family: $font-helvetica;
+	font-family: $font-montserrat;
 	margin-bottom: 20px;
 
 	&__item{
@@ -270,7 +270,7 @@
 	margin-top: 60px;
 
 	&__head{
-		font-family: $font-helvetica;
+		font-family: $font-montserrat;
 		@include font(normal, normal, 19px, 24px, $color-text);
 		margin-bottom: 17px;
 	}

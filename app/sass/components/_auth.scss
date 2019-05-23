@@ -13,7 +13,7 @@
 }
 
 .auth-social{
-	font-family: $font-helvetica;
+	font-family: $font-montserrat;
 	margin-top: 65px;
 	margin-bottom: 65px;
 
@@ -76,7 +76,7 @@
 		padding: 25px 20px 27px;
 
 		.input-check__label{
-			font-family: $font-helvetica;
+			font-family: $font-montserrat;
 			display: inline-block;
 			vertical-align: middle;
 			@include font(normal, normal, 11px, 19px, $color-grey-light);

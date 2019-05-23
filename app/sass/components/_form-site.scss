@@ -1,6 +1,6 @@
 ﻿/*----------- form-site -------------*/
 .form-site{
-	font-family: $font-helvetica;
+	font-family: $font-montserrat;
 
 	&__head{
 		@include font(normal, normal, 25px, 28px, $color-text);
@@ -99,7 +99,7 @@
 	}
 
 	&__check-link{
-		font-family: $font-helvetica;
+		font-family: $font-montserrat;
 		@include font(normal, normal, 13px, 18px, $color-grey-light);
 		text-decoration: none;
 		position: relative;
@@ -123,7 +123,7 @@
 	}
 
 	&__info{
-		font-family: $font-helvetica;
+		font-family: $font-montserrat;
 		@include font(normal, normal, 13px, 18px, $color-text);
 		margin-top: 32px;
 		margin-bottom: 4px;
@@ -188,7 +188,7 @@
 }
 
 .form-site-date{
-	font-family: $font-helvetica;
+	font-family: $font-montserrat;
 	margin-top: 16px;
 	@include font(normal, normal, 13px, 15px, $color-text);
 

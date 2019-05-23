@@ -1,6 +1,6 @@
 /*-------------- review -----------------*/
 .board-review{
-	font-family: $font-helvetica;
+	font-family: $font-montserrat;
 	height: 330px;
 	background: url(#{$path-img}/bg-board-review.jpg) no-repeat center -80px;
 	background-size: cover;
@@ -53,7 +53,7 @@
 .review-filter{
 	display: flex;
 	justify-content: center;
-	font-family: $font-helvetica;
+	font-family: $font-montserrat;
 	margin: 57px 0 30px;
 
 	&__item{
@@ -89,7 +89,7 @@
 }
 
 .review-list{
-	font-family: $font-helvetica;
+	font-family: $font-montserrat;
 	margin-top: 60px;
 
 	&__item{
