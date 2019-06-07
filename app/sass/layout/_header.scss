@@ -13,10 +13,9 @@
 
 	&__logo{
 		display: block;
-		width: 210px;
+		width: 158px;
 		margin: 0 auto;
 		margin-top: 5px;
-		margin-left: -11px;
 	}
 
 	&__logo-white,
@@ -38,7 +37,7 @@
 
 	&__phone,
 	&__lang{
-		@include font(normal, 300, 15px, 20px, $color-text);
+		@include font(normal, 300, 17px, 20px, $color-text);
 		text-decoration: none;
 		margin-right: 28px;
 	}
@@ -54,8 +53,8 @@
 
 	&__icon{
 		display: inline-block;
-		width: 17px;
-		height: 17px;
+		width: 19px;
+		height: 19px;
 		background-image:  url(#{$path-img}/sprite.png);
 		background-repeat: no-repeat;
 	}
@@ -226,7 +225,7 @@
 
 	&__item,
 	&__link{
-		@include font(normal, 300, 14px, 20px, $color-text);
+		@include font(normal, 300, 17px, 20px, $color-text);
 		text-transform: uppercase;
 		text-decoration: none;
 	}
@@ -328,7 +327,7 @@
 	.top-menu{
 		&__item,
 		&__link{
-			font-size: 11px;
+			font-size: 13px;
 		}
 	}
 

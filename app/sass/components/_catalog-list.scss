@@ -89,8 +89,13 @@
 		margin-right: 20px;
 	}
 
+	&__del,
+	&__del a{
+		@include font(normal, normal, 11px, 18px, $color-grey-light);
+	}
+
 	&__del{
-		margin-top: 5px;
+		margin-top: 7px;
 	}
 
 	&__del a{

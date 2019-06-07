@@ -61,7 +61,7 @@
 
 	&__price{
 		@include font(normal, normal, 13px, 18px, $color-text);
-		margin-top: 14px;
+		margin-top: 0;
 	}
 
 	&__old-price{
@@ -71,10 +71,10 @@
 	}
 
 	.btn{
-		margin-top: 10px;
+		margin-top: 9px;
 		font-size: 10px;
-		line-height: 31px;
-		height: 32px;
+		line-height: 25px;
+		height: 27px;
 	}
 
 	.slick-arrow{
@@ -110,6 +110,16 @@
 
 	.slick-next:hover{
 		background-position: -30px  -385px
+	}
+}
+
+@media (max-width: 1249px) {
+	.catalog-slider{
+		&__item{
+			width: 183px;
+			margin-left: 27px;
+			margin-right: 27px;
+		}
 	}
 }
 

@@ -20,7 +20,7 @@
 	}
 
 	&__title{
-		@include font(normal, normal, 19px, 24px, $color-text);
+		@include font(normal, normal, 17px, 24px, $color-text);
 	}
 
 	&__label{
@@ -34,13 +34,13 @@
 	}
 
 	&__old-price{
-		@include font(normal, 300, 16px, 21px, $color-text);
+		@include font(normal, 300, 19px, 21px, $color-text);
 		text-decoration: line-through;
 		margin-right: 20px;
 	}
 
 	&__cur-price{
-		@include font(normal, 500, 16px, 21px, $color-text);
+		@include font(normal, 500, 19px, 21px, $color-text);
 	}
 
 	&__action{
@@ -54,7 +54,7 @@
 	}
 
 	&__action .btn:not(:last-child){
-		margin-right: 22px;
+		margin-right: 15px;
 	}
 
 	&__time{
@@ -167,6 +167,11 @@
 
 	&__item--color &__val:not(:last-child){
 		margin-right: 13px;
+	}
+
+	&__size-guide{
+		@include font(normal, normal, 13px, 18px, $color-grey-light);
+		margin-left: 20px;
 	}
 }
 
