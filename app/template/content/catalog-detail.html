@@ -26,6 +26,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-8">
+								<div id="position-btn-add"></div>
 								<div class="product-slider">
 									<div class="product-slide-thumb js-product-slide-thumb d-none d-md-block">
 										<div class="product-slide-thumb__item" style="background-image: url(img/product-slider-img1.jpg);"></div>
@@ -132,7 +133,7 @@
 										</div>
 									</div>
 
-									<div class="catalog-card__action">
+									<div class="catalog-card__action d-none d-md-block">
 										<a href="#" class="btn btn--border">добавить в корзину</a>
 										<a href="#" class="btn btn--grey">Купить в 1 клик</a>
 									</div>
@@ -166,7 +167,7 @@
 					</div>
 				</div><!-- end catalog-card -->
 
-				<div class="catalog-detail-more d-none d-md-block">
+				<div class="catalog-detail-more">
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
@@ -182,7 +183,7 @@
 										<a href="#" class="catalog-slider__name">Смарт-брюки</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__cur-price">8 900&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 
 									<div class="catalog-slider__item">
@@ -194,7 +195,7 @@
 										<a href="#" class="catalog-slider__name">Пальто-кокон</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__old-price">18 500&#8381;</span><span class="catalog-slider__cur-price">12 950&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 
 									<div class="catalog-slider__item">
@@ -206,7 +207,7 @@
 										<a href="#" class="catalog-slider__name">Приталенная куртка-косуха</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__cur-price">42 600&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 
 									<div class="catalog-slider__item">
@@ -218,7 +219,7 @@
 										<a href="#" class="catalog-slider__name">Юбка-карандаш</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__cur-price">7 900&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 
 									<div class="catalog-slider__item">
@@ -230,7 +231,7 @@
 										<a href="#" class="catalog-slider__name">Свитер с грлом</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__old-price">9 500&#8381;</span><span class="catalog-slider__cur-price">6 650&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 
 									<div class="catalog-slider__item">
@@ -242,7 +243,7 @@
 										<a href="#" class="catalog-slider__name">Юбка-карандаш</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__cur-price">7 900&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 
 									<div class="catalog-slider__item">
@@ -254,13 +255,25 @@
 										<a href="#" class="catalog-slider__name">Свитер с грлом</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__old-price">9 500&#8381;</span><span class="catalog-slider__cur-price">6 650&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div><!-- end catalog-detail-more -->
+
+				<a data-fancybox data-src="#popup-add-card" href="javascript:;" class="btn catalog-card__btn-add js-catalog-card-btn-add" id="catalog-card-btn-add">добавить в корзину</a>
+
+				<div style="display: none;" class="popup-add-card" id="popup-add-card">
+					<div class="popup-add-card__head">Спасибо!</div>
+					<div class="popup-add-card__text">Товар успешно добавлен в корзину</div>
+
+					<a href="#" class="btn">Оформить заказ</a>
+					<a href="#" class="btn btn--grey">Купить в 1 клик</a>
+
+					<a href="#" class="popup-add-card__next">Продолжить покупки</a>
+				</div>
 			</main>
 			//= ../footer/footer.html
 		</div>

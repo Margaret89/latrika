@@ -2,6 +2,11 @@ $(document).ready(function () {
 	// Фиксированное меню
 	showHeaderScroll('position-fixedmenu','header');
 
+	// Фиксированная кнопка
+	if ($('.js-catalog-card-btn-add').length) {
+		showBtnScroll('position-btn-add','catalog-card-btn-add');
+	}
+
 	// Открыть/Закрыть мобильное меню
 	$('.js-catalog-menu-mark').click(function(e){
 		e.preventDefault();
@@ -56,6 +61,32 @@ $(document).ready(function () {
 				breakpoint: 1250,
 				settings: {
 					slidesToShow: 4,
+					arrows: true,
+					infinite: true,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3,
+					arrows: true,
+					infinite: true,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2.5,
+					arrows: false,
+					infinite: false,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1.5,
+					arrows: false,
+					infinite: false,
 				}
 			},
 		]
@@ -295,6 +326,42 @@ function showHeaderScroll(selPos,fixedMenu){
 				if (typeMenu == 'opacity') {
 					$(fixedMenu).addClass('opacity');
 				}
+			}
+		});
+	}
+}
+
+//-------------- Btn fixed ---------------------
+function showBtnScroll(selPos,fixedBtn){
+
+	var positionSensor = document.getElementById(selPos);
+
+	if(positionSensor){
+		var fixedBtn = document.getElementById(fixedBtn);
+		var sensorTopPos = positionSensor.getBoundingClientRect().top;
+		
+		var btnHidden = true;
+		if(sensorTopPos <= 0) {
+			$(fixedBtn).addClass("active");
+			btnHidden = false;
+		}
+
+		$(window).on("scroll", function() {
+			sensorTopPos = positionSensor.getBoundingClientRect().top;
+			if(sensorTopPos <= 0) {
+				if(btnHidden) {
+					$(fixedBtn).removeClass("active");
+					btnHidden = false;
+				}
+
+				$(fixedBtn).addClass("active");
+			}else if (sensorTopPos > 0) {
+				if(!btnHidden) {
+					$(fixedBtn).addClass("active");
+					btnHidden = true;
+				}
+
+				$(fixedBtn).removeClass("active");
 			}
 		});
 	}
