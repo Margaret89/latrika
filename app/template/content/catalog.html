@@ -71,8 +71,11 @@
 						</div>
 
 						<div class="col-12 col-md-9 col-lg-8">
+
 							<div class="filter-wrap">
-								<form method="get" class="filter">
+								<a data-fancybox data-src="#popup-filter" href="javascript:;" class="filter-wrap__title d-md-none">Фильтр</a>
+
+								<form method="get" class="filter d-none d-md-flex">
 									<div class="filter__item">
 										<span class="filter__head">Размеры</span>
 										<span class="filter__val">XS</span>
@@ -98,6 +101,31 @@
 										</select>
 									</div>
 								</form>
+
+								<div style="display: none;" id="popup-filter">
+									<form method="get" class="filter">
+										<div class="filter__item">
+											<span class="filter__head">Размеры</span>
+											<span class="filter__val">XS</span>
+											<span class="filter__val">S</span>
+											<span class="filter__val">M</span>
+											<span class="filter__val">L</span>
+										</div>
+
+										<div class="filter__item">
+											<span class="filter__head">Выберите цвет</span>
+											<span class="filter__val">Красный</span>
+											<span class="filter__val">Зеленый</span>
+											<span class="filter__val">Бежевый</span>
+										</div>
+
+										<div class="filter__item">
+											<span class="filter__head">Сортировать</span>
+											<span class="filter__val">Цене</span>
+											<span class="filter__val">Названию</span>
+										</div>
+									</form>
+								</div>
 							</div>
 
 							<div class="catalog-list-wrap">

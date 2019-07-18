@@ -331,19 +331,45 @@
 	.personal-menu{
 		margin-top: 0;
 		margin-bottom: 11px;
+		border-top: 1px solid #f3f3f4;
 
 		&__item{
-			padding: 30px 20px 26px;
-			margin-bottom: 20px;
-			border: 1px solid #f3f3f4;
+			border-bottom: 1px solid #f3f3f4;
+			margin: 0 -20px;
+		}
+
+		&__link{
+			display: block;
+			padding: 20px 40px;
 		}
 
 		&__text{
 			font-size: 16px;
+			letter-spacing: -0.8px;
 		}
 
-		&__link{
-			padding-left: 32px;
+		&__link::before{
+			display: inline-block;
+			vertical-align: middle;
+			width: 20px;
+			height: 20px;
+			position: static;
+			margin-right: 12px;
+		}
+
+		&__link::after{
+			content: '';
+			display: inline-block;
+			width: 5px;
+			height: 9px;
+			background: url(#{$path-img}/sprite.png) no-repeat -30px -780px;
+			position: absolute;
+			@include top-center;
+			right: 20px;
+		}
+
+		& + .basket{
+			margin-top: 0;
 		}
 	}
 
@@ -357,17 +383,22 @@
 	}
 
 	.personal-inner{
-		border: 1px solid $color-text;
-		padding: 30px 20px;
+		// border: 1px solid $color-text;
+		// padding: 30px 20px;
 
-		.personal-menu__item{
-			padding: 0;
+		.personal-menu{
 			border: 0;
 		}
 
-		.basket-form{
+		.personal-menu__item{
 			padding: 0;
+			margin: 0;
 			border: 0;
+		}
+
+		.personal-menu__link{
+			display: inline-block;
+			padding: 0;
 		}
 
 		.basket__img{
@@ -377,16 +408,6 @@
 
 		.basket__info{
 			width: calc(100% - 120px);
-		}
-
-		.basket-param__val{
-			width: 32px;
-			height: 32px;
-			line-height: 30px;
-		}
-
-		.basket-param__val--color{
-			height: 15px;
 		}
 	}
 
@@ -431,13 +452,13 @@
 		}
 	}
 
-	.wish-list{
-		.catalog-list__img-wrap{
-			width: 280px;
-		}
+	// .wish-list{
+	// 	.catalog-list__img-wrap{
+	// 		width: 280px;
+	// 	}
 
-		.catalog-list__img{
-			height: 418px;
-		}
-	}
+	// 	.catalog-list__img{
+	// 		height: 418px;
+	// 	}
+	// }
 }

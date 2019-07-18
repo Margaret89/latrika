@@ -48,8 +48,14 @@
 	}
 
 	.filter{
-		&__item{
-			margin-bottom: 11px;
+		display: block;
+
+		&__item:first-child{
+			margin-right: 0;
+		}
+
+		&__item:not(:last-child){
+			margin-bottom: 15px;
 		}
 
 		&__head{

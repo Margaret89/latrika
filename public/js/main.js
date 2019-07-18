@@ -36,12 +36,24 @@ $(document).ready(function () {
 					breakpoint: 992,
 					settings: {
 						slidesToShow: 3,
+						arrows: true,
+						infinite: true,
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2.5,
+						arrows: false,
+						infinite: false,
 					}
 				},
 				{
 					breakpoint: 480,
 					settings: {
-						slidesToShow: 2,
+						slidesToShow: 1.5,
+						arrows: false,
+						infinite: false,
 					}
 				},
 			]
