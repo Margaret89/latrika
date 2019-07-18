@@ -685,6 +685,7 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   padding: 5px 0;
   border-bottom: 1px solid #f2f2f3;
   height: 85px;
+  position: relative;
 }
 
 .header--white {
@@ -730,6 +731,10 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   color: #000;
   text-decoration: none;
   margin-right: 20px;
+}
+
+.header__phone {
+  margin-right: 15px;
 }
 
 .header__lang {
@@ -976,12 +981,26 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 
 .change-city {
   position: relative;
-  margin-right: 20px;
+  margin-right: 15px;
+}
+
+.change-city__cur {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+.header--white .change-city__cur {
+  color: #fff;
 }
 
 .change-city__content {
   display: none;
-  padding: 20px 10px;
+  width: 185px;
+  padding: 25px 30px;
   background: #fff;
   border: 1px solid #d9d9d9;
   position: absolute;
@@ -990,6 +1009,38 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  margin-top: 10px;
+  z-index: 10;
+}
+
+.change-city__content::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 9px 10px 9px;
+  border-color: transparent transparent #d9d9d9 transparent;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.change-city__content::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 9px 10px 9px;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .change-city__list, .change-city__item {
@@ -1003,13 +1054,32 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   font-style: normal;
   font-weight: 200;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 17px;
   color: #bfbfbf;
   text-decoration: none;
 }
 
 .change-city__item a:hover, .change-city__item.active {
   color: #000;
+}
+
+.change-city__close {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url(../img/sprite.png) no-repeat -55px -495px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.change-city__close:hover {
+  background-position: -30px -495px;
+}
+
+.change-city .form-search {
+  margin-top: 10px;
 }
 
 .top-menu {
@@ -1998,6 +2068,69 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   margin-right: 13px;
 }
 
+.form-search {
+  position: relative;
+}
+
+.form-search input[type="text"] {
+  height: 30px;
+  width: 100%;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #d9d9d9;
+  border-radius: 0;
+  font-family: "Calibri", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  color: #000;
+  padding: 0;
+  padding-left: 28px;
+  background: transparent;
+}
+
+.form-search input[type="text"]::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.form-search input[type="text"]::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.form-search input[type="text"]:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.form-search input[type="text"]::-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.form-search input[type="text"]::placeholder {
+  color: #bfbfbf;
+}
+
+.form-search input[type="submit"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/sprite.png) no-repeat -30px -5px;
+  border: 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 0;
+  font-size: 0;
+  text-indent: -9999;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   .form-site input[type="text"],
   .form-site input[type="email"],
@@ -2523,6 +2656,11 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   margin-top: 17px;
 }
 
+.board-collection .btn {
+  min-width: 300px;
+  font-size: 11px;
+}
+
 .board-collection--big {
   background-image: url(../img/bg-collection-big.jpg);
   height: 850px;
@@ -2595,6 +2733,7 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   .board-collection .btn,
   .board-collection input[type="submit"].btn {
     font-size: 9px;
+    min-width: 200px;
   }
 }
 

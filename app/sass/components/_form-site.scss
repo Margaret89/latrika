@@ -198,6 +198,45 @@
 	}
 }
 
+.form-search{
+	position: relative;
+
+	input[type="text"]{
+		height: 30px;
+		width: 100%;
+		outline: none;
+		border: 0;
+		border-bottom: 1px solid #d9d9d9;
+		border-radius: 0;
+		font-family: $font-calibri;
+		@include font(normal, normal, 14px, 28px, $color-text);
+		padding: 0;
+		padding-left: 28px;
+		background: transparent;
+	}
+
+	input[type="text"]::placeholder{
+		color: #bfbfbf;
+	}
+
+	input[type="submit"]{
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		background: url(#{$path-img}/sprite.png) no-repeat -30px -5px;
+		border: 0;
+		outline: 0;
+		box-shadow: none;
+		padding: 0;
+		font-size: 0;
+		text-indent: -9999;
+		position: absolute;
+		@include top-center;
+		left: 0;
+		cursor: pointer;
+	}
+}
+
 @media (max-width: 767px) {
 	.form-site{
 		input[type="text"],

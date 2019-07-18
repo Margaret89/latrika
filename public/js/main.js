@@ -241,6 +241,22 @@ $(document).ready(function () {
 			$(this).parents('.js-basket-item').find('.js-setting').toggleClass('active');
 		});
 	}
+
+	//---------- Открыть/Закрыть выбор города -------------
+	$('.js-change-city-cur').on("click", function(event){
+		$('.js-change-city-content').slideToggle();
+	});
+
+	$('.js-change-city-close').on("click", function(event){
+		$('.js-change-city-content').slideUp();
+	});
+
+	$(document).click(function(event) {
+		if ($(event.target).closest(".js-change-city-content").length) return;
+		if ($(event.target).closest(".js-change-city-cur").length) return;
+		$('.js-change-city-content').slideUp();
+		event.stopPropagation();
+	});
 	
 
 	//---------- Открыть/Закрыть меню -------------
