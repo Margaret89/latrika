@@ -197,14 +197,37 @@
 	}
 }
 
+@media (max-width: 991px) {
+	.order-regist-res{
+		margin-top: 30px;
+	}
+}
+
 @media (max-width: 767px) {
 	.order-regist{
 		&__bottom{
 			display: block;
 
-			.btn{
-				min-width: 280px;
-			}
+			// .btn{
+			// 	min-width: 280px;
+			// }
+		}
+
+		&__btn{
+			width: calc(100% - 20px);
+			height: 45px;
+			line-height: 48px;
+			font-size: 10px;
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 10px;
+			z-index: 100;
+		}
+
+		&__btn:hover{
+			background: #fff;
 		}
 
 		&__polit{
@@ -276,7 +299,5 @@
 		.form-site__text{
 			margin-bottom: 15px
 		}
-
-
 	}
 }

@@ -202,7 +202,7 @@
 
 @media (max-width: 767px) {
 	.order-filter{
-		margin-top: -14px;
+		margin-top: 0;
 		margin-bottom: 15px;
 
 		&__item{
@@ -257,6 +257,11 @@
 	}
 
 	.order-list{
+		&__item:not(:last-child){
+			border-bottom: 1px solid #f1f1f1;
+			margin-bottom: 0;
+		}
+
 		&__content{
 			display: block;
 			width: calc(100% - 105px);

@@ -46,6 +46,7 @@
 		position: absolute;
 		top: 20px;
 		left: 20px;
+		opacity: 0.5;
 	}
 
 	&__wish.active,
@@ -158,7 +159,7 @@
 
 @media (max-width: 767px) {
 	.catalog-slider{
-		margin: 14px -10px;
+		margin: 14px -20px;
 		height: 265px;
 
 		&__item{
@@ -168,14 +169,16 @@
 		}
 
 		&__img-wrap{
-			width: 130px;
+			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 6px;
 		}
 
 		&__img{
-			height: 200px;
+			height: 328px;
+			width: 100%;
+			max-width: 218px;
 		}
 
 		&__name{
@@ -203,7 +206,7 @@
 			width: 20px;
 			height: 20px;
 			background: none;
-			top: 90px;
+			top: 150px;
 			z-index: 10;
 		}
 

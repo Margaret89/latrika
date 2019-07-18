@@ -75,15 +75,33 @@
 										</ul>
 									</div>
 				
-									<div class="header__mobile-contacts d-flex d-md-none">
-										<a href="tel:+7909591990" class="header__mobile-phone">+7 (909) 59-19-90</a>
-				
-										<div class="header__mobile-action">
-											<a href="#" class="header__lang">en</a>
-											<a href="#" class="header__icon header__icon--wish"></a>
-											<a href="#" class="header__icon header__icon--auth"></a>
-										</div>
+									<div class="header-action d-flex d-md-none">
+										<a href="#" class="header-action__icon header-action__icon--wish"></a>
+										<a href="#" class="header-action__icon header-action__icon--geo"></a>
+										<a href="#" class="header-action__icon header-action__icon--auth"></a>
+										<a href="#" class="header-action__icon header-action__icon--search"></a>
+										<a href="#" class="header-action__lang">en</a>
 									</div>
+								</div>
+							</div>
+				
+							<div class="change-city d-none d-md-inline-block d-lg-none">
+								<div class="change-city__cur">Санкт-Петербург</div>
+				
+								<div class="change-city__content">
+									<ul class="change-city__list">
+										<li class="change-city__item"><a href="#">Москва</a></li>
+										<li class="change-city__item active">Санк-Петербург</li>
+										<li class="change-city__item"><a href="#">Екатеринбург</a></li>
+										<li class="change-city__item"><a href="#">Краснодар</a></li>
+									</ul>
+				
+									<form method="get" class="form-site">
+										<div class="form-site__search">
+											<input type="text">
+											<input type="submit" value="Найти">
+										</div>
+									</form>
 								</div>
 							</div>
 				
@@ -100,6 +118,27 @@
 						<div class="col-4 col-lg-5 col-xl-5">
 							<div class="header__action">
 								<a href="tel:+7909591990" class="header__phone">+7 (909) 59-19-90</a>
+				
+								<div class="change-city d-none d-lg-block">
+									<div class="change-city__cur js-change-city-cur">Санкт-Петербург</div>
+				
+									<div class="change-city__content js-change-city-content">
+										<ul class="change-city__list">
+											<li class="change-city__item"><a href="#">Москва</a></li>
+											<li class="change-city__item active">Санк-Петербург</li>
+											<li class="change-city__item"><a href="#">Екатеринбург</a></li>
+											<li class="change-city__item"><a href="#">Краснодар</a></li>
+										</ul>
+				
+										<form method="get" class="form-search">
+											<input type="text" placeholder="Найти город">
+											<input type="submit" value="Найти">
+										</form>
+				
+										<div class="change-city__close js-change-city-close"></div>
+									</div>
+								</div>
+				
 								<a href="#" class="header__lang d-none d-md-block">en</a>
 								<a href="#" class="header__icon header__icon--search d-none d-md-block"></a>
 								<a href="#" class="header__icon header__icon--wish d-none d-md-block"></a>
@@ -204,7 +243,7 @@
 													<span class="basket-param__val basket-param__val--count">1 шт.</span>
 												</div>
 
-				<!-- 								<div class="basket-param__item basket-param__item--count d-block d-md-none">
+												<!-- <div class="basket-param__item basket-param__item--count d-block d-md-none">
 													<span class="basket-param__title">Количество</span>
 													
 												</div> -->
@@ -343,6 +382,8 @@
 							</div>
 						</div>
 					</div>
+
+					<a href="#" class="btn basket__btn-order d-md-none">оформить заказ</a>
 				</div>
 			</main>
 			<footer class="footer">

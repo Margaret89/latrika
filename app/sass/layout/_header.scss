@@ -2,9 +2,10 @@
 .header{
 	font-family: $font-calibri;
 	@include font(normal, 300, 15px, 20px, $color-text);
-	padding: 5px 0 19px;
+	padding: 5px 0;
 	border-bottom: 1px solid #f2f2f3;
-	height: 100px;
+	height: 85px;
+	position: relative;
 
 	&--white{
 		padding: 19px 0;
@@ -39,7 +40,11 @@
 	&__lang{
 		@include font(normal, 300, 17px, 20px, $color-text);
 		text-decoration: none;
-		margin-right: 28px;
+		margin-right: 20px;
+	}
+
+	&__phone{
+		margin-right: 15px;
 	}
 
 	&__lang{
@@ -79,10 +84,16 @@
 		background-size: contain;
 	}
 
+	&__icon--geo{
+		background: url(#{$path-img}/ic-geo.svg) no-repeat center;
+		background-size: contain;
+	}
+
 	&__icon--search:hover{background: url(#{$path-img}/ic-search-grey.svg) no-repeat center;}
 	&__icon--wish:hover{background: url(#{$path-img}/ic-wish-grey.svg) no-repeat center;}
 	&__icon--auth:hover{background: url(#{$path-img}/ic-auth-grey.svg) no-repeat center;}
 	&__icon--buy:hover{background: url(#{$path-img}/ic-basket-grey.svg) no-repeat center;}
+	&__icon--geo:hover{background: url(#{$path-img}/ic-geo-grey.svg) no-repeat center;}
 
 	// &__icon--search{background-position: -5px -5px;}
 	// &__icon--wish{background-position: -5px -30px;}
@@ -131,19 +142,23 @@
 	&--white &__icon--wish{background: url(#{$path-img}/ic-wish-white.svg) no-repeat center;}
 	&--white &__icon--auth{background: url(#{$path-img}/ic-auth-white.svg) no-repeat center;}
 	&--white &__icon--buy{background: url(#{$path-img}/ic-basket-white.svg) no-repeat center;}
+	&--white &__icon--geo{background: url(#{$path-img}/ic-geo-white.svg) no-repeat center;}
 	&--white &__icon--search:hover{background: url(#{$path-img}/ic-search.svg) no-repeat center;}
 	&--white &__icon--wish:hover{background: url(#{$path-img}/ic-wish.svg) no-repeat center;}
 	&--white &__icon--auth:hover{background: url(#{$path-img}/ic-auth.svg) no-repeat center;}
 	&--white &__icon--buy:hover{background: url(#{$path-img}/ic-basket.svg) no-repeat center;}
+	&--white &__icon--geo:hover{background: url(#{$path-img}/ic-geo.svg) no-repeat center;}
 
 	&--white.open-menu &__icon--search{background: url(#{$path-img}/ic-search.svg) no-repeat center;}
 	&--white.open-menu &__icon--wish{background: url(#{$path-img}/ic-wish.svg) no-repeat center;}
 	&--white.open-menu &__icon--auth{background: url(#{$path-img}/ic-auth.svg) no-repeat center;}
 	&--white.open-menu &__icon--buy{background: url(#{$path-img}/ic-basket.svg) no-repeat center;}
+	&--white.open-menu &__icon--geo{background: url(#{$path-img}/ic-geo.svg) no-repeat center;}
 	&--white.open-menu &__icon--search:hover{background: url(#{$path-img}/ic-search-grey.svg) no-repeat center;}
 	&--white.open-menu &__icon--wish:hover{background: url(#{$path-img}/ic-wish-grey.svg) no-repeat center;}
 	&--white.open-menu &__icon--auth:hover{background: url(#{$path-img}/ic-auth-grey.svg) no-repeat center;}
 	&--white.open-menu &__icon--buy:hover{background: url(#{$path-img}/ic-basket-grey.svg) no-repeat center;}
+	&--white.open-menu &__icon--geo:hover{background: url(#{$path-img}/ic-geo-grey.svg) no-repeat center;}
 
 
 	&.open-menu__icon--search{
@@ -194,13 +209,110 @@
 	&--white.fixed &__icon--wish{background: url(#{$path-img}/ic-wish.svg) no-repeat center;}
 	&--white.fixed &__icon--auth{background: url(#{$path-img}/ic-auth.svg) no-repeat center;}
 	&--white.fixed &__icon--buy{background: url(#{$path-img}/ic-basket.svg) no-repeat center;}
+	&--white.fixed &__icon--geo{background: url(#{$path-img}/ic-geo.svg) no-repeat center;}
 	&--white.fixed &__icon--search:hover{background: url(#{$path-img}/ic-search-grey.svg) no-repeat center;}
 	&--white.fixed &__icon--wish:hover{background: url(#{$path-img}/ic-wish-grey.svg) no-repeat center;}
 	&--white.fixed &__icon--auth:hover{background: url(#{$path-img}/ic-auth-grey.svg) no-repeat center;}
 	&--white.fixed &__icon--buy:hover{background: url(#{$path-img}/ic-basket-grey.svg) no-repeat center;}
+	&--white.fixed &__icon--geo:hover{background: url(#{$path-img}/ic-geo-grey.svg) no-repeat center;}
 
 	&--white.fixed &__logo-white{display: none;}
 	&--white.fixed &__logo-black{display: block;}
+}
+
+.change-city{
+	position: relative;
+	margin-right: 15px;
+
+	&__cur{
+		@include font(normal, 300, 17px, 20px, #000);
+		cursor: pointer;
+	}
+
+	.header--white &__cur{
+		color: #fff;
+	}
+
+	&__content{
+		display: none;
+		width: 185px;
+		padding: 25px 30px;
+		background: #fff;
+		border: 1px solid #d9d9d9;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: 10px;
+		z-index: 10;
+	}
+
+	&__content::before{
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 9px 10px 9px;
+		border-color: transparent transparent #d9d9d9 transparent;
+		position: absolute;
+		top: -10px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__content::after{
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 9px 10px 9px;
+		border-color: transparent transparent #fff transparent;
+		position: absolute;
+		top: -8px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__list,
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item,
+	&__item a{
+		@include font(normal, 200, 14px, 17px, #bfbfbf);
+		text-decoration: none;
+	}
+
+	&__item a:hover,
+	&__item.active{
+		color: $color-text;
+	}
+
+	&__close{
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background: url(#{$path-img}/sprite.png) no-repeat -55px -495px;
+		cursor: pointer;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	&__close:hover{
+		background-position: -30px -495px;
+	}
+
+	.form-search{
+		margin-top: 10px;
+	}
 }
 
 .top-menu{
@@ -332,15 +444,35 @@
 	}
 
 	.header{
-		padding: 5px 0 5px;
-		height: 90px;
-
 		&__logo{
 			width: 180px;
 			margin-left: -10px;
 		}
+
+		&__phone{
+			display: inline-block;
+			width: 19px;
+			height: 19px;
+			font-size: 0;
+			background: url(#{$path-img}/ic-call.svg) no-repeat center;
+			background-size: contain;
+		}
+
+		&__phone:hover{background: url(#{$path-img}/ic-call-grey.svg) no-repeat center;}
+		&--white &__phone{background: url(#{$path-img}/ic-call-white.svg) no-repeat center;}
+		&--white &__phone:hover{background: url(#{$path-img}/ic-call.svg) no-repeat center;}
+
+
+		&--white.open-menu &__phone{background: url(#{$path-img}/ic-call.svg) no-repeat center;}
+		&--white.open-menu &__phone:hover{background: url(#{$path-img}/ic-call-grey.svg) no-repeat center;}
+
+		&--white.fixed &__phone{background: url(#{$path-img}/ic-call.svg) no-repeat center;}
+		&--white.fixed &__phone:hover{background: url(#{$path-img}/ic-call-grey.svg) no-repeat center;}
 	}
 	
+	.change-city{
+		order: -1;
+	}
 }
 
 @media (max-width: 991px) {
@@ -352,21 +484,6 @@
 			margin-left: auto;
 		}
 
-		&__phone{
-			display: inline-block;
-			width: 15px;
-			height: 15px;
-			font-size: 0;
-			background: url(#{$path-img}/sprite.png) no-repeat -5px -725px;
-		}
-
-		&__phone:hover{background-position: -30px -725px;}
-		&--white &__phone{background-position: -55px -725px;}
-		&--white &__phone:hover{background-position: -5px -725px;}
-
-		&--white.open-menu &__phone{background-position: -5px -725px;}
-		&--white.open-menu &__phone:hover{background-position: -30px -725px;}
-
 		&--white .top-menu__item,
 		&--white .top-menu__link{
 			color: $color-text;
@@ -376,6 +493,14 @@
 		&--white .top-menu__link:hover::after{
 			background: $color-text;
 		}
+	}
+
+	.change-city{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 0;
+		margin-left: 20px;
+		padding-bottom: 10px;
 	}
 
 	.top-menu-wrap{
@@ -437,13 +562,19 @@
 
 @media (max-width: 767px) {
 	.header{
-		padding: 6px 0;
+		padding: 0;
 		position: relative;
 		height: auto;
 		height: 54px;
+		z-index: 10;
 
 		&__logo{
-			width: 92px;
+			width: 115px;
+		}
+
+		&__icon{
+			width: 22px;
+			height: 22px;
 		}
 
 		&__icon--search{
@@ -451,13 +582,21 @@
 			margin-left: 28px;
 		}
 
-		&__mobile-contacts{
-			display: flex;
-			align-items: flex-end;
-			justify-content: space-between;
-			padding: 20px;
-			height: 60px;
-		}
+		// &__mobile-contacts{
+		// 	display: flex;
+		// 	align-items: flex-end;
+		// 	justify-content: space-between;
+		// 	padding: 20px;
+		// 	height: 60px;
+		// }
+
+		// &__mobile-action{
+		// 	display: flex;
+		// 	align-items: center;
+		// 	justify-content: space-between;
+		// 	padding: 20px;
+		// 	height: 60px;
+		// }
 
 		&__mobile-phone{
 			@include font(normal, 300, 15px, 20px, $color-text);
@@ -494,6 +633,59 @@
 		&.open-menu{
 			background: #f2f2f3;
 			border-bottom: 1px solid #e2e2e2;
+		}
+	}
+
+	.header-action{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px;
+		height: 60px;
+
+		&__icon{
+			display: inline-block;
+			width: 13px;
+			height: 13px;
+		}
+
+		&__icon--wish{
+			background: url(#{$path-img}/ic-wish.svg) no-repeat center;
+			background-size: contain;
+		}
+
+		&__icon--geo{
+			background: url(#{$path-img}/ic-geo.svg) no-repeat center;
+			background-size: contain;
+		}
+
+		&__icon--auth{
+			background: url(#{$path-img}/ic-auth.svg) no-repeat center;
+			background-size: contain;
+		}
+
+		&__icon--search{
+			background: url(#{$path-img}/ic-search.svg) no-repeat center;
+			background-size: contain;
+		}
+
+		&__icon--wish:hover{background: url(#{$path-img}/ic-wish-grey.svg) no-repeat center;}
+		&__icon--geo:hover{background: url(#{$path-img}/ic-geo-grey.svg) no-repeat center;}
+		&__icon--auth:hover{background: url(#{$path-img}/ic-auth-grey.svg) no-repeat center;}
+		&__icon--search:hover{background: url(#{$path-img}/ic-search-grey.svg) no-repeat center;}
+
+		&__lang{
+			font-style: normal;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 16px;
+			color: #000;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+
+		&__lang:hover{
+			color: $color-grey;
 		}
 	}
 
@@ -537,7 +729,7 @@
 
 		&__link{
 			display: block;
-			padding: 10px 50px 9px 20px;
+			padding: 15px 50px 14px 20px;
 			border-bottom: 1px solid #e2e2e2;
 		}
 
@@ -621,7 +813,13 @@
 @media (max-width: 340px) {
 	.header{
 		&__logo{
-			margin-left: -7px;
+			width: 106px;
+			margin-left: -3px;
+		}
+
+		&__phone,
+		&__lang{
+			margin-right: 20px;
 		}
 	}
 }

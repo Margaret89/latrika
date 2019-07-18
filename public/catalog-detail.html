@@ -75,15 +75,33 @@
 										</ul>
 									</div>
 				
-									<div class="header__mobile-contacts d-flex d-md-none">
-										<a href="tel:+7909591990" class="header__mobile-phone">+7 (909) 59-19-90</a>
-				
-										<div class="header__mobile-action">
-											<a href="#" class="header__lang">en</a>
-											<a href="#" class="header__icon header__icon--wish"></a>
-											<a href="#" class="header__icon header__icon--auth"></a>
-										</div>
+									<div class="header-action d-flex d-md-none">
+										<a href="#" class="header-action__icon header-action__icon--wish"></a>
+										<a href="#" class="header-action__icon header-action__icon--geo"></a>
+										<a href="#" class="header-action__icon header-action__icon--auth"></a>
+										<a href="#" class="header-action__icon header-action__icon--search"></a>
+										<a href="#" class="header-action__lang">en</a>
 									</div>
+								</div>
+							</div>
+				
+							<div class="change-city d-none d-md-inline-block d-lg-none">
+								<div class="change-city__cur">Санкт-Петербург</div>
+				
+								<div class="change-city__content">
+									<ul class="change-city__list">
+										<li class="change-city__item"><a href="#">Москва</a></li>
+										<li class="change-city__item active">Санк-Петербург</li>
+										<li class="change-city__item"><a href="#">Екатеринбург</a></li>
+										<li class="change-city__item"><a href="#">Краснодар</a></li>
+									</ul>
+				
+									<form method="get" class="form-site">
+										<div class="form-site__search">
+											<input type="text">
+											<input type="submit" value="Найти">
+										</div>
+									</form>
 								</div>
 							</div>
 				
@@ -100,6 +118,27 @@
 						<div class="col-4 col-lg-5 col-xl-5">
 							<div class="header__action">
 								<a href="tel:+7909591990" class="header__phone">+7 (909) 59-19-90</a>
+				
+								<div class="change-city d-none d-lg-block">
+									<div class="change-city__cur js-change-city-cur">Санкт-Петербург</div>
+				
+									<div class="change-city__content js-change-city-content">
+										<ul class="change-city__list">
+											<li class="change-city__item"><a href="#">Москва</a></li>
+											<li class="change-city__item active">Санк-Петербург</li>
+											<li class="change-city__item"><a href="#">Екатеринбург</a></li>
+											<li class="change-city__item"><a href="#">Краснодар</a></li>
+										</ul>
+				
+										<form method="get" class="form-search">
+											<input type="text" placeholder="Найти город">
+											<input type="submit" value="Найти">
+										</form>
+				
+										<div class="change-city__close js-change-city-close"></div>
+									</div>
+								</div>
+				
 								<a href="#" class="header__lang d-none d-md-block">en</a>
 								<a href="#" class="header__icon header__icon--search d-none d-md-block"></a>
 								<a href="#" class="header__icon header__icon--wish d-none d-md-block"></a>
@@ -129,6 +168,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-8">
+								<div id="position-btn-add"></div>
 								<div class="product-slider">
 									<div class="product-slide-thumb js-product-slide-thumb d-none d-md-block">
 										<div class="product-slide-thumb__item" style="background-image: url(img/product-slider-img1.jpg);"></div>
@@ -235,7 +275,7 @@
 										</div>
 									</div>
 
-									<div class="catalog-card__action">
+									<div class="catalog-card__action d-none d-md-block">
 										<a href="#" class="btn btn--border">добавить в корзину</a>
 										<a href="#" class="btn btn--grey">Купить в 1 клик</a>
 									</div>
@@ -269,7 +309,7 @@
 					</div>
 				</div><!-- end catalog-card -->
 
-				<div class="catalog-detail-more d-none d-md-block">
+				<div class="catalog-detail-more">
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
@@ -285,7 +325,7 @@
 										<a href="#" class="catalog-slider__name">Смарт-брюки</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__cur-price">8 900&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 
 									<div class="catalog-slider__item">
@@ -297,7 +337,7 @@
 										<a href="#" class="catalog-slider__name">Пальто-кокон</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__old-price">18 500&#8381;</span><span class="catalog-slider__cur-price">12 950&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 
 									<div class="catalog-slider__item">
@@ -309,7 +349,7 @@
 										<a href="#" class="catalog-slider__name">Приталенная куртка-косуха</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__cur-price">42 600&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 
 									<div class="catalog-slider__item">
@@ -321,7 +361,7 @@
 										<a href="#" class="catalog-slider__name">Юбка-карандаш</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__cur-price">7 900&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 
 									<div class="catalog-slider__item">
@@ -333,7 +373,7 @@
 										<a href="#" class="catalog-slider__name">Свитер с грлом</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__old-price">9 500&#8381;</span><span class="catalog-slider__cur-price">6 650&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 
 									<div class="catalog-slider__item">
@@ -345,7 +385,7 @@
 										<a href="#" class="catalog-slider__name">Юбка-карандаш</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__cur-price">7 900&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 
 									<div class="catalog-slider__item">
@@ -357,13 +397,25 @@
 										<a href="#" class="catalog-slider__name">Свитер с грлом</a>
 										<div class="catalog-slider__price"><span class="catalog-slider__old-price">9 500&#8381;</span><span class="catalog-slider__cur-price">6 650&#8381;</span></div>
 
-										<a href="#" class="btn btn--border">добавить в корзину</a>
+										<a href="#" class="btn btn--border d-none d-md-inline-block">добавить в корзину</a>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div><!-- end catalog-detail-more -->
+
+				<a data-fancybox data-src="#popup-add-card" href="javascript:;" class="btn catalog-card__btn-add js-catalog-card-btn-add" id="catalog-card-btn-add">добавить в корзину</a>
+
+				<div style="display: none;" class="popup-add-card" id="popup-add-card">
+					<div class="popup-add-card__head">Спасибо!</div>
+					<div class="popup-add-card__text">Товар успешно добавлен в корзину</div>
+
+					<a href="#" class="btn">Оформить заказ</a>
+					<a href="#" class="btn btn--grey">Купить в 1 клик</a>
+
+					<a href="#" class="popup-add-card__next">Продолжить покупки</a>
+				</div>
 			</main>
 			<footer class="footer">
 				<div class="footer-top">

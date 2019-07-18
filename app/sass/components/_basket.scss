@@ -295,8 +295,20 @@
 			margin-bottom: 32px;
 		}
 
+		&__head h1,
+		&__head .h1{
+			font-size: 17px;
+		}
+
+		&__list{
+			border-top: 1px solid #f1f1f1;
+		}
+
 		&__item{
 			flex-wrap: wrap;
+			align-items: flex-start;
+			margin-bottom: 0;
+			border-bottom: 1px solid #f1f1f1;
 		}
 
 		&__img{
@@ -419,6 +431,23 @@
 		&__del:hover{
 			color: $color-grey-light;
 		}
+
+		&__btn-order{
+			width: calc(100% - 20px);
+			height: 45px;
+			line-height: 48px;
+			font-size: 10px;
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 10px;
+			z-index: 100;
+		}
+
+		&__btn-order:hover{
+			background: #fff;
+		}
 	}
 
 	.basket-param{
@@ -433,6 +462,16 @@
 			font-size: 12px;
 			font-weight: normal;
 			margin-top: 1px;
+			height: auto;
+			width: auto;
+			min-width: 20px;
+			line-height: 16px;
+			border: 0;
+		}
+
+		&__val--color{
+			height: 15px;
+			width: 30px;
 		}
 
 		&__val--count{
@@ -445,7 +484,9 @@
 	}
 
 	.basket-form{
-		padding: 13px 20px 0;
+		// padding: 13px 20px 0;
+		padding: 0;
+		border: 0;
 		margin-bottom: 28px;
 
 		.form-site input[type="submit"]{
