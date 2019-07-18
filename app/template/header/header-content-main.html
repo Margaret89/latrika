@@ -2,7 +2,7 @@
 	<div class="row align-items-center">
 		<div class="col-4 col-lg-5 col-xl-5">
 			<div class="top-menu-wrap">
-				<span class="ic-hamburger js-btn-menu d-md-block d-lg-none"><span></span></span>
+				<span class="ic-hamburger js-btn-menu d-md-inline-block d-lg-none"><span></span></span>
 
 				<div class="top-menu-wrap__content js-top-menu-content">
 					<div class="top-menu-wrap__list">
@@ -66,6 +66,26 @@
 				</div>
 			</div>
 
+			<div class="change-city d-none d-md-inline-block d-lg-none">
+				<div class="change-city__cur">Санкт-Петербург</div>
+
+				<div class="change-city__content">
+					<ul class="change-city__list">
+						<li class="change-city__item"><a href="#">Москва</a></li>
+						<li class="change-city__item active">Санк-Петербург</li>
+						<li class="change-city__item"><a href="#">Екатеринбург</a></li>
+						<li class="change-city__item"><a href="#">Краснодар</a></li>
+					</ul>
+
+					<form method="get" class="form-site">
+						<div class="form-site__search">
+							<input type="text">
+							<input type="submit" value="Найти">
+						</div>
+					</form>
+				</div>
+			</div>
+
 			<a href="#" class="header__icon header__icon--search d-inline-block d-md-none"></a>
 		</div>
 
@@ -79,6 +99,27 @@
 		<div class="col-4 col-lg-5 col-xl-5">
 			<div class="header__action">
 				<a href="tel:+7909591990" class="header__phone">+7 (909) 59-19-90</a>
+
+				<div class="change-city d-none d-lg-block">
+					<div class="change-city__cur">Санкт-Петербург</div>
+
+					<div class="change-city__content">
+						<ul class="change-city__list">
+							<li class="change-city__item"><a href="#">Москва</a></li>
+							<li class="change-city__item active">Санк-Петербург</li>
+							<li class="change-city__item"><a href="#">Екатеринбург</a></li>
+							<li class="change-city__item"><a href="#">Краснодар</a></li>
+						</ul>
+
+						<form method="get" class="form-site">
+							<div class="form-site__search">
+								<input type="text">
+								<input type="submit" value="Найти">
+							</div>
+						</form>
+					</div>
+				</div>
+
 				<a href="#" class="header__lang d-none d-md-block">en</a>
 				<a href="#" class="header__icon header__icon--search d-none d-md-block"></a>
 				<!-- <a href="#" class="header__icon header__icon--wish d-none d-md-block"></a> -->

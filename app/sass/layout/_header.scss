@@ -2,9 +2,9 @@
 .header{
 	font-family: $font-calibri;
 	@include font(normal, 300, 15px, 20px, $color-text);
-	padding: 5px 0 19px;
+	padding: 5px 0;
 	border-bottom: 1px solid #f2f2f3;
-	height: 100px;
+	height: 85px;
 
 	&--white{
 		padding: 19px 0;
@@ -39,7 +39,7 @@
 	&__lang{
 		@include font(normal, 300, 17px, 20px, $color-text);
 		text-decoration: none;
-		margin-right: 28px;
+		margin-right: 20px;
 	}
 
 	&__lang{
@@ -215,6 +215,44 @@
 	&--white.fixed &__logo-black{display: block;}
 }
 
+.change-city{
+	position: relative;
+	margin-right: 20px;
+
+	&__cur{
+
+	}
+
+	&__content{
+		display: none;
+		padding: 20px 10px;
+		background: #fff;
+		border: 1px solid #d9d9d9;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__list,
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item,
+	&__item a{
+		@include font(normal, 200, 14px, 18px, #bfbfbf);
+		text-decoration: none;
+	}
+
+	&__item a:hover,
+	&__item.active{
+		color: $color-text;
+	}
+}
+
 .top-menu{
 	display: flex;
 	align-items: center;
@@ -344,24 +382,9 @@
 	}
 
 	.header{
-		padding: 5px 0 5px;
-		height: 90px;
-
 		&__logo{
 			width: 180px;
 			margin-left: -10px;
-		}
-	}
-	
-}
-
-@media (max-width: 991px) {
-	.header{
-		height: 85px;
-
-		&__logo{
-			width: 160px;
-			margin-left: auto;
 		}
 
 		&__phone{
@@ -383,6 +406,21 @@
 
 		&--white.fixed &__phone{background: url(#{$path-img}/ic-call.svg) no-repeat center;}
 		&--white.fixed &__phone:hover{background: url(#{$path-img}/ic-call-grey.svg) no-repeat center;}
+	}
+	
+	.change-city{
+		order: -1;
+	}
+}
+
+@media (max-width: 991px) {
+	.header{
+		height: 85px;
+
+		&__logo{
+			width: 160px;
+			margin-left: auto;
+		}
 
 		&--white .top-menu__item,
 		&--white .top-menu__link{
@@ -393,6 +431,14 @@
 		&--white .top-menu__link:hover::after{
 			background: $color-text;
 		}
+	}
+
+	.change-city{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 0;
+		margin-left: 20px;
+		padding-bottom: 10px;
 	}
 
 	.top-menu-wrap{
