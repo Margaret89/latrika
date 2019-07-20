@@ -682,9 +682,9 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   font-size: 15px;
   line-height: 20px;
   color: #000;
-  padding: 5px 0;
   border-bottom: 1px solid #f2f2f3;
-  height: 85px;
+  height: auto;
+  padding-bottom: 5px;
   position: relative;
 }
 
@@ -697,7 +697,6 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   display: block;
   width: 158px;
   margin: 0 auto;
-  margin-top: 5px;
 }
 
 .header__logo-white,
@@ -1208,9 +1207,25 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   .top-menu__item, .top-menu__link {
     font-size: 13px;
   }
+  .change-city {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+}
+
+@media (max-width: 991px) {
   .header__logo {
-    width: 180px;
-    margin-left: -10px;
+    width: 160px;
+    margin-left: auto;
+  }
+  .header--white .top-menu__item,
+  .header--white .top-menu__link {
+    color: #000;
+  }
+  .header--white .top-menu__link.current::after,
+  .header--white .top-menu__link:hover::after {
+    background: #000;
   }
   .header__phone {
     display: inline-block;
@@ -1240,29 +1255,6 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   }
   .header--white.fixed .header__phone:hover {
     background: url(../img/ic-call-grey.svg) no-repeat center;
-  }
-  .change-city {
-    -webkit-box-ordinal-group: 0;
-    -ms-flex-order: -1;
-    order: -1;
-  }
-}
-
-@media (max-width: 991px) {
-  .header {
-    height: 85px;
-  }
-  .header__logo {
-    width: 160px;
-    margin-left: auto;
-  }
-  .header--white .top-menu__item,
-  .header--white .top-menu__link {
-    color: #000;
-  }
-  .header--white .top-menu__link.current::after,
-  .header--white .top-menu__link:hover::after {
-    background: #000;
   }
   .change-city {
     display: inline-block;
@@ -1327,6 +1319,7 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
     z-index: 10;
   }
   .header__logo {
+    margin-top: 5px;
     width: 115px;
   }
   .header__icon {
@@ -1394,8 +1387,8 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   }
   .header-action__icon {
     display: inline-block;
-    width: 13px;
-    height: 13px;
+    width: 17px;
+    height: 17px;
   }
   .header-action__icon--wish {
     background: url(../img/ic-wish.svg) no-repeat center;
@@ -1428,8 +1421,8 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   .header-action__lang {
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 18px;
+    line-height: 18px;
     color: #000;
     text-transform: uppercase;
     text-decoration: none;
