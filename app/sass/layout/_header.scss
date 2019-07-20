@@ -2,9 +2,9 @@
 .header{
 	font-family: $font-calibri;
 	@include font(normal, 300, 15px, 20px, $color-text);
-	padding: 5px 0;
 	border-bottom: 1px solid #f2f2f3;
-	height: 85px;
+	height: auto;
+	padding-bottom: 5px;
 	position: relative;
 
 	&--white{
@@ -16,7 +16,6 @@
 		display: block;
 		width: 158px;
 		margin: 0 auto;
-		margin-top: 5px;
 	}
 
 	&__logo-white,
@@ -442,11 +441,27 @@
 			font-size: 13px;
 		}
 	}
+	
+	.change-city{
+		order: -1;
+	}
+}
 
+@media (max-width: 991px) {
 	.header{
 		&__logo{
-			width: 180px;
-			margin-left: -10px;
+			width: 160px;
+			margin-left: auto;
+		}
+
+		&--white .top-menu__item,
+		&--white .top-menu__link{
+			color: $color-text;
+		}
+
+		&--white .top-menu__link.current::after,
+		&--white .top-menu__link:hover::after{
+			background: $color-text;
 		}
 
 		&__phone{
@@ -468,31 +483,6 @@
 
 		&--white.fixed &__phone{background: url(#{$path-img}/ic-call.svg) no-repeat center;}
 		&--white.fixed &__phone:hover{background: url(#{$path-img}/ic-call-grey.svg) no-repeat center;}
-	}
-	
-	.change-city{
-		order: -1;
-	}
-}
-
-@media (max-width: 991px) {
-	.header{
-		height: 85px;
-
-		&__logo{
-			width: 160px;
-			margin-left: auto;
-		}
-
-		&--white .top-menu__item,
-		&--white .top-menu__link{
-			color: $color-text;
-		}
-
-		&--white .top-menu__link.current::after,
-		&--white .top-menu__link:hover::after{
-			background: $color-text;
-		}
 	}
 
 	.change-city{
@@ -569,6 +559,7 @@
 		z-index: 10;
 
 		&__logo{
+			margin-top: 5px;
 			width: 115px;
 		}
 
@@ -645,8 +636,8 @@
 
 		&__icon{
 			display: inline-block;
-			width: 13px;
-			height: 13px;
+			width: 17px;
+			height: 17px;
 		}
 
 		&__icon--wish{
@@ -677,8 +668,8 @@
 		&__lang{
 			font-style: normal;
 			font-weight: 300;
-			font-size: 14px;
-			line-height: 16px;
+			font-size: 18px;
+			line-height: 18px;
 			color: #000;
 			text-transform: uppercase;
 			text-decoration: none;
