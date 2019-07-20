@@ -12,6 +12,11 @@
 		height: 120px;
 	}
 
+	&--white.fixed{
+		padding: 0 0 5px 0;
+		height: auto;
+	}
+
 	&__logo{
 		display: block;
 		width: 158px;
@@ -554,9 +559,13 @@
 	.header{
 		padding: 0;
 		position: relative;
-		height: auto;
 		height: 54px;
 		z-index: 10;
+
+		&--white.fixed{
+			padding:0;
+			height: 54px;
+		}
 
 		&__logo{
 			margin-top: 5px;
