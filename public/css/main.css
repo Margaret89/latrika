@@ -684,7 +684,7 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   color: #000;
   border-bottom: 1px solid #f2f2f3;
   height: auto;
-  padding-bottom: 5px;
+  padding: 10px 0;
   position: relative;
 }
 
@@ -694,7 +694,7 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 }
 
 .header--white.fixed {
-  padding: 0 0 5px 0;
+  padding: 10px 0;
   height: auto;
 }
 
@@ -1220,6 +1220,12 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 }
 
 @media (max-width: 991px) {
+  .header {
+    padding: 5px 0;
+  }
+  .header--white.fixed {
+    padding: 5px 0;
+  }
   .header__logo {
     width: 160px;
     margin-left: auto;
