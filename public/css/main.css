@@ -3000,7 +3000,10 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
     height: calc(100vh + 84px);
   }
   .page-main .catalog-slider {
+    width: auto;
     margin-bottom: 18px;
+    margin-left: -20px;
+    margin-right: -20px;
   }
   .page-main .board-collection {
     background-position: center;
