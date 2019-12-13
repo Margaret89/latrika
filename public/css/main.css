@@ -686,6 +686,7 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   height: auto;
   padding: 10px 0;
   position: relative;
+  z-index: 10;
 }
 
 .header--white {
@@ -2966,6 +2967,14 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 /*----------- page-main -------------*/
 .page-main .board-collection--big:first-child {
   margin-top: -120px;
+  padding-top: 84px;
+}
+
+.page-main .top-slider:first-child {
+  margin-top: -120px;
+}
+
+.page-main .top-slider:first-child .top-slider__item {
   padding-top: 84px;
 }
 
@@ -6743,4 +6752,104 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 .contents-site__item {
   font-size: 24px;
   margin-bottom: 40px;
+}
+
+/*----------- top-slider -------------*/
+.top-slider {
+  margin-bottom: 76px;
+}
+
+.top-slider__item {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 850px;
+  background-repeat: no-repeat;
+  background-position: center -100px;
+  text-align: center;
+  padding: 20px 200px;
+}
+
+.top-slider__head {
+  font-family: "cyrillicgaramond", "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 54px;
+  color: #fff;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  letter-spacing: 5.5px;
+}
+
+.top-slider__btn {
+  margin-top: 22px;
+}
+
+.top-slider .btn {
+  min-width: 300px;
+  font-size: 11px;
+}
+
+@media (max-width: 1249px) {
+  .top-slider__item {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-slider {
+    margin-bottom: 45px;
+  }
+  .top-slider__item {
+    height: calc(100vh + 84px);
+    background-size: cover;
+    background-position: 61% -11px;
+    position: relative;
+  }
+  .top-slider__head {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2px;
+  }
+  .top-slider__btn {
+    margin-top: 14px;
+  }
+  .top-slider__corner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    margin: 0 auto;
+    height: 14px;
+  }
+  .top-slider__corner-left {
+    border-bottom: 15px solid #fff;
+    border-right: 20px solid transparent;
+    width: 50%;
+  }
+  .top-slider__corner-right {
+    border-bottom: 15px solid #fff;
+    border-left: 20px solid transparent;
+    width: 50%;
+  }
+  .top-slider .btn,
+  .top-slider input[type="submit"].btn {
+    font-size: 9px;
+    min-width: 200px;
+  }
 }

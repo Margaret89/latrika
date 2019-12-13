@@ -23,6 +23,17 @@ $(document).ready(function () {
 		disable_search: true,
 	});
 
+	// Верхний слайдер
+	if ($('.js-top-slider').length) {
+		$('.js-top-slider').slick({
+			dots: false,
+			arrows: false,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+		});
+	}
+
 	// Слайдер товаров
 	if ($('.js-catalog-slider').length) {
 		$('.js-catalog-slider').slick({
